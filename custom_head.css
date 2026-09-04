@@ -1343,13 +1343,26 @@ a:hover {
 
 
 /* =========================================================
-   Footer 管理链接
+   隐藏底栏「主题」「管理」
    ========================================================= */
 
+/*
+ * 底栏这两个按钮全局隐藏（不限手机端）：
+ *
+ * 主题 -> 顶栏右侧已有 ☼ 图标
+ * 管理 -> 顶栏 ⋯ 更多菜单里已有「管理后台」
+ *
+ * 底栏只保留「返回顶部」。
+ *
+ * 用 !important 压过各断点里
+ * 给 .openlist-footer-actions button / a 设的 display。
+ */
+
+#openlist-footer-theme,
 .openlist-footer-actions a[href*="@manage"] {
 
-    font-weight:
-        500;
+    display:
+        none !important;
 }
 
 
@@ -1525,11 +1538,11 @@ a:hover {
 
         /*
          * 给底部导航留出空间
-         * 使用 safe-area 防止 iPhone 底部黑条挡住
+         * 手机 footer 只剩 Online 状态条
          */
         padding-bottom:
             calc(
-                74px + env(safe-area-inset-bottom)
+                68px + env(safe-area-inset-bottom)
             ) !important;
 
         overflow-x: hidden !important;
@@ -1570,13 +1583,46 @@ a:hover {
             15px !important;
 
         /*
-         * 防止内容撑破
+         * 面包屑允许横向滚动，不再强制单行挤压
          */
-        overflow:
+        overflow-x:
+            auto !important;
+
+        overflow-y:
             hidden !important;
+
+        -webkit-overflow-scrolling:
+            touch;
+
+        scrollbar-width:
+            none;
+    }
+
+    .body > .nav::-webkit-scrollbar {
+
+        display:
+            none;
+    }
+
+    .body > .nav .nav-link {
+
+        max-width:
+            120px;
+
+        overflow:
+            hidden;
+
+        text-overflow:
+            ellipsis;
 
         white-space:
             nowrap;
+    }
+
+    .body > .nav .nav-item:last-child .nav-link {
+
+        max-width:
+            160px;
     }
 
 
@@ -1657,6 +1703,78 @@ a:hover {
 
         transform:
             none !important;
+    }
+
+
+    /* =====================================================
+       列表项行内边距
+       ===================================================== */
+
+    .list-item {
+
+        padding:
+            6px 8px !important;
+
+        gap:
+            4px !important;
+
+        font-size:
+            13px !important;
+    }
+
+
+    /* =====================================================
+       列表项图标 & checkbox 缩小
+       ===================================================== */
+
+    .list-item .icon {
+
+        width:
+            20px !important;
+
+        height:
+            20px !important;
+
+        flex-shrink:
+            0 !important;
+    }
+
+    .list-item .name-box {
+
+        gap:
+            3px !important;
+    }
+
+    .list-item .name-box > label {
+
+        transform:
+            scale(0.85);
+
+        margin:
+            0 -2px !important;
+    }
+
+    .list-item .name-box .icon {
+
+        margin-right:
+            0 !important;
+    }
+
+
+    /* =====================================================
+       表头缩小
+       ===================================================== */
+
+    .list .title {
+
+        padding:
+            6px 8px !important;
+
+        font-size:
+            12px !important;
+
+        gap:
+            4px !important;
     }
 
 
@@ -1807,10 +1925,10 @@ a:hover {
             none !important;
 
         height:
-            52px !important;
+            auto !important;
 
         min-height:
-            52px !important;
+            44px !important;
 
         box-sizing:
             border-box !important;
@@ -1818,11 +1936,8 @@ a:hover {
         border-radius:
             16px !important;
 
-        /*
-         * 防止内容撑开 Footer
-         */
         overflow:
-            hidden !important;
+            visible !important;
     }
 
 
@@ -1836,13 +1951,16 @@ a:hover {
             100% !important;
 
         height:
-            100% !important;
+            auto !important;
+
+        min-height:
+            44px !important;
 
         min-width:
             0 !important;
 
         padding:
-            0 8px !important;
+            6px 10px !important;
 
         box-sizing:
             border-box !important;
@@ -1850,11 +1968,17 @@ a:hover {
         display:
             flex !important;
 
+        flex-direction:
+            row !important;
+
         align-items:
             center !important;
 
         justify-content:
-            space-between !important;
+            center !important;
+
+        gap:
+            0 !important;
 
         overflow:
             hidden !important;
@@ -1933,9 +2057,27 @@ a:hover {
     }
 
 
+    /*
+     * 手机底栏：
+     *
+     * 主题 / 管理 已在上面全局隐藏（不限断点）
+     * 返回顶部   -> 保留，只显示 ↑ 图标（文字在下方隐藏）
+     *
+     * 右下角悬浮的 #openlist-top 在手机上已隐藏，
+     * 避免和底栏的 ↑ 重复（见 custom_content.html 的 768px 断点）。
+     */
+
+
     /* =====================================================
        Footer 右侧
        ===================================================== */
+
+    /*
+     * 这里刻意不写 display，
+     * 避免覆盖「隐藏主题 / 管理」的规则。
+     * 这一组里只剩「返回顶部」一个按钮，
+     * 以下尺寸就是它的实际尺寸。
+     */
 
     .openlist-footer-actions {
 
@@ -1944,9 +2086,6 @@ a:hover {
 
         min-width:
             0 !important;
-
-        display:
-            flex !important;
 
         align-items:
             center !important;
@@ -2266,9 +2405,6 @@ a:hover {
 
     #openlist-footer {
 
-        left:
-            6px !important;
-
         right:
             6px !important;
 
@@ -2278,10 +2414,10 @@ a:hover {
             ) !important;
 
         height:
-            50px !important;
+            auto !important;
 
         min-height:
-            50px !important;
+            40px !important;
 
         border-radius:
             15px !important;
@@ -2291,27 +2427,20 @@ a:hover {
     .openlist-footer-inner {
 
         padding:
-            0 6px !important;
+            4px 8px !important;
     }
 
 
     .openlist-footer-status {
 
         height:
-            32px !important;
+            30px !important;
 
         padding:
             0 7px !important;
 
         font-size:
             10px !important;
-    }
-
-
-    .openlist-footer-actions {
-
-        gap:
-            1px !important;
     }
 
 
@@ -2402,9 +2531,6 @@ a:hover {
 
     #openlist-topbar {
 
-        left:
-            6px !important;
-
         right:
             6px !important;
 
@@ -2475,7 +2601,7 @@ a:hover {
     .openlist-footer-inner {
 
         padding:
-            0 4px !important;
+            5px 6px !important;
     }
 
 
@@ -3269,6 +3395,47 @@ html.openlist-theme-warp #root {
 html.openlist-theme-warp #openlist-video-bg {
     filter: brightness(1.22) saturate(1.45) hue-rotate(28deg);
     transform: scale(1.06);
+}
+
+
+/* =========================================================
+   原生组件层级适配
+   通知 / 选中工具栏 / 右键菜单 避开自定义导航栏
+   ========================================================= */
+
+/* Hope UI 通知列表（欢迎语等提示）：置于顶栏之上并下移避开顶栏 */
+.hope-notification__list {
+    z-index: 100000 !important;
+    top: 84px !important;
+}
+
+/* 选中文件时底部弹出的操作菜单：上移避开底部导航 */
+.center-toolbar {
+    z-index: 100000 !important;
+    bottom: 92px !important;
+}
+
+/* 原生右下角悬浮工具条：上移避开底部导航 */
+.left-toolbar-box {
+    z-index: 100000 !important;
+    bottom: 92px !important;
+}
+
+/* 右键菜单：置于导航栏之上 */
+.solid-contextmenu {
+    z-index: 100000 !important;
+}
+
+@media (max-width: 768px) {
+
+    .hope-notification__list {
+        top: 72px !important;
+    }
+
+    .center-toolbar,
+    .left-toolbar-box {
+        bottom: calc(76px + env(safe-area-inset-bottom)) !important;
+    }
 }
 
 

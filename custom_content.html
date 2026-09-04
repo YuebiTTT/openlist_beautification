@@ -1471,27 +1471,10 @@
 
     @media (max-width: 768px) {
 
-        #openlist-topbar {
-
-            top:
-                7px;
-
-            width:
-                calc(
-                    100vw - 16px
-                );
-
-            height:
-                54px;
-
-            padding:
-                0 6px 0 9px;
-
-            border-radius:
-                16px;
-        }
-
-
+        /*
+         * topbar 内各元素微调
+         * topbar 本体由 custom_head.css 统一管理
+         */
         .openlist-brand {
 
             min-width:
@@ -1561,25 +1544,6 @@
         }
 
 
-        .body > .nav {
-
-            margin-top:
-                68px !important;
-        }
-
-
-        #openlist-search-panel {
-
-            top:
-                68px;
-
-            width:
-                calc(
-                    100vw - 24px
-                );
-        }
-
-
         #openlist-status {
 
             left:
@@ -1590,41 +1554,16 @@
         }
 
 
+        /*
+         * 手机上隐藏右下角悬浮的返回顶部
+         *
+         * 底栏里已经有「返回顶部」箭头，
+         * 这里再显示一个会变成两个箭头上下叠着。
+         */
         #openlist-top {
 
-            right:
-                12px;
-
-            bottom:
-                12px;
-        }
-
-
-        #openlist-footer {
-
-            width:
-                calc(
-                    100% - 24px
-                );
-        }
-
-
-        .openlist-footer-inner {
-
-            min-height:
-                auto;
-
-            padding:
-                10px 13px;
-
-            flex-direction:
-                column;
-
-            align-items:
-                flex-start;
-
-            gap:
-                8px;
+            display:
+                none !important;
         }
 
     }
