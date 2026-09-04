@@ -2628,44 +2628,100 @@
                     .then(function () {
 
                         const r =
-                            Math.hypot(
-                                Math.max(
-                                    x,
-                                    window.innerWidth - x
-                                ),
+                            Math.ceil(
+                                Math.hypot(
+                                    Math.max(
+                                        x,
+                                        window.innerWidth - x
+                                    ),
 
-                                Math.max(
-                                    y,
-                                    window.innerHeight - y
-                                )
+                                    Math.max(
+                                        y,
+                                        window.innerHeight - y
+                                    )
+                                ) * 1.05
                             );
 
                         document.documentElement.animate(
-                            {
-                                clipPath: [
-                                    "circle(0px at " +
+                            [
+                                {
+                                    clipPath:
+                                        "circle(0px at " + x + "px " + y + "px)",
+
+                                    transform: "scale(1.16)",
+
+                                    filter:
+                                        "brightness(1.7) saturate(1.6)",
+
+                                    easing:
+                                        "cubic-bezier(0.6, 0, 0.9, 0.4)"
+                                },
+
+                                {
+                                    clipPath:
+                                        "circle(" +
+                                        Math.round(r * 0.24) +
+                                        "px at " +
                                         x +
                                         "px " +
                                         y +
                                         "px)",
 
-                                    "circle(" +
-                                        r +
-                                        "px at " +
-                                        x +
-                                        "px " +
-                                        y +
-                                        "px)"
-                                ]
-                            },
-                            {
-                                duration: 700,
+                                    transform: "scale(1.06)",
 
-                                easing:
-                                    "cubic-bezier(0.4, 0, 0.2, 1)",
+                                    filter:
+                                        "brightness(1.3) saturate(1.25)",
+
+                                    offset: 0.4,
+
+                                    easing:
+                                        "cubic-bezier(0.1, 0.7, 0.15, 1)"
+                                },
+
+                                {
+                                    clipPath:
+                                        "circle(" + r + "px at " + x + "px " + y + "px)",
+
+                                    transform: "scale(1)",
+
+                                    filter:
+                                        "brightness(1) saturate(1)"
+                                }
+                            ],
+                            {
+                                duration: 1000,
 
                                 pseudoElement:
                                     "::view-transition-new(root)"
+                            }
+                        );
+
+                        document.documentElement.animate(
+                            [
+                                {
+                                    transform: "scale(1)",
+
+                                    filter: "blur(0px)",
+
+                                    opacity: 1
+                                },
+
+                                {
+                                    transform: "scale(1.08)",
+
+                                    filter: "blur(10px)",
+
+                                    opacity: 0.35
+                                }
+                            ],
+                            {
+                                duration: 1000,
+
+                                easing:
+                                    "cubic-bezier(0.5, 0, 0.2, 1)",
+
+                                pseudoElement:
+                                    "::view-transition-old(root)"
                             }
                         );
 
@@ -2687,110 +2743,124 @@
 
         /* =====================================================
         主题切换转场
-        Fallback 覆盖层动画
+        Fallback 时空扭曲 + 冲击波
         ===================================================== */
 
-        function fallbackThemeTransition(
-            x,
-            y,
-            apply
-        ) {
+        function buildThemeFx(x, y, toDark) {
 
-            let overlay =
+            const old =
                 document.getElementById(
-                    "openlist-theme-transition"
+                    "openlist-theme-fx"
                 );
 
-            if (!overlay) {
+            if (old) {
 
-                overlay =
-                    document.createElement(
-                        "div"
-                    );
-
-                overlay.id =
-                    "openlist-theme-transition";
-
-                document.body.appendChild(
-                    overlay
-                );
+                old.remove();
 
             }
 
+            const size =
+                Math.ceil(
+                    Math.hypot(
+                        Math.max(
+                            x,
+                            window.innerWidth - x
+                        ),
+
+                        Math.max(
+                            y,
+                            window.innerHeight - y
+                        )
+                    ) * 2.6
+                );
+
+            const geo =
+                "left:" + x + "px;" +
+                "top:" + y + "px;" +
+                "width:" + size + "px;" +
+                "height:" + size + "px;";
+
+            const fx =
+                document.createElement("div");
+
+            fx.id = "openlist-theme-fx";
+
+            fx.className = toDark
+                ? "to-dark"
+                : "to-light";
+
+            fx.style.setProperty(
+                "--fx-x",
+                x + "px"
+            );
+
+            fx.style.setProperty(
+                "--fx-y",
+                y + "px"
+            );
+
+            fx.innerHTML =
+                '<div class="fx-core" style="' + geo + '"></div>' +
+                '<div class="fx-ring fx-ring-1" style="' + geo + '"></div>' +
+                '<div class="fx-ring fx-ring-2" style="' + geo + '"></div>' +
+                '<div class="fx-ring fx-ring-3" style="' + geo + '"></div>' +
+                '<div class="fx-flash"></div>';
+
+            document.body.appendChild(fx);
+
+            return fx;
+
+        }
+
+
+        function fallbackThemeTransition(x, y, apply) {
 
             const toDark =
                 !document.body.classList.contains(
                     "hope-ui-dark"
                 );
 
-            overlay.style.setProperty(
-                "--openlist-tx",
-                x + "px"
-            );
+            const fx =
+                buildThemeFx(x, y, toDark);
 
-            overlay.style.setProperty(
-                "--openlist-ty",
-                y + "px"
-            );
+            const root =
+                document.documentElement;
 
-            overlay.style.background = toDark
-                ? "radial-gradient(circle at " +
-                      x +
-                      "px " +
-                      y +
-                      "px, #1d2939 0%, #0b0f16 65%)"
-                : "radial-gradient(circle at " +
-                      x +
-                      "px " +
-                      y +
-                      "px, #ffffff 0%, #e3ecf5 65%)";
-
-            overlay.classList.remove(
-                "run",
-                "done"
+            root.classList.add(
+                "openlist-theme-warp"
             );
 
             requestAnimationFrame(function () {
 
-                overlay.classList.add(
-                    "run"
-                );
+                fx.classList.add("run");
 
             });
 
-
             /*
-            * 全屏被覆盖的时刻切换主题
+            * 全屏被能量核心覆盖时切换主题
             */
 
-            setTimeout(
-                apply,
-                460
-            );
+            setTimeout(apply, 430);
+
+            /*
+            * 揭示新主题
+            */
 
             setTimeout(function () {
 
-                overlay.classList.remove(
-                    "run"
+                fx.classList.add("reveal");
+
+                root.classList.remove(
+                    "openlist-theme-warp"
                 );
 
-                overlay.classList.add(
-                    "done"
-                );
-
-            },
-            500
-            );
+            }, 530);
 
             setTimeout(function () {
 
-                overlay.classList.remove(
-                    "done"
-                );
+                fx.remove();
 
-            },
-            1200
-            );
+            }, 1500);
 
         }
 

@@ -3086,7 +3086,7 @@ a:hover {
 
 /* =====================================================
    主题切换转场特效
-   View Transitions 圆形扩散
+   View Transitions 蓄力爆发
    ===================================================== */
 
 ::view-transition-old(root),
@@ -3106,83 +3106,169 @@ a:hover {
 
 /* =====================================================
    主题切换转场特效
-   Fallback 全屏涟漪覆盖层
+   Fallback 时空扭曲 + 能量冲击波
    ===================================================== */
 
-#openlist-theme-transition {
+#openlist-theme-fx {
     position: fixed;
     inset: 0;
     z-index: 2147483647;
+    overflow: hidden;
     pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
-    clip-path: circle(0px at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
-    will-change: clip-path, opacity, transform;
 }
 
-#openlist-theme-transition.run {
-    visibility: visible;
-    opacity: 1;
-    animation: openlist-theme-expand 0.48s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-}
-
-#openlist-theme-transition.done {
-    visibility: visible;
-    animation: openlist-theme-reveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-#openlist-theme-transition::after {
-    content: "";
+#openlist-theme-fx .fx-core,
+#openlist-theme-fx .fx-ring {
     position: absolute;
-    left: var(--openlist-tx, 50%);
-    top: var(--openlist-ty, 50%);
-    width: 42px;
-    height: 42px;
     border-radius: 50%;
-    border: 2px solid rgba(140, 190, 255, 0.6);
+    transform: translate(-50%, -50%) scale(0);
+    will-change: transform, opacity;
+}
+
+#openlist-theme-fx.to-dark .fx-core {
+    background: radial-gradient(circle, #31426a 0%, #16213c 45%, #080d18 100%);
     box-shadow:
-        0 0 26px rgba(140, 190, 255, 0.4),
-        inset 0 0 14px rgba(140, 190, 255, 0.3);
-    transform: translate(-50%, -50%) scale(0.15);
+        0 0 90px 30px rgba(70, 130, 255, 0.42),
+        inset 0 0 70px rgba(120, 160, 255, 0.20);
+}
+
+#openlist-theme-fx.to-light .fx-core {
+    background: radial-gradient(circle, #ffffff 0%, #e2edfa 45%, #c6d9ee 100%);
+    box-shadow:
+        0 0 90px 30px rgba(130, 195, 255, 0.48),
+        inset 0 0 70px rgba(255, 255, 255, 0.55);
+}
+
+#openlist-theme-fx .fx-ring {
+    border: 2.5px solid rgba(96, 165, 250, 0.55);
+    box-shadow:
+        0 0 28px rgba(96, 165, 250, 0.32),
+        inset 0 0 24px rgba(139, 92, 246, 0.22);
     opacity: 0;
-    pointer-events: none;
 }
 
-#openlist-theme-transition.run::after {
-    animation: openlist-theme-ripple 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+#openlist-theme-fx .fx-ring-2 {
+    border-color: rgba(167, 139, 250, 0.50);
+    box-shadow:
+        0 0 28px rgba(167, 139, 250, 0.28),
+        inset 0 0 24px rgba(96, 165, 250, 0.20);
 }
 
-@keyframes openlist-theme-expand {
+#openlist-theme-fx .fx-ring-3 {
+    border-color: rgba(103, 232, 249, 0.45);
+    box-shadow:
+        0 0 28px rgba(103, 232, 249, 0.25),
+        inset 0 0 24px rgba(96, 165, 250, 0.18);
+}
+
+#openlist-theme-fx .fx-flash {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: radial-gradient(
+        circle at var(--fx-x, 50%) var(--fx-y, 50%),
+        rgba(255, 255, 255, 0.85),
+        rgba(190, 220, 255, 0.35) 40%,
+        transparent 72%
+    );
+}
+
+#openlist-theme-fx.run .fx-core {
+    animation: openlist-fx-core-expand 0.55s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+#openlist-theme-fx.run .fx-ring-1 {
+    animation: openlist-fx-ring 0.8s cubic-bezier(0.16, 1, 0.3, 1) 60ms forwards;
+}
+
+#openlist-theme-fx.run .fx-ring-2 {
+    animation: openlist-fx-ring 0.95s cubic-bezier(0.16, 1, 0.3, 1) 190ms forwards;
+}
+
+#openlist-theme-fx.run .fx-ring-3 {
+    animation: openlist-fx-ring 1.1s cubic-bezier(0.16, 1, 0.3, 1) 330ms forwards;
+}
+
+#openlist-theme-fx.run .fx-flash {
+    animation: openlist-fx-flash 0.5s cubic-bezier(0.7, 0, 0.3, 1) 300ms forwards;
+}
+
+#openlist-theme-fx.reveal .fx-core {
+    animation: openlist-fx-core-reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes openlist-fx-core-expand {
     from {
-        clip-path: circle(0px at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
+        transform: translate(-50%, -50%) scale(0);
     }
     to {
-        clip-path: circle(200% at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 
-@keyframes openlist-theme-reveal {
+@keyframes openlist-fx-core-reveal {
     from {
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
-        clip-path: circle(200% at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
-        transform: scale(1);
     }
     to {
+        transform: translate(-50%, -50%) scale(1.18);
         opacity: 0;
-        clip-path: circle(200% at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
-        transform: scale(1.1);
     }
 }
 
-@keyframes openlist-theme-ripple {
+@keyframes openlist-fx-ring {
     0% {
-        transform: translate(-50%, -50%) scale(0.15);
-        opacity: 0.95;
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
     }
     100% {
-        transform: translate(-50%, -50%) scale(26);
+        transform: translate(-50%, -50%) scale(1);
         opacity: 0;
     }
+}
+
+@keyframes openlist-fx-flash {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   主题切换转场 内容扭曲
+   ===================================================== */
+
+#root {
+    transition:
+        filter 0.45s cubic-bezier(0.7, 0, 0.3, 1),
+        transform 0.45s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+html.openlist-theme-warp #root {
+    filter: blur(9px) brightness(1.12) saturate(1.35);
+    transform: scale(0.945);
+}
+
+#openlist-video-bg {
+    transition:
+        opacity 0.45s ease,
+        filter 0.5s cubic-bezier(0.7, 0, 0.3, 1),
+        transform 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+html.openlist-theme-warp #openlist-video-bg {
+    filter: brightness(1.22) saturate(1.45) hue-rotate(28deg);
+    transform: scale(1.06);
 }
 
 
