@@ -1,0 +1,3315 @@
+    <!-- =========================================================
+        OpenList Video Background
+        ========================================================= -->
+
+
+    <!-- =========================================================
+        视频背景
+        ========================================================= -->
+
+    <video
+        id="openlist-video-bg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        disablepictureinpicture
+    ></video>
+
+
+    <!-- =========================================================
+        视频遮罩
+        ========================================================= -->
+
+    <div
+        id="openlist-video-overlay"
+    ></div>
+
+
+
+
+    <!-- =========================================================
+        自定义 UI
+        ========================================================= -->
+
+    <div
+        id="openlist-custom-ui"
+    >
+
+
+        <!-- =====================================================
+            顶部导航
+            ===================================================== -->
+
+        <header
+            id="openlist-topbar"
+        >
+
+
+            <!-- =================================================
+                品牌
+                ================================================= -->
+
+            <div
+                class="openlist-brand"
+            >
+
+                <div
+                    class="openlist-brand-icon"
+                >
+                    ◈
+                </div>
+
+
+                <div
+                    class="openlist-brand-text"
+                >
+
+                    <div
+                        class="openlist-brand-title"
+                    >
+                        铜催化剂
+                    </div>
+
+
+                    <div
+                        class="openlist-brand-subtitle"
+                    >
+                        Personal Cloud
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                搜索
+                ================================================= -->
+
+            <div
+                class="openlist-search-center"
+            >
+
+                <button
+                    id="openlist-search-button"
+                    class="openlist-search-button"
+                    type="button"
+                >
+
+                    <span
+                        class="openlist-search-icon"
+                    >
+                        ⌕
+                    </span>
+
+
+                    <span
+                        class="openlist-search-text"
+                    >
+                        Search files
+                    </span>
+
+
+                    <span
+                        class="openlist-search-shortcut"
+                    >
+                        /
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                右侧工具
+                ================================================= -->
+
+            <div
+                class="openlist-actions"
+            >
+
+
+                <!-- Online -->
+
+                <div
+                    class="openlist-online"
+                    title="OpenList Online"
+                >
+
+                    <span
+                        class="openlist-online-dot"
+                    ></span>
+
+
+                    <span
+                        class="openlist-online-text"
+                    >
+                        Online
+                    </span>
+
+                </div>
+
+
+                <!-- Theme -->
+
+                <button
+                    id="openlist-theme-button"
+                    class="openlist-action"
+                    type="button"
+                    title="切换主题"
+                >
+                    ☼
+                </button>
+
+
+                <!-- Refresh -->
+
+                <button
+                    id="openlist-refresh-button"
+                    class="openlist-action"
+                    type="button"
+                    title="刷新"
+                >
+                    ↻
+                </button>
+
+
+                <!-- More -->
+
+                <button
+                    id="openlist-more-button"
+                    class="openlist-action"
+                    type="button"
+                    title="更多"
+                >
+                    ⋯
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+            搜索面板
+            ===================================================== -->
+
+        <div
+            id="openlist-search-panel"
+        >
+
+            <div
+                class="openlist-search-box"
+            >
+
+                <span
+                    class="openlist-search-panel-icon"
+                >
+                    ⌕
+                </span>
+
+
+                <input
+                    id="openlist-search-input"
+                    type="text"
+                    placeholder="搜索文件..."
+                    autocomplete="off"
+                >
+
+
+                <span
+                    class="openlist-search-esc"
+                >
+                    ESC
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================================
+            返回顶部
+            ===================================================== -->
+
+        <button
+            id="openlist-top"
+            type="button"
+            title="返回顶部"
+        >
+            ↑
+        </button>
+
+
+        <!-- =====================================================
+            Footer
+            ===================================================== -->
+
+        <footer id="openlist-footer">
+
+            <div class="openlist-footer-inner">
+
+                <!-- 左侧：在线状态 -->
+                <div class="openlist-footer-status">
+
+                    <span class="openlist-footer-status-dot"></span>
+
+                    <span>Online</span>
+
+                </div>
+
+
+                <!-- 中间：OpenList 信息 -->
+                <div class="openlist-footer-center">
+
+                    <span class="openlist-footer-brand">
+                        铜催化剂
+                    </span>
+
+                    <span class="openlist-footer-divider">
+                        ·
+                    </span>
+
+                    <a
+                        href="https://github.com/OpenListTeam/OpenList"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        由 OpenList 驱动
+                    </a>
+
+                </div>
+
+
+                <!-- 右侧 -->
+                <div class="openlist-footer-actions">
+
+                    <!-- 主题 -->
+                    <button
+                        id="openlist-footer-theme"
+                        type="button"
+                        title="切换主题"
+                    >
+                        ☼
+                        <span>主题</span>
+                    </button>
+
+
+                    <!-- 管理 -->
+                    <a
+                        href="/@manage"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="管理"
+                    >
+                        ⚙
+                        <span>管理</span>
+                    </a>
+
+
+                    <!-- 返回顶部 -->
+                    <button
+                        id="openlist-footer-top"
+                        type="button"
+                        title="返回顶部"
+                    >
+                        ↑
+                        <span>顶部</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </footer>
+        
+    </div>
+
+
+    <style>
+
+    /* =========================================================
+    Custom UI
+    ========================================================= */
+
+    #openlist-custom-ui {
+
+        position:
+            relative;
+
+        z-index:
+            9999;
+
+        pointer-events:
+            none;
+    }
+
+
+    /* =========================================================
+    顶部栏
+    ========================================================= */
+
+    #openlist-topbar {
+
+        position:
+            fixed;
+
+        top:
+            10px;
+
+        left:
+            50%;
+
+        transform:
+            translateX(-50%);
+
+        width:
+            min(
+                calc(100vw - 40px),
+                1200px
+            );
+
+        height:
+            58px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-between;
+
+        padding:
+            0 10px 0 16px;
+
+        border:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.50
+            );
+
+        border-radius:
+            18px;
+
+        background:
+            rgba(
+                255,
+                255,
+                255,
+                0.48
+            );
+
+        box-shadow:
+            0 12px 40px
+            rgba(
+                30,
+                80,
+                130,
+                0.10
+            );
+
+        backdrop-filter:
+            blur(22px)
+            saturate(150%);
+
+        -webkit-backdrop-filter:
+            blur(22px)
+            saturate(150%);
+
+        pointer-events:
+            auto;
+
+        transition:
+            all .3s ease;
+    }
+
+
+    #openlist-topbar.scrolled {
+
+        background:
+            rgba(
+                255,
+                255,
+                255,
+                0.64
+            );
+
+        box-shadow:
+            0 15px 45px
+            rgba(
+                30,
+                80,
+                130,
+                0.14
+            );
+    }
+
+
+    .hope-ui-dark
+    #openlist-topbar {
+
+        background:
+            rgba(
+                15,
+                19,
+                27,
+                0.60
+            );
+
+        border-color:
+            rgba(
+                255,
+                255,
+                255,
+                0.09
+            );
+
+        box-shadow:
+            0 12px 45px
+            rgba(
+                0,
+                0,
+                0,
+                0.30
+            );
+    }
+
+
+    .hope-ui-dark
+    #openlist-topbar.scrolled {
+
+        background:
+            rgba(
+                13,
+                17,
+                24,
+                0.76
+            );
+    }
+
+
+    /* =========================================================
+    品牌
+    ========================================================= */
+
+    .openlist-brand {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            10px;
+
+        min-width:
+            180px;
+    }
+
+
+    .openlist-brand-icon {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border-radius:
+            11px;
+
+        background:
+            rgba(
+                var(--openlist-accent-rgb),
+                0.10
+            );
+
+        color:
+            rgb(
+                var(--openlist-accent-rgb)
+            );
+
+        font-size:
+            21px;
+
+        box-shadow:
+            inset
+            0 0
+            0 1px
+            rgba(
+                var(--openlist-accent-rgb),
+                0.08
+            );
+    }
+
+
+    .openlist-brand-title {
+
+        font-size:
+            14px;
+
+        font-weight:
+            700;
+
+        line-height:
+            17px;
+
+        color:
+            #43515f;
+    }
+
+
+    .openlist-brand-subtitle {
+
+        font-size:
+            10px;
+
+        line-height:
+            12px;
+
+        color:
+            #8c98a5;
+    }
+
+
+    .hope-ui-dark
+    .openlist-brand-title {
+
+        color:
+            #edf2f7;
+    }
+
+
+    .hope-ui-dark
+    .openlist-brand-subtitle {
+
+        color:
+            #8994a2;
+    }
+
+
+    /* =========================================================
+    搜索
+    ========================================================= */
+
+    .openlist-search-center {
+
+        position:
+            absolute;
+
+        left:
+            50%;
+
+        top:
+            50%;
+
+        transform:
+            translate(
+                -50%,
+                -50%
+            );
+    }
+
+
+    .openlist-search-button {
+
+        width:
+            230px;
+
+        height:
+            38px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            9px;
+
+        padding:
+            0 10px;
+
+        border:
+            1px solid
+            rgba(
+                120,
+                150,
+                180,
+                0.11
+            );
+
+        border-radius:
+            12px;
+
+        background:
+            rgba(
+                255,
+                255,
+                255,
+                0.30
+            );
+
+        color:
+            #8995a3;
+
+        cursor:
+            pointer;
+
+        transition:
+            all .2s ease;
+    }
+
+
+    .openlist-search-button:hover {
+
+        background:
+            rgba(
+                var(--openlist-accent-rgb),
+                0.08
+            );
+
+        border-color:
+            rgba(
+                var(--openlist-accent-rgb),
+                0.17
+            );
+
+        color:
+            rgb(
+                var(--openlist-accent-rgb)
+            );
+    }
+
+
+    .openlist-search-icon {
+
+        font-size:
+            20px;
+    }
+
+
+    .openlist-search-text {
+
+        flex:
+            1;
+
+        text-align:
+            left;
+
+        font-size:
+            12px;
+    }
+
+
+    .openlist-search-shortcut {
+
+        width:
+            20px;
+
+        height:
+            20px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border-radius:
+            6px;
+
+        background:
+            rgba(
+                100,
+                120,
+                140,
+                0.08
+            );
+
+        font-size:
+            11px;
+    }
+
+
+    /* =========================================================
+    Actions
+    ========================================================= */
+
+    .openlist-actions {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            4px;
+    }
+
+
+    .openlist-online {
+
+        height:
+            34px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            7px;
+
+        padding:
+            0 10px;
+
+        border-radius:
+            10px;
+
+        background:
+            rgba(
+                255,
+                255,
+                255,
+                0.25
+            );
+
+        color:
+            #778391;
+
+        font-size:
+            11px;
+    }
+
+
+    .openlist-online-dot,
+    .openlist-status-dot {
+
+        width:
+            7px;
+
+        height:
+            7px;
+
+        border-radius:
+            50%;
+
+        background:
+            #4fd18a;
+
+        box-shadow:
+            0 0 10px
+            rgba(
+                79,
+                209,
+                138,
+                0.75
+            );
+
+        animation:
+            openlist-online-pulse
+            2s infinite;
+    }
+
+
+    @keyframes openlist-online-pulse {
+
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: .45;
+            transform: scale(.82);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+
+    .openlist-action {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border:
+            0;
+
+        border-radius:
+            11px;
+
+        background:
+            transparent;
+
+        color:
+            #687583;
+
+        font-size:
+            17px;
+
+        cursor:
+            pointer;
+
+        transition:
+            all .2s ease;
+    }
+
+
+    .openlist-action:hover {
+
+        color:
+            rgb(
+                var(--openlist-accent-rgb)
+            );
+
+        background:
+            rgba(
+                var(--openlist-accent-rgb),
+                0.09
+            );
+
+        transform:
+            translateY(-2px);
+    }
+
+
+    .hope-ui-dark
+    .openlist-online {
+
+        background:
+            rgba(
+                255,
+                255,
+                255,
+                0.05
+            );
+
+        color:
+            #a4afbc;
+    }
+
+
+    .hope-ui-dark
+    .openlist-action {
+
+        color:
+            #aeb8c4;
+    }
+
+
+    /* =========================================================
+    搜索弹窗
+    ========================================================= */
+
+    #openlist-search-panel {
+
+        position:
+            fixed;
+
+        top:
+            78px;
+
+        left:
+            50%;
+
+        width:
+            min(
+                calc(100vw - 30px),
+                600px
+            );
+
+        transform:
+            translate(
+                -50%,
+                -10px
+            );
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        pointer-events:
+            none;
+
+        z-index:
+            10001;
+
+        transition:
+            all .22s ease;
+    }
+
+
+    #openlist-search-panel.open {
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        pointer-events:
+            auto;
+
+        transform:
+            translate(
+                -50%,
+                0
+            );
+    }
+
+
+    .openlist-search-box {
+
+        height:
+            58px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            12px;
+
+        padding:
+            0 13px;
+
+        border:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.50
+            );
+
+        border-radius:
+            17px;
+
+        background:
+            rgba(
+                255,
+                255,
+                255,
+                0.74
+            );
+
+        box-shadow:
+            0 15px 50px
+            rgba(
+                30,
+                80,
+                130,
+                0.16
+            );
+
+        backdrop-filter:
+            blur(25px);
+
+        -webkit-backdrop-filter:
+            blur(25px);
+    }
+
+
+    .hope-ui-dark
+    .openlist-search-box {
+
+        background:
+            rgba(
+                15,
+                19,
+                27,
+                0.80
+            );
+
+        border-color:
+            rgba(
+                255,
+                255,
+                255,
+                0.09
+            );
+
+        box-shadow:
+            0 15px 50px
+            rgba(
+                0,
+                0,
+                0,
+                0.32
+            );
+    }
+
+
+    .openlist-search-panel-icon {
+
+        color:
+            rgb(
+                var(--openlist-accent-rgb)
+            );
+
+        font-size:
+            21px;
+    }
+
+
+    #openlist-search-input {
+
+        flex:
+            1;
+
+        height:
+            100%;
+
+        padding:
+            0;
+
+        border:
+            0 !important;
+
+        outline:
+            0 !important;
+
+        box-shadow:
+            none !important;
+
+        background:
+            transparent !important;
+
+        color:
+            #43515e;
+
+        font-size:
+            14px;
+    }
+
+
+    .hope-ui-dark
+    #openlist-search-input {
+
+        color:
+            #edf2f7;
+    }
+
+
+    #openlist-search-input::placeholder {
+
+        color:
+            #9ba6b2;
+    }
+
+
+    .openlist-search-esc {
+
+        padding:
+            4px 7px;
+
+        border-radius:
+            6px;
+
+        background:
+            rgba(
+                100,
+                120,
+                140,
+                0.08
+            );
+
+        color:
+            #8d98a5;
+
+        font-size:
+            10px;
+    }
+
+
+    /* =========================================================
+    返回顶部
+    ========================================================= */
+
+    #openlist-top {
+
+        position:
+            fixed;
+
+        right:
+            20px;
+
+        bottom:
+            20px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        border:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.46
+            );
+
+        border-radius:
+            14px;
+
+        background:
+            rgba(
+                255,
+                255,
+                255,
+                0.54
+            );
+
+        box-shadow:
+            0 10px 32px
+            rgba(
+                30,
+                80,
+                130,
+                0.10
+            );
+
+        color:
+            #687685;
+
+        font-size:
+            18px;
+
+        cursor:
+            pointer;
+
+        pointer-events:
+            auto;
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        transform:
+            translateY(10px);
+
+        transition:
+            all .25s ease;
+    }
+
+
+    #openlist-top.show {
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        transform:
+            translateY(0);
+    }
+
+
+    #openlist-top:hover {
+
+        color:
+            rgb(
+                var(--openlist-accent-rgb)
+            );
+
+        background:
+            rgba(
+                var(--openlist-accent-rgb),
+                0.12
+            );
+
+        transform:
+            translateY(-3px);
+    }
+
+
+    /* =========================================================
+    Footer
+    ========================================================= */
+
+    #openlist-footer {
+
+        width:
+            min(
+                calc(100% - 44px),
+                1200px
+            );
+
+        margin:
+            35px auto 18px;
+
+        pointer-events:
+            auto;
+    }
+
+
+    .openlist-footer-inner {
+
+        min-height:
+            46px;
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-between;
+
+        padding:
+            0 18px;
+
+        border:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.45
+            );
+
+        border-radius:
+            15px;
+
+        background:
+            rgba(
+                255,
+                255,
+                255,
+                0.46
+            );
+
+        box-shadow:
+            0 10px 32px
+            rgba(
+                30,
+                80,
+                130,
+                0.08
+            );
+
+        backdrop-filter:
+            blur(18px);
+
+        -webkit-backdrop-filter:
+            blur(18px);
+
+        color:
+            #84909d;
+
+        font-size:
+            12px;
+    }
+
+
+    .hope-ui-dark
+    .openlist-footer-inner {
+
+        background:
+            rgba(
+                17,
+                21,
+                28,
+                0.56
+            );
+
+        border-color:
+            rgba(
+                255,
+                255,
+                255,
+                0.08
+            );
+
+        color:
+            #9ca7b4;
+    }
+
+
+    .openlist-footer-left {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            7px;
+    }
+
+
+    .openlist-footer-title {
+
+        color:
+            rgb(
+                var(--openlist-accent-rgb)
+            );
+
+        font-weight:
+            600;
+    }
+
+
+    .openlist-footer-separator {
+
+        opacity:
+            .5;
+    }
+
+
+    .openlist-footer-right {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        gap:
+            13px;
+    }
+
+
+    .openlist-footer-right button {
+
+        padding:
+            0;
+
+        border:
+            0;
+
+        background:
+            transparent;
+
+        color:
+            inherit;
+
+        font-size:
+            12px;
+
+        cursor:
+            pointer;
+
+        transition:
+            color .2s ease;
+    }
+
+
+    .openlist-footer-right button:hover {
+
+        color:
+            rgb(
+                var(--openlist-accent-rgb)
+            );
+    }
+
+
+    /* =========================================================
+    手机端
+    ========================================================= */
+
+    @media (max-width: 768px) {
+
+        #openlist-topbar {
+
+            top:
+                7px;
+
+            width:
+                calc(
+                    100vw - 16px
+                );
+
+            height:
+                54px;
+
+            padding:
+                0 6px 0 9px;
+
+            border-radius:
+                16px;
+        }
+
+
+        .openlist-brand {
+
+            min-width:
+                auto;
+        }
+
+
+        .openlist-brand-text {
+
+            display:
+                none;
+        }
+
+
+        .openlist-brand-icon {
+
+            width:
+                34px;
+
+            height:
+                34px;
+        }
+
+
+        .openlist-search-button {
+
+            width:
+                42px;
+
+            padding:
+                0;
+
+            justify-content:
+                center;
+        }
+
+
+        .openlist-search-text,
+        .openlist-search-shortcut {
+
+            display:
+                none;
+        }
+
+
+        .openlist-online {
+
+            padding:
+                0 7px;
+        }
+
+
+        .openlist-online-text {
+
+            display:
+                none;
+        }
+
+
+        .openlist-action {
+
+            width:
+                33px;
+
+            height:
+                33px;
+        }
+
+
+        .body > .nav {
+
+            margin-top:
+                68px !important;
+        }
+
+
+        #openlist-search-panel {
+
+            top:
+                68px;
+
+            width:
+                calc(
+                    100vw - 24px
+                );
+        }
+
+
+        #openlist-status {
+
+            left:
+                12px;
+
+            bottom:
+                12px;
+        }
+
+
+        #openlist-top {
+
+            right:
+                12px;
+
+            bottom:
+                12px;
+        }
+
+
+        #openlist-footer {
+
+            width:
+                calc(
+                    100% - 24px
+                );
+        }
+
+
+        .openlist-footer-inner {
+
+            min-height:
+                auto;
+
+            padding:
+                10px 13px;
+
+            flex-direction:
+                column;
+
+            align-items:
+                flex-start;
+
+            gap:
+                8px;
+        }
+
+    }
+
+
+    /* =========================================================
+    超小屏
+    ========================================================= */
+
+    @media (max-width: 430px) {
+
+        .openlist-online {
+
+            display:
+                none;
+        }
+
+    }
+
+
+    /* =========================================================
+    减少动画
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        #openlist-video-bg {
+
+            display:
+                none;
+        }
+
+    }
+
+    </style>
+
+
+    <script>
+
+    (function () {
+
+        "use strict";
+
+
+        /* =====================================================
+        防重复执行
+        ===================================================== */
+
+        if (
+            window.__OpenListVideoTheme
+        ) {
+
+            return;
+
+        }
+
+
+        window.__OpenListVideoTheme =
+            true;
+
+
+        /* =====================================================
+        DOM
+        ===================================================== */
+
+        function $(id) {
+
+            return document.getElementById(
+                id
+            );
+
+        }
+
+
+        /* =====================================================
+        视频
+        ===================================================== */
+            
+            function initVideo() {
+
+                const video =
+                    $("openlist-video-bg");
+
+
+                if (!video) {
+
+                    return;
+
+                }
+
+
+                /*
+                * =====================================================
+                * OpenList 视频背景地址
+                * =====================================================
+                */
+
+                const LIGHT_VIDEO =
+                    "/d/background/lemon.mp4?sign=SJ1nRwApCN05KdeUQqVy_VFqHULBOYJm90SthNojtRI=:0";
+
+
+                const DARK_VIDEO =
+                    "/d/background/wallpaper1.mp4?sign=CZfmr-3uWMGclLAiCLyRHgzUw1jcuKmy9CeWYPTddqw=:0";
+
+
+                /*
+                * =====================================================
+                * 视频基础属性
+                * =====================================================
+                */
+
+                video.muted =
+                    true;
+
+                video.loop =
+                    true;
+
+                video.playsInline =
+                    true;
+
+
+                /*
+                * =====================================================
+                * 判断当前主题
+                * =====================================================
+                */
+
+                function isDarkMode() {
+
+                    return document.body.classList.contains(
+                        "hope-ui-dark"
+                    );
+
+                }
+
+
+                /*
+                * =====================================================
+                * 设置视频
+                * =====================================================
+                */
+
+                function setVideo(
+                    force
+                ) {
+
+                    const target =
+                        isDarkMode()
+                            ? DARK_VIDEO
+                            : LIGHT_VIDEO;
+
+
+                    /*
+                    * 如果已经是正确的视频，
+                    * 不重复加载。
+                    */
+
+                    if (
+                        !force &&
+                        video.dataset.currentVideo ===
+                            target
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    video.dataset.currentVideo =
+                        target;
+
+
+                    /*
+                    * 保存当前播放位置。
+                    * 切换主题时尽量保持自然。
+                    */
+
+                    const oldTime =
+                        video.currentTime || 0;
+
+
+                    /*
+                    * 淡出旧视频
+                    */
+
+                    video.style.opacity =
+                        "0";
+
+
+                    /*
+                    * 停止当前视频
+                    */
+
+                    video.pause();
+
+
+                    /*
+                    * 更换 source
+                    */
+
+                    video.src =
+                        target;
+
+
+                    /*
+                    * 重新加载
+                    */
+
+                    video.load();
+
+
+                    /*
+                    * 新视频可播放后淡入
+                    */
+
+                    video.addEventListener(
+                        "canplay",
+                        function () {
+
+                            video.style.opacity =
+                                "";
+
+                        },
+                        {
+                            once: true
+                        }
+                    );
+
+
+                    video.addEventListener(
+                        "error",
+                        function () {
+
+                            video.style.opacity =
+                                "";
+
+                        },
+                        {
+                            once: true
+                        }
+                    );
+
+
+                    /*
+                    * 自动播放
+                    */
+
+                    const playPromise =
+                        video.play();
+
+
+                    if (
+                        playPromise &&
+                        typeof playPromise.catch ===
+                        "function"
+                    ) {
+
+                        playPromise.catch(
+                            function () {
+
+                                /*
+                                * 浏览器如果暂时阻止自动播放，
+                                * 不做任何处理。
+                                */
+
+                            }
+                        );
+
+                    }
+
+
+                    /*
+                    * 尝试恢复播放位置
+                    */
+
+                    video.addEventListener(
+                        "loadedmetadata",
+                        function restorePosition() {
+
+                            try {
+
+                                if (
+                                    oldTime > 0 &&
+                                    oldTime <
+                                    video.duration
+                                ) {
+
+                                    video.currentTime =
+                                        oldTime;
+
+                                }
+
+                            } catch (e) {}
+
+
+                            video.removeEventListener(
+                                "loadedmetadata",
+                                restorePosition
+                            );
+
+                        }
+                    );
+
+                }
+
+
+                /*
+                * =====================================================
+                * 第一次设置
+                * =====================================================
+                */
+
+                setVideo(
+                    true
+                );
+
+
+                /*
+                * =====================================================
+                * 监听 OpenList 主题变化
+                *
+                * OpenList / Hope UI 会修改 body class：
+                *
+                * hope-ui-light
+                * hope-ui-dark
+                *
+                * 所以 MutationObserver 可以实时检测。
+                * =====================================================
+                */
+
+                const observer =
+                    new MutationObserver(
+                        function () {
+
+                            setVideo(
+                                false
+                            );
+
+                        }
+                    );
+
+
+                observer.observe(
+                    document.body,
+                    {
+                        attributes:
+                            true,
+
+                        attributeFilter:
+                            [
+                                "class"
+                            ]
+                    }
+                );
+
+
+                /*
+                * =====================================================
+                * 某些情况下主题按钮可能修改 HTML / 根节点
+                * 再监听 html，增加兼容性。
+                * =====================================================
+                */
+
+                observer.observe(
+                    document.documentElement,
+                    {
+                        attributes:
+                            true,
+
+                        attributeFilter:
+                            [
+                                "class"
+                            ]
+                    }
+                );
+
+
+                /*
+                * =====================================================
+                * 浏览器从后台回来后重新尝试播放
+                * =====================================================
+                */
+
+                document.addEventListener(
+                    "visibilitychange",
+                    function () {
+
+                        if (
+                            document.visibilityState ===
+                            "visible"
+                        ) {
+
+                            const promise =
+                                video.play();
+
+
+                            if (
+                                promise &&
+                                typeof promise.catch ===
+                                "function"
+                            ) {
+
+                                promise.catch(
+                                    function () {}
+                                );
+
+                            }
+
+                        }
+
+                    }
+                );
+
+            }
+
+        /* =====================================================
+        滚动效果
+        ===================================================== */
+
+        function initScroll() {
+
+            const topbar =
+                $("openlist-topbar");
+
+
+            const topButton =
+                $("openlist-top");
+
+
+            if (!topbar) {
+
+                return;
+
+            }
+
+
+            function update() {
+
+                const scroll =
+                    window.scrollY;
+
+
+                if (
+                    scroll > 35
+                ) {
+
+                    topbar.classList.add(
+                        "scrolled"
+                    );
+
+                } else {
+
+                    topbar.classList.remove(
+                        "scrolled"
+                    );
+
+                }
+
+
+                if (
+                    topButton
+                ) {
+
+                    if (
+                        scroll > 300
+                    ) {
+
+                        topButton.classList.add(
+                            "show"
+                        );
+
+                    } else {
+
+                        topButton.classList.remove(
+                            "show"
+                        );
+
+                    }
+
+                }
+
+            }
+
+
+            window.addEventListener(
+                "scroll",
+                update,
+                {
+                    passive:
+                        true
+                }
+            );
+
+
+            update();
+
+        }
+
+
+        /* =====================================================
+        返回顶部
+        ===================================================== */
+
+        function initTop() {
+
+            const top =
+                $("openlist-top");
+
+
+            const footerTop =
+                $("openlist-footer-top");
+
+
+            function scrollTop() {
+
+                window.scrollTo({
+
+                    top:
+                        0,
+
+                    behavior:
+                        "smooth"
+
+                });
+
+            }
+
+
+            if (top) {
+
+                top.addEventListener(
+                    "click",
+                    scrollTop
+                );
+
+            }
+
+
+            if (footerTop) {
+
+                footerTop.addEventListener(
+                    "click",
+                    scrollTop
+                );
+
+            }
+
+        }
+
+
+        /* =====================================================
+        搜索
+        ===================================================== */
+
+        function initSearch() {
+
+            const button =
+                $("openlist-search-button");
+
+
+            const panel =
+                $("openlist-search-panel");
+
+
+            const input =
+                $("openlist-search-input");
+
+
+            if (
+                !button ||
+                !panel ||
+                !input
+            ) {
+
+                return;
+
+            }
+
+
+            function openSearch() {
+
+                panel.classList.add(
+                    "open"
+                );
+
+
+                setTimeout(
+                    function () {
+
+                        input.focus();
+
+                    },
+                    80
+                );
+
+            }
+
+
+            function closeSearch() {
+
+                panel.classList.remove(
+                    "open"
+                );
+
+            }
+
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        panel.classList.contains(
+                            "open"
+                        )
+                    ) {
+
+                        closeSearch();
+
+                    } else {
+
+                        openSearch();
+
+                    }
+
+                }
+            );
+
+
+            /*
+            * ESC
+            */
+
+            input.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key ===
+                        "Escape"
+                    ) {
+
+                        closeSearch();
+
+                        return;
+
+                    }
+
+
+                    if (
+                        event.key ===
+                        "Enter"
+                    ) {
+
+                        const keyword =
+                            input.value.trim();
+
+
+                        if (!keyword) {
+
+                            return;
+
+                        }
+
+
+                        /*
+                        * 找 OpenList 原生搜索框
+                        */
+
+                        const inputs =
+                            document.querySelectorAll(
+                                "input"
+                            );
+
+
+                        let target =
+                            null;
+
+
+                        for (
+                            let i = 0;
+                            i < inputs.length;
+                            i++
+                        ) {
+
+                            const candidate =
+                                inputs[i];
+
+
+                            if (
+                                candidate ===
+                                input
+                            ) {
+
+                                continue;
+
+                            }
+
+
+                            const placeholder =
+                                (
+                                    candidate
+                                        .placeholder ||
+                                    ""
+                                ).toLowerCase();
+
+
+                            if (
+
+                                placeholder.includes(
+                                    "search"
+                                ) ||
+
+                                placeholder.includes(
+                                    "搜索"
+                                )
+                            ) {
+
+                                target =
+                                    candidate;
+
+                                break;
+
+                            }
+
+                        }
+
+
+                        if (target) {
+
+                            target.focus();
+
+                            target.value =
+                                keyword;
+
+
+                            target.dispatchEvent(
+                                new Event(
+                                    "input",
+                                    {
+                                        bubbles:
+                                            true
+                                    }
+                                )
+                            );
+
+
+                            target.dispatchEvent(
+                                new KeyboardEvent(
+                                    "keydown",
+                                    {
+                                        key:
+                                            "Enter",
+
+                                        bubbles:
+                                            true
+                                    }
+                                )
+                            );
+
+                        }
+
+
+                        closeSearch();
+
+                    }
+
+                }
+            );
+
+
+            /*
+            * /
+            * 快捷键
+            */
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key !== "/"
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    const element =
+                        document.activeElement;
+
+
+                    if (
+                        element &&
+                        (
+                            element.tagName ===
+                            "INPUT" ||
+
+                            element.tagName ===
+                            "TEXTAREA"
+                        )
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    event.preventDefault();
+
+                    openSearch();
+
+                }
+            );
+
+
+            /*
+            * 点击外面关闭
+            */
+
+            document.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        !panel.classList.contains(
+                            "open"
+                        )
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    if (
+                        panel.contains(
+                            event.target
+                        ) ||
+
+                        button.contains(
+                            event.target
+                        )
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    closeSearch();
+
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+        刷新
+        ===================================================== */
+
+        function initRefresh() {
+
+            const button =
+                $("openlist-refresh-button");
+
+
+            if (!button) {
+
+                return;
+
+            }
+
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    button.style.transform =
+                        "rotate(180deg)";
+
+
+                    setTimeout(
+                        function () {
+
+                            location.reload();
+
+                        },
+                        180
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+        主题切换转场
+        ===================================================== */
+
+        function playThemeTransition(
+            x,
+            y,
+            apply
+        ) {
+
+            const reduced =
+                window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches;
+
+            if (reduced) {
+
+                apply();
+
+                return;
+
+            }
+
+
+            /*
+            * 优先使用 View Transitions API
+            * 新主题画面从点击位置以圆形扩散开
+            */
+
+            if (
+                document.startViewTransition
+            ) {
+
+                const beforeDark =
+                    document.body.classList.contains(
+                        "hope-ui-dark"
+                    );
+
+                const transition =
+                    document.startViewTransition(
+                        function () {
+
+                            apply();
+
+                            /*
+                            * 等待主题 class 真正变化，
+                            * 确保新快照是切换后的画面
+                            */
+
+                            return new Promise(
+                                function (resolve) {
+
+                                    const obs =
+                                        new MutationObserver(
+                                            function () {
+
+                                                if (
+                                                    document.body.classList.contains(
+                                                        "hope-ui-dark"
+                                                    ) !== beforeDark
+                                                ) {
+
+                                                    obs.disconnect();
+
+                                                    resolve();
+
+                                                }
+
+                                            }
+                                        );
+
+                                    obs.observe(
+                                        document.body,
+                                        {
+                                            attributes: true,
+
+                                            attributeFilter:
+                                                [
+                                                    "class"
+                                                ]
+                                        }
+                                    );
+
+                                    setTimeout(
+                                        function () {
+
+                                            obs.disconnect();
+
+                                            resolve();
+
+                                        },
+                                        350
+                                    );
+
+                                }
+                            );
+
+                        }
+                    );
+
+                transition.ready
+                    .then(function () {
+
+                        const r =
+                            Math.hypot(
+                                Math.max(
+                                    x,
+                                    window.innerWidth - x
+                                ),
+
+                                Math.max(
+                                    y,
+                                    window.innerHeight - y
+                                )
+                            );
+
+                        document.documentElement.animate(
+                            {
+                                clipPath: [
+                                    "circle(0px at " +
+                                        x +
+                                        "px " +
+                                        y +
+                                        "px)",
+
+                                    "circle(" +
+                                        r +
+                                        "px at " +
+                                        x +
+                                        "px " +
+                                        y +
+                                        "px)"
+                                ]
+                            },
+                            {
+                                duration: 700,
+
+                                easing:
+                                    "cubic-bezier(0.4, 0, 0.2, 1)",
+
+                                pseudoElement:
+                                    "::view-transition-new(root)"
+                            }
+                        );
+
+                    })
+                    .catch(function () {});
+
+                return;
+
+            }
+
+            fallbackThemeTransition(
+                x,
+                y,
+                apply
+            );
+
+        }
+
+
+        /* =====================================================
+        主题切换转场
+        Fallback 覆盖层动画
+        ===================================================== */
+
+        function fallbackThemeTransition(
+            x,
+            y,
+            apply
+        ) {
+
+            let overlay =
+                document.getElementById(
+                    "openlist-theme-transition"
+                );
+
+            if (!overlay) {
+
+                overlay =
+                    document.createElement(
+                        "div"
+                    );
+
+                overlay.id =
+                    "openlist-theme-transition";
+
+                document.body.appendChild(
+                    overlay
+                );
+
+            }
+
+
+            const toDark =
+                !document.body.classList.contains(
+                    "hope-ui-dark"
+                );
+
+            overlay.style.setProperty(
+                "--openlist-tx",
+                x + "px"
+            );
+
+            overlay.style.setProperty(
+                "--openlist-ty",
+                y + "px"
+            );
+
+            overlay.style.background = toDark
+                ? "radial-gradient(circle at " +
+                      x +
+                      "px " +
+                      y +
+                      "px, #1d2939 0%, #0b0f16 65%)"
+                : "radial-gradient(circle at " +
+                      x +
+                      "px " +
+                      y +
+                      "px, #ffffff 0%, #e3ecf5 65%)";
+
+            overlay.classList.remove(
+                "run",
+                "done"
+            );
+
+            requestAnimationFrame(function () {
+
+                overlay.classList.add(
+                    "run"
+                );
+
+            });
+
+
+            /*
+            * 全屏被覆盖的时刻切换主题
+            */
+
+            setTimeout(
+                apply,
+                460
+            );
+
+            setTimeout(function () {
+
+                overlay.classList.remove(
+                    "run"
+                );
+
+                overlay.classList.add(
+                    "done"
+                );
+
+            },
+            500
+            );
+
+            setTimeout(function () {
+
+                overlay.classList.remove(
+                    "done"
+                );
+
+            },
+            1200
+            );
+
+        }
+
+
+        /* =====================================================
+        Theme
+        ===================================================== */
+
+        function initTheme() {
+
+            const button =
+                $("openlist-theme-button");
+
+
+            const footer =
+                $("openlist-footer-theme");
+
+
+            function apply() {
+
+                /*
+                * 寻找 OpenList 原生主题按钮
+                */
+
+                const buttons =
+                    document.querySelectorAll(
+                        "button"
+                    );
+
+
+                for (
+                    let i = 0;
+                    i < buttons.length;
+                    i++
+                ) {
+
+                    const candidate =
+                        buttons[i];
+
+
+                    if (
+                        candidate ===
+                        button ||
+
+                        candidate ===
+                        footer
+                    ) {
+
+                        continue;
+
+                    }
+
+
+                    const label =
+                        (
+                            candidate
+                                .getAttribute(
+                                    "aria-label"
+                                ) ||
+
+                            candidate
+                                .getAttribute(
+                                    "title"
+                                ) ||
+
+                            candidate
+                                .innerText ||
+
+                            ""
+                        ).toLowerCase();
+
+
+                    if (
+
+                        label.includes(
+                            "theme"
+                        ) ||
+
+                        label.includes(
+                            "dark"
+                        ) ||
+
+                        label.includes(
+                            "light"
+                        ) ||
+
+                        label.includes(
+                            "主题"
+                        )
+                    ) {
+
+                        candidate.click();
+
+                        return;
+
+                    }
+
+                }
+
+
+                /*
+                * Fallback
+                */
+
+                const dark =
+                    document.body.classList.contains(
+                        "hope-ui-dark"
+                    );
+
+
+                if (dark) {
+
+                    document.body.classList.remove(
+                        "hope-ui-dark"
+                    );
+
+                    document.body.classList.add(
+                        "hope-ui-light"
+                    );
+
+                } else {
+
+                    document.body.classList.remove(
+                        "hope-ui-light"
+                    );
+
+                    document.body.classList.add(
+                        "hope-ui-dark"
+                    );
+
+                }
+
+            }
+
+
+            /*
+            * 转场入口：
+            * 从点击位置开始播放主题切换转场
+            */
+
+            function toggle(event) {
+
+                const x =
+                    event && event.clientX
+                        ? event.clientX
+                        : window.innerWidth / 2;
+
+                const y =
+                    event && event.clientY
+                        ? event.clientY
+                        : window.innerHeight / 2;
+
+                playThemeTransition(
+                    x,
+                    y,
+                    apply
+                );
+
+            }
+
+
+            if (button) {
+
+                button.addEventListener(
+                    "click",
+                    toggle
+                );
+            }
+
+
+            if (footer) {
+
+                footer.addEventListener(
+                    "click",
+                    toggle
+                );
+            }
+
+        }
+
+
+        /* =====================================================
+        更多
+        ===================================================== */
+
+        function initMore() {
+
+            const button = $("openlist-more-button");
+
+            if (!button) {
+                return;
+            }
+
+            /*
+            * 防止重复创建
+            */
+            let menu = $("openlist-more-menu");
+
+            if (menu) {
+                return;
+            }
+
+            /*
+            * 当前 OpenList 域名
+            *
+            * 例如：
+            * https://example.com
+            *
+            * 自动变成：
+            * OpenWrt       -> http(s)://example.com/
+            * qBittorrent   -> http(s)://example.com:8081
+            * Clash         -> http(s)://example.com:9090
+            */
+            const protocol = window.location.protocol;
+            const hostname = window.location.hostname;
+
+            const baseUrl =
+                protocol + "//" + hostname;
+
+            /*
+            * 管理后台
+            */
+            const manageUrl =
+                baseUrl + ":5244/@manage";
+
+            /*
+            * 快捷菜单
+            */
+            menu = document.createElement("div");
+
+            menu.id = "openlist-more-menu";
+
+            menu.innerHTML = `
+
+                <div
+                    class="openlist-more-title"
+                >
+                    快捷入口
+                </div>
+
+                <a
+                    class="openlist-more-item"
+                    href="${manageUrl}"
+                >
+                    <span class="openlist-more-icon">
+                        ⚙
+                    </span>
+
+                    <span class="openlist-more-text">
+                        <strong>管理后台</strong>
+                        <small>OpenList 管理中心</small>
+                    </span>
+
+                    <span class="openlist-more-arrow">
+                        ›
+                    </span>
+                </a>
+
+                <a
+                    class="openlist-more-item"
+                    href="${baseUrl}/"
+                >
+                    <span class="openlist-more-icon">
+                        ◈
+                    </span>
+
+                    <span class="openlist-more-text">
+                        <strong>OpenWrt</strong>
+                        <small>路由器管理</small>
+                    </span>
+
+                    <span class="openlist-more-arrow">
+                        ›
+                    </span>
+                </a>
+
+                <a
+                    class="openlist-more-item"
+                    href="${baseUrl}:8081"
+                >
+                    <span class="openlist-more-icon">
+                        ⬇
+                    </span>
+
+                    <span class="openlist-more-text">
+                        <strong>qBittorrent</strong>
+                        <small>下载管理</small>
+                    </span>
+
+                    <span class="openlist-more-arrow">
+                        ›
+                    </span>
+                </a>
+
+                <a
+                    class="openlist-more-item"
+                    href="${baseUrl}:9090"
+                >
+                    <span class="openlist-more-icon">
+                        ◉
+                    </span>
+
+                    <span class="openlist-more-text">
+                        <strong>Clash</strong>
+                        <small>代理控制面板</small>
+                    </span>
+
+                    <span class="openlist-more-arrow">
+                        ›
+                    </span>
+                </a>
+
+            `;
+
+            document.body.appendChild(menu);
+
+
+            /*
+            * 打开 / 关闭菜单
+            */
+            button.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const isOpen =
+                        menu.classList.contains(
+                            "open"
+                        );
+
+                    /*
+                    * 关闭其他状态
+                    */
+                    document
+                        .querySelectorAll(
+                            ".openlist-more-menu.open"
+                        )
+                        .forEach(
+                            function (item) {
+
+                                item.classList.remove(
+                                    "open"
+                                );
+
+                            }
+                        );
+
+                    if (!isOpen) {
+
+                        /*
+                        * 计算按钮位置
+                        */
+                        const rect =
+                            button.getBoundingClientRect();
+
+                        menu.style.top =
+                            (
+                                rect.bottom + 10
+                            ) + "px";
+
+                        /*
+                        * 桌面端右对齐
+                        */
+                        menu.style.right =
+                            (
+                                window.innerWidth -
+                                rect.right
+                            ) + "px";
+
+                        menu.classList.add(
+                            "open"
+                        );
+
+                    }
+
+                }
+            );
+
+
+            /*
+            * 点击菜单内部
+            *
+            * 不让事件继续冒泡
+            */
+            menu.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+                }
+            );
+
+
+            /*
+            * 点击页面其他地方关闭
+            */
+            document.addEventListener(
+                "click",
+                function () {
+
+                    menu.classList.remove(
+                        "open"
+                    );
+
+                }
+            );
+
+
+            /*
+            * ESC 关闭
+            */
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key === "Escape"
+                    ) {
+
+                        menu.classList.remove(
+                            "open"
+                        );
+
+                    }
+
+                }
+            );
+
+
+            /*
+            * 窗口变化时重新定位
+            */
+            window.addEventListener(
+                "resize",
+                function () {
+
+                    if (
+                        !menu.classList.contains(
+                            "open"
+                        )
+                    ) {
+                        return;
+                    }
+
+                    const rect =
+                        button.getBoundingClientRect();
+
+                    menu.style.top =
+                        (
+                            rect.bottom + 10
+                        ) + "px";
+
+                    menu.style.right =
+                        (
+                            window.innerWidth -
+                            rect.right
+                        ) + "px";
+
+                }
+            );
+
+        }
+            
+        /* =====================================================
+        初始化
+        ===================================================== */
+
+        function init() {
+
+            initVideo();
+
+            initScroll();
+
+            initTop();
+
+            initSearch();
+
+            initRefresh();
+
+            initTheme();
+
+            initMore();
+
+        }
+
+
+        /*
+        * 等 OpenList React 页面初始化
+        */
+
+        if (
+            document.readyState ===
+            "loading"
+        ) {
+
+            document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+
+                    setTimeout(
+                        init,
+                        1000
+                    );
+
+                }
+            );
+
+        } else {
+
+            setTimeout(
+                init,
+                1000
+            );
+
+        }
+
+    })();
+
+    </script>

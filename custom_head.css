@@ -1,0 +1,3193 @@
+<style>
+
+/* =========================================================
+   OpenList Premium Glass
+   Video Background Edition
+   Final CSS
+   ========================================================= */
+
+
+/* =========================================================
+   主题变量
+   ========================================================= */
+
+:root {
+
+    --openlist-accent:
+        #20a4ff;
+
+    --openlist-accent-rgb:
+        32, 164, 255;
+
+    --openlist-glass:
+        rgba(255, 255, 255, 0.48);
+
+    --openlist-glass-strong:
+        rgba(255, 255, 255, 0.65);
+
+    --openlist-border:
+        rgba(255, 255, 255, 0.48);
+
+    --openlist-shadow:
+        0 12px 40px
+        rgba(30, 80, 130, 0.10);
+
+    --openlist-radius:
+        20px;
+
+    --openlist-radius-small:
+        14px;
+
+    --openlist-text:
+        #1b2430;
+
+    --openlist-text-secondary:
+        rgba(27, 36, 48, 0.65);
+
+    --openlist-footer-height:
+        58px;
+}
+
+
+/* =========================================================
+   全局
+   ========================================================= */
+
+html {
+
+    scroll-behavior:
+        smooth;
+
+    min-height:
+        100%;
+}
+
+
+body {
+
+    min-height:
+        100vh;
+
+    margin:
+        0;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "PingFang SC",
+        "Microsoft YaHei",
+        sans-serif !important;
+
+    overflow-x:
+        hidden;
+
+    background:
+        transparent !important;
+
+    color:
+        var(--openlist-text);
+}
+
+
+/* =========================================================
+   OpenList Root
+   ========================================================= */
+
+#root {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    min-height:
+        100vh;
+
+    background:
+        transparent !important;
+}
+
+
+/* =========================================================
+   OpenList 容器透明
+   ========================================================= */
+
+#root,
+#root > div,
+#root .app,
+#root .App {
+
+    background:
+        transparent !important;
+}
+
+
+/* =========================================================
+   视频背景
+   ========================================================= */
+
+#openlist-video-bg {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    width:
+        100vw;
+
+    height:
+        100vh;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center center;
+
+    z-index:
+        0;
+
+    pointer-events:
+        none;
+
+    user-select:
+        none;
+
+    transform:
+        scale(1.02);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #dceff8,
+            #eef4f8
+        );
+
+    transition:
+        opacity .45s ease;
+}
+
+
+/* =========================================================
+   视频遮罩
+   ========================================================= */
+
+#openlist-video-overlay {
+    opacity: 0.7;
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        1;
+
+    pointer-events:
+        none;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(
+                235,
+                248,
+                252,
+                0.58
+            ),
+            rgba(
+                245,
+                248,
+                252,
+                0.68
+            )
+        );
+
+    transition:
+        background .45s ease;
+}
+
+
+/* =========================================================
+   视频模糊层
+   ========================================================= */
+
+#openlist-video-blur {
+
+    position:
+        fixed;
+
+    inset:
+        -20px;
+
+    z-index:
+        1;
+
+    pointer-events:
+        none;
+
+    backdrop-filter:
+        blur(1.5px)
+        saturate(115%);
+
+    -webkit-backdrop-filter:
+        blur(1.5px)
+        saturate(115%);
+}
+
+
+/* =========================================================
+   深色模式视频遮罩
+   ========================================================= */
+
+.hope-ui-dark #openlist-video-overlay {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(
+                7,
+                12,
+                18,
+                0.48
+            ),
+            rgba(
+                10,
+                15,
+                23,
+                0.67
+            )
+        );
+}
+
+
+/* =========================================================
+   视频顶部 / 底部渐变
+   ========================================================= */
+
+#openlist-video-overlay::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+
+            rgba(
+                255,
+                255,
+                255,
+                0.10
+            ),
+
+            transparent 24%,
+
+            transparent 72%,
+
+            rgba(
+                255,
+                255,
+                255,
+                0.12
+            )
+        );
+
+    transition:
+        background .45s ease;
+}
+
+
+.hope-ui-dark #openlist-video-overlay::after {
+
+    background:
+
+        linear-gradient(
+            to bottom,
+
+            rgba(
+                0,
+                0,
+                0,
+                0.08
+            ),
+
+            transparent 25%,
+
+            transparent 72%,
+
+            rgba(
+                0,
+                0,
+                0,
+                0.20
+            )
+        );
+}
+
+
+/* =========================================================
+   隐藏 OpenList 原生 Header
+   ========================================================= */
+
+#root > .header {
+
+    height:
+        0 !important;
+
+    min-height:
+        0 !important;
+
+    margin:
+        0 !important;
+
+    padding:
+        0 !important;
+
+    background:
+        transparent !important;
+
+    border:
+        0 !important;
+
+    box-shadow:
+        none !important;
+
+    overflow:
+        visible !important;
+}
+
+
+#root > .header > * {
+
+    display:
+        none !important;
+}
+
+
+/* =========================================================
+   页面主体
+   ========================================================= */
+
+.body {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    background:
+        transparent !important;
+
+    padding-bottom:
+
+        calc(
+            var(--openlist-footer-height)
+            + 30px
+        );
+}
+
+
+/* =========================================================
+   面包屑 / Nav
+   ========================================================= */
+
+.body > .nav {
+
+    margin-top:
+        82px !important;
+
+    border-radius:
+        var(--openlist-radius)
+        !important;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.52
+        ) !important;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.43
+        ) !important;
+
+    box-shadow:
+        var(--openlist-shadow)
+        !important;
+
+    backdrop-filter:
+        blur(22px)
+        saturate(145%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(145%)
+        !important;
+
+    transition:
+        all .3s ease;
+
+    padding: inherit;
+}
+
+
+/* =========================================================
+   Nav 深色
+   ========================================================= */
+
+.hope-ui-dark .body > .nav {
+
+    background:
+        rgba(
+            15,
+            19,
+            27,
+            0.53
+        ) !important;
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.09
+        ) !important;
+
+    box-shadow:
+
+        0 12px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.28
+        ) !important;
+
+    
+}
+
+
+/* =========================================================
+   文件列表
+   ========================================================= */
+
+.obj-box {
+
+    border-radius:
+        var(--openlist-radius)
+        !important;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.52
+        ) !important;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        ) !important;
+
+    box-shadow:
+
+        0 14px 45px
+        rgba(
+            30,
+            80,
+            130,
+            0.10
+        ) !important;
+
+    backdrop-filter:
+        blur(22px)
+        saturate(145%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(145%)
+        !important;
+
+    overflow:
+        hidden;
+
+    transition:
+        all .3s ease;
+}
+
+
+/* =========================================================
+   文件列表 - 深色
+   ========================================================= */
+
+.hope-ui-dark .obj-box {
+
+    background:
+        rgba(
+            14,
+            18,
+            26,
+            0.54
+        ) !important;
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        ) !important;
+
+    box-shadow:
+
+        0 14px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.30
+        ) !important;
+}
+
+
+/* =========================================================
+   文件项目
+   ========================================================= */
+
+.obj-box > div > div {
+
+    border-radius:
+        var(--openlist-radius-small);
+
+    transition:
+
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+/* =========================================================
+   文件 Hover
+   ========================================================= */
+
+.obj-box > div > div:hover {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.075
+        );
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+
+        0 6px 20px
+        rgba(
+            30,
+            80,
+            130,
+            0.07
+        );
+}
+
+
+/* =========================================================
+   文件 Hover - 深色
+   ========================================================= */
+
+.hope-ui-dark
+.obj-box > div > div:hover {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.10
+        );
+
+    box-shadow:
+
+        0 6px 20px
+        rgba(
+            0,
+            0,
+            0,
+            0.16
+        );
+}
+
+
+/* =========================================================
+   文件名
+   ========================================================= */
+
+.name-box .name {
+
+    transition:
+        color .2s ease;
+}
+
+
+.obj-box
+> div
+> div:hover
+.name {
+
+    color:
+        var(--openlist-accent)
+        !important;
+}
+
+
+/* =========================================================
+   缩略图
+   ========================================================= */
+
+.item-thumbnail {
+
+    transition:
+        transform .25s ease;
+}
+
+
+.obj-box
+> div
+> div:hover
+.item-thumbnail {
+
+    transform:
+        scale(1.035);
+}
+
+
+/* =========================================================
+   输入框
+   ========================================================= */
+
+input,
+textarea,
+[role="textbox"] {
+
+    border-radius:
+        var(--openlist-radius-small)
+        !important;
+
+    transition:
+        all .2s ease;
+}
+
+
+input:focus,
+textarea:focus,
+[role="textbox"]:focus {
+
+    border-color:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.50
+        ) !important;
+
+    box-shadow:
+
+        0 0 0 4px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.09
+        ) !important;
+}
+
+
+/* =========================================================
+   按钮
+   ========================================================= */
+
+button {
+
+    transition:
+
+        transform .18s ease,
+        background .18s ease,
+        box-shadow .18s ease;
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+button:active {
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   原生图标按钮
+   ========================================================= */
+
+.hope-icon-button {
+
+    border-radius:
+        12px !important;
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+}
+
+
+.hope-icon-button:hover {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.10
+        ) !important;
+}
+
+
+/* =========================================================
+   Markdown
+   ========================================================= */
+
+[class*="markdown"],
+.markdown-body {
+
+    border-radius:
+        var(--openlist-radius)
+        !important;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        ) !important;
+
+    backdrop-filter:
+        blur(18px)
+        saturate(140%);
+
+    -webkit-backdrop-filter:
+        blur(18px)
+        saturate(140%);
+}
+
+
+.hope-ui-dark
+[class*="markdown"],
+.hope-ui-dark
+.markdown-body {
+
+    background:
+        rgba(
+            15,
+            19,
+            27,
+            0.48
+        ) !important;
+}
+
+
+/* =========================================================
+   侧边栏 / Drawer
+   ========================================================= */
+
+[class*="sidebar"],
+[class*="drawer"] {
+
+    backdrop-filter:
+        blur(24px)
+        saturate(145%)
+        !important;
+
+    -webkit-backdrop-filter:
+        blur(24px)
+        saturate(145%)
+        !important;
+}
+
+
+/* =========================================================
+   链接
+   ========================================================= */
+
+a {
+
+    transition:
+        color .2s ease;
+}
+
+
+a:hover {
+
+    color:
+        var(--openlist-accent)
+        !important;
+}
+
+
+/* =========================================================
+   隐藏原生 Footer
+   ========================================================= */
+
+#root .footer {
+
+    display:
+        none !important;
+}
+
+
+/* =========================================================
+   自定义底部导航
+   ========================================================= */
+
+#openlist-footer {
+    opacity: 0.7;
+
+    position:
+        fixed;
+
+    left:
+        18px;
+
+    right:
+        18px;
+
+    bottom:
+        14px;
+
+    height:
+        var(--openlist-footer-height);
+
+    z-index:
+        9999;
+
+    box-sizing:
+        border-box;
+
+    border-radius:
+        18px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.50
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        );
+
+    box-shadow:
+
+        0 12px 40px
+        rgba(
+            30,
+            80,
+            130,
+            0.13
+        );
+
+    backdrop-filter:
+        blur(22px)
+        saturate(145%);
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(145%);
+
+    color:
+        var(--openlist-text);
+
+    transition:
+        all .3s ease;
+}
+
+
+/* =========================================================
+   Footer 深色
+   ========================================================= */
+
+.hope-ui-dark #openlist-footer {
+
+    background:
+        rgba(
+            14,
+            18,
+            26,
+            0.60
+        );
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.09
+        );
+
+    box-shadow:
+
+        0 12px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.30
+        );
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.88
+        );
+}
+
+
+/* =========================================================
+   Footer 内部
+   ========================================================= */
+
+.openlist-footer-inner {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        0 16px;
+
+    box-sizing:
+        border-box;
+}
+
+
+/* =========================================================
+   Footer 左侧 Online
+   ========================================================= */
+
+.openlist-footer-status {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    min-width:
+        120px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        500;
+
+    opacity:
+        .75;
+
+    white-space:
+        nowrap;
+}
+
+
+.openlist-footer-status-dot {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    flex:
+        0 0 auto;
+
+    border-radius:
+        50%;
+
+    background:
+        #35d07f;
+
+    box-shadow:
+
+        0 0 0 4px
+        rgba(
+            53,
+            208,
+            127,
+            0.12
+        );
+
+    animation:
+
+        openlist-online-pulse
+        2.4s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes openlist-online-pulse {
+
+    0%,
+    100% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        opacity:
+            .55;
+
+        transform:
+            scale(.85);
+    }
+}
+
+
+/* =========================================================
+   Footer 中央
+   ========================================================= */
+
+/*
+   使用 absolute + 50%，
+   确保无论左右按钮多少，
+   中间内容永远真正居中。
+*/
+
+.openlist-footer-center {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    font-size:
+        13px;
+
+    white-space:
+        nowrap;
+
+    pointer-events:
+        auto;
+}
+
+
+/* =========================================================
+   Footer OpenList
+   ========================================================= */
+
+.openlist-footer-brand {
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .2px;
+
+    color:
+        var(--openlist-accent);
+}
+
+
+/* =========================================================
+   Footer 分隔符
+   ========================================================= */
+
+.openlist-footer-divider {
+
+    opacity:
+        .35;
+}
+
+
+/* =========================================================
+   由 OpenList 驱动
+   ========================================================= */
+
+.openlist-footer-center a {
+
+    color:
+        inherit !important;
+
+    text-decoration:
+        none;
+
+    opacity:
+        .68;
+
+    transition:
+        all .2s ease;
+}
+
+
+.openlist-footer-center a:hover {
+
+    opacity:
+        1;
+
+    color:
+        var(--openlist-accent)
+        !important;
+}
+
+
+/* =========================================================
+   Footer 右侧
+   ========================================================= */
+
+.openlist-footer-actions {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        4px;
+
+    margin-left:
+        auto;
+}
+
+
+/* =========================================================
+   Footer 右侧按钮 / 管理
+   ========================================================= */
+
+.openlist-footer-actions button,
+.openlist-footer-actions a {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        5px;
+
+    height:
+        34px;
+
+    padding:
+        0 10px;
+
+    box-sizing:
+        border-box;
+
+    border:
+        0;
+
+    border-radius:
+        10px;
+
+    background:
+        transparent;
+
+    color:
+        inherit !important;
+
+    text-decoration:
+        none;
+
+    font-family:
+        inherit;
+
+    font-size:
+        12px;
+
+    line-height:
+        1;
+
+    cursor:
+        pointer;
+
+    opacity:
+        .72;
+
+    transition:
+
+        background .2s ease,
+        color .2s ease,
+        opacity .2s ease,
+        transform .2s ease;
+}
+
+
+.openlist-footer-actions button:hover,
+.openlist-footer-actions a:hover {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.10
+        );
+
+    opacity:
+        1;
+
+    color:
+        var(--openlist-accent)
+        !important;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.openlist-footer-actions button:active,
+.openlist-footer-actions a:active {
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   Footer 管理链接
+   ========================================================= */
+
+.openlist-footer-actions a[href*="@manage"] {
+
+    font-weight:
+        500;
+}
+
+
+/* =========================================================
+   滚动条
+   ========================================================= */
+
+::-webkit-scrollbar {
+
+    width:
+        8px;
+
+    height:
+        8px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background:
+        transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(
+            100,
+            120,
+            140,
+            0.25
+        );
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.42
+        );
+}
+
+
+/* =========================================================
+   选中文本
+   ========================================================= */
+
+::selection {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.22
+        );
+}
+
+
+/* =========================================================
+   深色模式文字变量
+   ========================================================= */
+
+.hope-ui-dark {
+
+    --openlist-text:
+        rgba(
+            255,
+            255,
+            255,
+            0.90
+        );
+
+    --openlist-text-secondary:
+        rgba(
+            255,
+            255,
+            255,
+            0.62
+        );
+}
+
+
+.hope-ui-dark body {
+
+    background:
+        transparent !important;
+}
+
+
+/* =========================================================
+   深色模式容器透明
+   ========================================================= */
+
+.hope-ui-dark #root,
+.hope-ui-dark #root > div,
+.hope-ui-dark .body {
+
+    background:
+        transparent !important;
+}
+
+
+/* =========================================================
+   视频无 src 时的背景
+   ========================================================= */
+
+#openlist-video-bg:not([src]) {
+
+    background:
+
+        radial-gradient(
+            circle at 30% 20%,
+            rgba(
+                255,
+                255,
+                255,
+                0.65
+            ),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            #dceff8,
+            #eef4f8
+        );
+}
+
+
+/* =========================================================
+   手机端
+   ========================================================= */
+
+<style>
+
+/* =========================================================
+   OpenList Mobile Fix
+   手机版专用修正版
+   ========================================================= */
+
+/* =========================================================
+   平板 / 手机
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* -----------------------------------------------------
+       页面整体
+       ----------------------------------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    #root {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    .body {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        /*
+         * 给底部导航留出空间
+         * 使用 safe-area 防止 iPhone 底部黑条挡住
+         */
+        padding-bottom:
+            calc(
+                74px + env(safe-area-inset-bottom)
+            ) !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    /* =====================================================
+       顶部导航 / 面包屑
+       ===================================================== */
+
+    .body > .nav {
+
+        /*
+         * 手机不要再使用桌面端 82px
+         */
+        margin-top:
+            68px !important;
+
+        margin-left:
+            8px !important;
+
+        margin-right:
+            8px !important;
+
+        width:
+            auto !important;
+
+        max-width:
+            calc(100% - 16px) !important;
+
+        box-sizing:
+            border-box !important;
+
+        min-height:
+            42px;
+
+        border-radius:
+            15px !important;
+
+        /*
+         * 防止内容撑破
+         */
+        overflow:
+            hidden !important;
+
+        white-space:
+            nowrap;
+    }
+
+
+    /* Nav 内部内容不要把页面撑宽 */
+
+    .body > .nav > * {
+        max-width:
+            100% !important;
+
+        box-sizing:
+            border-box !important;
+    }
+
+
+    /* =====================================================
+       文件列表
+       ===================================================== */
+
+    .obj-box {
+
+        width:
+            auto !important;
+
+        max-width:
+            calc(100% - 16px) !important;
+
+        margin-left:
+            8px !important;
+
+        margin-right:
+            8px !important;
+
+        box-sizing:
+            border-box !important;
+
+        border-radius:
+            16px !important;
+
+        overflow:
+            hidden !important;
+    }
+
+
+    /* =====================================================
+       文件列表内部
+       ===================================================== */
+
+    .obj-box > div {
+        max-width:
+            100% !important;
+
+        box-sizing:
+            border-box !important;
+    }
+
+
+    .obj-box > div > div {
+
+        /*
+         * 手机取消 hover 上浮
+         * 手机没有真正的 hover
+         */
+        transform:
+            none !important;
+
+        box-sizing:
+            border-box !important;
+
+        max-width:
+            100% !important;
+
+        border-radius:
+            11px !important;
+    }
+
+
+    .obj-box > div > div:hover {
+
+        transform:
+            none !important;
+    }
+
+
+    /* =====================================================
+       文件名
+       ===================================================== */
+
+    .name-box {
+        min-width:
+            0 !important;
+
+        max-width:
+            100% !important;
+    }
+
+
+    .name-box .name {
+
+        /*
+         * 超长文件名省略
+         */
+        overflow:
+            hidden !important;
+
+        text-overflow:
+            ellipsis !important;
+
+        white-space:
+            nowrap !important;
+
+        min-width:
+            0 !important;
+    }
+
+
+    /* =====================================================
+       缩略图
+       ===================================================== */
+
+    .item-thumbnail {
+
+        /*
+         * 手机不要放大缩略图
+         */
+        transform:
+            none !important;
+
+        max-width:
+            100%;
+    }
+
+
+    .obj-box > div > div:hover .item-thumbnail {
+        transform:
+            none !important;
+    }
+
+
+    /* =====================================================
+       输入框
+       ===================================================== */
+
+    input,
+    textarea,
+    [role="textbox"] {
+
+        max-width:
+            100% !important;
+
+        box-sizing:
+            border-box !important;
+    }
+
+
+    /* =====================================================
+       防止 OpenList 表格产生横向滚动
+       ===================================================== */
+
+    table {
+        max-width:
+            100% !important;
+    }
+
+    td,
+    th {
+        max-width:
+            100%;
+
+        overflow:
+            hidden;
+
+        text-overflow:
+            ellipsis;
+    }
+
+
+    /* =====================================================
+       Markdown
+       ===================================================== */
+
+    [class*="markdown"],
+    .markdown-body {
+
+        width:
+            auto !important;
+
+        max-width:
+            calc(100% - 16px) !important;
+
+        margin-left:
+            8px !important;
+
+        margin-right:
+            8px !important;
+
+        box-sizing:
+            border-box !important;
+
+        border-radius:
+            16px !important;
+    }
+
+
+    /* =====================================================
+       自定义底部导航
+       ===================================================== */
+
+    #openlist-footer {
+
+        /*
+         * 不再使用固定左右 18px
+         */
+        left:
+            8px !important;
+
+        right:
+            8px !important;
+
+        bottom:
+            calc(
+                8px + env(safe-area-inset-bottom)
+            ) !important;
+
+        width:
+            auto !important;
+
+        max-width:
+            none !important;
+
+        height:
+            52px !important;
+
+        min-height:
+            52px !important;
+
+        box-sizing:
+            border-box !important;
+
+        border-radius:
+            16px !important;
+
+        /*
+         * 防止内容撑开 Footer
+         */
+        overflow:
+            hidden !important;
+    }
+
+
+    /* =====================================================
+       Footer 内部
+       ===================================================== */
+
+    .openlist-footer-inner {
+
+        width:
+            100% !important;
+
+        height:
+            100% !important;
+
+        min-width:
+            0 !important;
+
+        padding:
+            0 8px !important;
+
+        box-sizing:
+            border-box !important;
+
+        display:
+            flex !important;
+
+        align-items:
+            center !important;
+
+        justify-content:
+            space-between !important;
+
+        overflow:
+            hidden !important;
+    }
+
+
+    /* =====================================================
+       Footer 左侧 Online
+       ===================================================== */
+
+    .openlist-footer-status {
+
+        flex:
+            0 0 auto !important;
+
+        min-width:
+            0 !important;
+
+        height:
+            34px !important;
+
+        padding:
+            0 9px !important;
+
+        border-radius:
+            10px !important;
+
+        display:
+            inline-flex !important;
+
+        align-items:
+            center !important;
+
+        justify-content:
+            center !important;
+
+        gap:
+            5px !important;
+
+        font-size:
+            11px !important;
+
+        white-space:
+            nowrap !important;
+    }
+
+
+    .openlist-footer-status-dot {
+
+        width:
+            6px !important;
+
+        height:
+            6px !important;
+
+        min-width:
+            6px !important;
+
+        border-radius:
+            50% !important;
+    }
+
+
+    /* =====================================================
+       Footer 中间内容
+       ===================================================== */
+
+    .openlist-footer-center {
+
+        /*
+         * 手机隐藏中央 OpenList / 驱动文字
+         * 给两侧留空间
+         */
+        display:
+            none !important;
+    }
+
+
+    /* =====================================================
+       Footer 右侧
+       ===================================================== */
+
+    .openlist-footer-actions {
+
+        flex:
+            0 0 auto !important;
+
+        min-width:
+            0 !important;
+
+        display:
+            flex !important;
+
+        align-items:
+            center !important;
+
+        justify-content:
+            flex-end !important;
+
+        gap:
+            2px !important;
+
+        white-space:
+            nowrap !important;
+    }
+
+
+    .openlist-footer-actions button,
+    .openlist-footer-actions a {
+
+        width:
+            38px !important;
+
+        min-width:
+            38px !important;
+
+        max-width:
+            38px !important;
+
+        height:
+            36px !important;
+
+        padding:
+            0 !important;
+
+        margin:
+            0 !important;
+
+        border-radius:
+            10px !important;
+
+        display:
+            inline-flex !important;
+
+        align-items:
+            center !important;
+
+        justify-content:
+            center !important;
+
+        box-sizing:
+            border-box !important;
+
+        font-size:
+            12px !important;
+
+        flex-shrink:
+            0 !important;
+    }
+
+    
+
+    /*
+     * 手机隐藏按钮文字
+     */
+    .openlist-footer-actions button span,
+    .openlist-footer-actions a span {
+
+        display:
+            none !important;
+    }
+
+
+    /* =====================================================
+       手机 Footer Hover
+       ===================================================== */
+
+    .openlist-footer-actions button:hover,
+    .openlist-footer-actions a:hover {
+
+        transform:
+            none !important;
+    }
+
+
+    /* =====================================================
+       自定义顶部栏
+       ===================================================== */
+
+    /*
+     * 如果你的自定义内容使用这个 ID，
+     * 手机自动缩小顶部栏
+     */
+
+    #openlist-topbar {
+
+        left:
+            8px !important;
+
+        right:
+            8px !important;
+
+        width:
+            auto !important;
+
+        max-width:
+            none !important;
+
+        min-width:
+            0 !important;
+
+        height:
+            52px !important;
+
+        border-radius:
+            16px !important;
+
+        box-sizing:
+            border-box !important;
+
+        overflow:
+            hidden !important;
+    }
+
+
+    /* 顶栏内部 */
+
+    #openlist-topbar > * {
+        min-width:
+            0;
+    }
+
+
+    /* 顶栏 Logo */
+
+    #openlist-topbar .openlist-brand {
+        min-width:
+            0 !important;
+
+        flex-shrink:
+            1 !important;
+    }
+
+
+    /* 手机隐藏 Personal Cloud */
+
+    #openlist-topbar .openlist-subtitle {
+        display:
+            none !important;
+    }
+
+
+    /* 手机搜索框 */
+
+    #openlist-topbar .openlist-search {
+
+        flex:
+            1 1 auto !important;
+
+        min-width:
+            0 !important;
+
+        max-width:
+            none !important;
+
+        margin:
+            0 6px !important;
+    }
+
+
+    /* 搜索文字过长时 */
+
+    #openlist-topbar .openlist-search span {
+
+        overflow:
+            hidden;
+
+        text-overflow:
+            ellipsis;
+
+        white-space:
+            nowrap;
+    }
+
+
+    /* 顶栏右侧按钮 */
+
+    #openlist-topbar button {
+
+        flex-shrink:
+            0 !important;
+    }
+
+
+    /* =====================================================
+       手机隐藏不必要的顶栏文字
+       ===================================================== */
+
+    #openlist-topbar .openlist-online-text,
+    #openlist-topbar .openlist-action-text {
+
+        display:
+            none !important;
+    }
+
+
+    /* =====================================================
+       搜索弹窗
+       ===================================================== */
+
+    #openlist-search-panel {
+
+        left:
+            8px !important;
+
+        right:
+            8px !important;
+
+        width:
+            auto !important;
+
+        max-width:
+            none !important;
+
+        box-sizing:
+            border-box !important;
+
+        border-radius:
+            16px !important;
+    }
+
+
+    #openlist-search-panel input {
+
+        width:
+            100% !important;
+
+        box-sizing:
+            border-box !important;
+    }
+
+
+    /* =====================================================
+       顶部 / 返回顶部按钮
+       ===================================================== */
+
+    #openlist-top-button {
+
+        right:
+            12px !important;
+
+        bottom:
+            calc(
+                72px + env(safe-area-inset-bottom)
+            ) !important;
+
+        width:
+            40px !important;
+
+        height:
+            40px !important;
+    }
+
+
+    /* =====================================================
+       侧边工具栏
+       ===================================================== */
+
+    /*
+     * OpenList 自己右侧的工具栏在手机上容易
+     * 和 Footer / 屏幕边缘打架。
+     */
+
+    .hope-icon-button {
+
+        border-radius:
+            10px !important;
+    }
+
+
+    /* =====================================================
+       滚动条
+       ===================================================== */
+
+    ::-webkit-scrollbar {
+
+        width:
+            4px;
+
+        height:
+            4px;
+    }
+
+
+    /* =====================================================
+       防止任何元素撑出屏幕
+       ===================================================== */
+
+    img,
+    video,
+    iframe {
+
+        max-width:
+            100%;
+    }
+
+}
+
+
+/* =========================================================
+   超小屏幕
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    /* -----------------------------------------------
+       Footer
+       ----------------------------------------------- */
+
+    #openlist-footer {
+
+        left:
+            6px !important;
+
+        right:
+            6px !important;
+
+        bottom:
+            calc(
+                6px + env(safe-area-inset-bottom)
+            ) !important;
+
+        height:
+            50px !important;
+
+        min-height:
+            50px !important;
+
+        border-radius:
+            15px !important;
+    }
+
+
+    .openlist-footer-inner {
+
+        padding:
+            0 6px !important;
+    }
+
+
+    .openlist-footer-status {
+
+        height:
+            32px !important;
+
+        padding:
+            0 7px !important;
+
+        font-size:
+            10px !important;
+    }
+
+
+    .openlist-footer-actions {
+
+        gap:
+            1px !important;
+    }
+
+
+    .openlist-footer-actions button,
+    .openlist-footer-actions a {
+
+        width:
+            36px !important;
+
+        min-width:
+            36px !important;
+
+        max-width:
+            36px !important;
+
+        height:
+            34px !important;
+    }
+
+
+    /* -----------------------------------------------
+       Nav
+       ----------------------------------------------- */
+
+    .body > .nav {
+
+        margin-top:
+            66px !important;
+
+        margin-left:
+            6px !important;
+
+        margin-right:
+            6px !important;
+
+        max-width:
+            calc(100% - 12px) !important;
+
+        border-radius:
+            14px !important;
+    }
+
+
+    /* -----------------------------------------------
+       文件列表
+       ----------------------------------------------- */
+
+    .obj-box {
+
+        margin-left:
+            6px !important;
+
+        margin-right:
+            6px !important;
+
+        max-width:
+            calc(100% - 12px) !important;
+
+        border-radius:
+            14px !important;
+    }
+
+
+    /* -----------------------------------------------
+       Markdown
+       ----------------------------------------------- */
+
+    [class*="markdown"],
+    .markdown-body {
+
+        margin-left:
+            6px !important;
+
+        margin-right:
+            6px !important;
+
+        max-width:
+            calc(100% - 12px) !important;
+
+        border-radius:
+            14px !important;
+    }
+
+
+    /* -----------------------------------------------
+       顶栏
+       ----------------------------------------------- */
+
+    #openlist-topbar {
+
+        left:
+            6px !important;
+
+        right:
+            6px !important;
+
+        height:
+            50px !important;
+
+        border-radius:
+            15px !important;
+    }
+
+
+    /* 手机上 Logo 再缩小一点 */
+
+    #openlist-topbar .openlist-brand {
+
+        font-size:
+            13px !important;
+    }
+
+
+    /* 手机上搜索框不要太宽 */
+
+    #openlist-topbar .openlist-search {
+
+        margin:
+            0 4px !important;
+    }
+
+
+    /* 返回顶部 */
+
+    #openlist-top-button {
+
+        right:
+            10px !important;
+
+        bottom:
+            calc(
+                66px + env(safe-area-inset-bottom)
+            ) !important;
+
+        width:
+            38px !important;
+
+        height:
+            38px !important;
+    }
+
+}
+
+
+/* =========================================================
+   极窄屏幕 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    #openlist-footer {
+
+        left:
+            4px !important;
+
+        right:
+            4px !important;
+    }
+
+
+    .openlist-footer-inner {
+
+        padding:
+            0 4px !important;
+    }
+
+
+    .openlist-footer-status {
+
+        padding:
+            0 6px !important;
+    }
+
+
+    .openlist-footer-actions button,
+    .openlist-footer-actions a {
+
+        width:
+            34px !important;
+
+        min-width:
+            34px !important;
+
+        max-width:
+            34px !important;
+    }
+
+
+    .body > .nav {
+
+        margin-left:
+            4px !important;
+
+        margin-right:
+            4px !important;
+
+        max-width:
+            calc(100% - 8px) !important;
+    }
+
+
+    .obj-box {
+
+        margin-left:
+            4px !important;
+
+        margin-right:
+            4px !important;
+
+        max-width:
+            calc(100% - 8px) !important;
+    }
+
+}
+
+
+/* =========================================================
+   减少动画
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior:
+            auto;
+    }
+
+
+    #openlist-video-bg {
+
+        display:
+            none;
+    }
+
+
+    .openlist-footer-status-dot {
+
+        animation:
+            none !important;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        transition-duration:
+            0.01ms !important;
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+    }
+
+}
+
+
+/* =========================================================
+   视频没有 src 时的兜底
+   ========================================================= */
+
+#openlist-video-bg:not([src]) {
+
+    background:
+
+        radial-gradient(
+            circle at 30% 20%,
+            rgba(
+                255,
+                255,
+                255,
+                0.65
+            ),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            #dceff8,
+            #eef4f8
+        );
+}
+
+
+/* =========================================================
+   深色模式
+   ========================================================= */
+
+.hope-ui-dark {
+
+    --openlist-text:
+        rgba(
+            255,
+            255,
+            255,
+            0.90
+        );
+
+    --openlist-text-secondary:
+        rgba(
+            255,
+            255,
+            255,
+            0.62
+        );
+}
+
+
+.hope-ui-dark body {
+
+    background:
+        transparent !important;
+}
+
+
+.hope-ui-dark #root,
+.hope-ui-dark #root > div,
+.hope-ui-dark .body {
+
+    background:
+        transparent !important;
+}
+
+/* =========================================================
+   More Menu
+   ========================================================= */
+
+#openlist-more-menu {
+
+    position: fixed;
+
+    z-index: 999999;
+
+    width: 270px;
+
+    padding: 10px;
+
+    border-radius: 18px;
+
+    /*
+     * Glass
+     */
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.18),
+
+        0 4px 16px
+        rgba(0, 0, 0, 0.08);
+
+    backdrop-filter:
+        blur(24px)
+        saturate(160%);
+
+    -webkit-backdrop-filter:
+        blur(24px)
+        saturate(160%);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-8px)
+        scale(0.96);
+
+    transform-origin:
+        top right;
+
+    transition:
+        opacity .18s ease,
+        transform .18s ease,
+        visibility .18s ease;
+
+}
+
+
+/* 打开 */
+
+#openlist-more-menu.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* 标题 */
+
+.openlist-more-title {
+
+    padding:
+        7px
+        10px
+        9px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing:
+        .04em;
+
+    color:
+        rgba(80, 80, 80, .62);
+
+}
+
+
+/* 菜单项目 */
+
+.openlist-more-item {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding:
+        8px
+        10px;
+
+    box-sizing: border-box;
+
+    border-radius: 13px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        background .16s ease,
+        transform .16s ease;
+
+}
+
+
+/* hover */
+
+.openlist-more-item:hover {
+
+    background:
+        rgba(255, 255, 255, .62);
+
+    transform:
+        translateX(-2px);
+
+}
+
+
+/* 点击 */
+
+.openlist-more-item:active {
+
+    transform:
+        scale(.98);
+
+}
+
+
+/* 图标 */
+
+.openlist-more-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 38px;
+
+    height: 38px;
+
+    margin-right: 11px;
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, .55);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, .55);
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, .06);
+
+    font-size: 17px;
+
+}
+
+
+/* 文字区域 */
+
+.openlist-more-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+/* 主标题 */
+
+.openlist-more-text strong {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 20px;
+
+    color:
+        rgba(25, 25, 25, .88);
+
+}
+
+
+/* 描述 */
+
+.openlist-more-text small {
+
+    margin-top: 1px;
+
+    font-size: 11px;
+
+    line-height: 16px;
+
+    color:
+        rgba(70, 70, 70, .52);
+
+}
+
+
+/* 箭头 */
+
+.openlist-more-arrow {
+
+    flex-shrink: 0;
+
+    margin-left: 8px;
+
+    font-size: 22px;
+
+    font-weight: 300;
+
+    color:
+        rgba(50, 50, 50, .32);
+
+    transition:
+        transform .16s ease;
+
+}
+
+
+.openlist-more-item:hover
+.openlist-more-arrow {
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* =========================================================
+   Dark Mode
+   ========================================================= */
+
+.hope-ui-dark #openlist-more-menu,
+.dark #openlist-more-menu {
+
+    background:
+        rgba(25, 27, 31, .78);
+
+    border-color:
+        rgba(255, 255, 255, .10);
+
+    box-shadow:
+        0 24px 70px
+        rgba(0, 0, 0, .45),
+
+        0 4px 18px
+        rgba(0, 0, 0, .28);
+
+}
+
+
+.hope-ui-dark
+.openlist-more-title,
+.dark
+.openlist-more-title {
+
+    color:
+        rgba(255, 255, 255, .48);
+
+}
+
+
+.hope-ui-dark
+.openlist-more-item:hover,
+.dark
+.openlist-more-item:hover {
+
+    background:
+        rgba(255, 255, 255, .08);
+
+}
+
+
+.hope-ui-dark
+.openlist-more-icon,
+.dark
+.openlist-more-icon {
+
+    background:
+        rgba(255, 255, 255, .07);
+
+    border-color:
+        rgba(255, 255, 255, .08);
+
+}
+
+
+.hope-ui-dark
+.openlist-more-text strong,
+.dark
+.openlist-more-text strong {
+
+    color:
+        rgba(255, 255, 255, .90);
+
+}
+
+
+.hope-ui-dark
+.openlist-more-text small,
+.dark
+.openlist-more-text small {
+
+    color:
+        rgba(255, 255, 255, .45);
+
+}
+
+
+.hope-ui-dark
+.openlist-more-arrow,
+.dark
+.openlist-more-arrow {
+
+    color:
+        rgba(255, 255, 255, .32);
+
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    #openlist-more-menu {
+
+        /*
+         * 手机不要太宽
+         */
+        width:
+            min(
+                270px,
+                calc(100vw - 24px)
+            );
+
+        padding: 9px;
+
+        border-radius: 17px;
+
+        /*
+         * 手机增强玻璃效果
+         */
+        backdrop-filter:
+            blur(28px)
+            saturate(170%);
+
+        -webkit-backdrop-filter:
+            blur(28px)
+            saturate(170%);
+
+    }
+
+
+    .openlist-more-item {
+
+        min-height: 56px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .openlist-more-icon {
+
+        width: 36px;
+
+        height: 36px;
+
+        margin-right: 10px;
+
+    }
+
+
+    .openlist-more-text strong {
+
+        font-size: 13px;
+
+    }
+
+
+    .openlist-more-text small {
+
+        font-size: 10px;
+
+    }
+
+}
+
+
+/* =========================================================
+   Very Small Phone
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    #openlist-more-menu {
+
+        width:
+            calc(100vw - 20px);
+
+    }
+
+}
+
+/* =====================================================
+   主题切换转场特效
+   View Transitions 圆形扩散
+   ===================================================== */
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+    z-index: 1;
+}
+
+::view-transition-new(root) {
+    z-index: 9999;
+}
+
+
+/* =====================================================
+   主题切换转场特效
+   Fallback 全屏涟漪覆盖层
+   ===================================================== */
+
+#openlist-theme-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    clip-path: circle(0px at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
+    will-change: clip-path, opacity, transform;
+}
+
+#openlist-theme-transition.run {
+    visibility: visible;
+    opacity: 1;
+    animation: openlist-theme-expand 0.48s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+#openlist-theme-transition.done {
+    visibility: visible;
+    animation: openlist-theme-reveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+#openlist-theme-transition::after {
+    content: "";
+    position: absolute;
+    left: var(--openlist-tx, 50%);
+    top: var(--openlist-ty, 50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid rgba(140, 190, 255, 0.6);
+    box-shadow:
+        0 0 26px rgba(140, 190, 255, 0.4),
+        inset 0 0 14px rgba(140, 190, 255, 0.3);
+    transform: translate(-50%, -50%) scale(0.15);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#openlist-theme-transition.run::after {
+    animation: openlist-theme-ripple 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes openlist-theme-expand {
+    from {
+        clip-path: circle(0px at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
+    }
+    to {
+        clip-path: circle(200% at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
+    }
+}
+
+@keyframes openlist-theme-reveal {
+    from {
+        opacity: 1;
+        clip-path: circle(200% at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        clip-path: circle(200% at var(--openlist-tx, 50%) var(--openlist-ty, 50%));
+        transform: scale(1.1);
+    }
+}
+
+@keyframes openlist-theme-ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(0.15);
+        opacity: 0.95;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(26);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   END
+   ========================================================= */
+
+</style>
