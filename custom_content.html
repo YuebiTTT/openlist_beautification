@@ -2847,6 +2847,18 @@
 
     function initVideo() {
 
+        /* ---- 第 1 步：旧浏览器 / fetch 缺失时直接跳过 ---- */
+
+        if (
+            typeof window.fetch !==
+            "function"
+        ) {
+
+            return;
+
+        }
+
+
         const lightVideo =
             $("openlist-video-bg-light");
 
@@ -4236,25 +4248,40 @@
 
     }
         
+
+    /* =====================================================
+       Markdown Welcome Card
+       —— 第 2/3 步再填实现，先占位
+       ===================================================== */
+
+    function patchHasMarkdown() {}
+
+    function watchBodyForMarkdown() {}
+
+
     /* =====================================================
        Initialize
        ===================================================== */
 
     function init() {
 
-        initVideo();
+        try { initVideo(); } catch (e) { console.warn("[OL] initVideo:", e); }
 
-        initScroll();
+        try { initScroll(); } catch (e) { console.warn("[OL] initScroll:", e); }
 
-        initTop();
+        try { initTop(); } catch (e) { console.warn("[OL] initTop:", e); }
 
-        initSearch();
+        try { initSearch(); } catch (e) { console.warn("[OL] initSearch:", e); }
 
-        initRefresh();
+        try { initRefresh(); } catch (e) { console.warn("[OL] initRefresh:", e); }
 
-        initTheme();
+        try { initTheme(); } catch (e) { console.warn("[OL] initTheme:", e); }
 
-        initMore();
+        try { initMore(); } catch (e) { console.warn("[OL] initMore:", e); }
+
+        try { patchHasMarkdown(); } catch (e) {}
+
+        try { watchBodyForMarkdown(); } catch (e) {}
 
 
         /* 读取上次保存的主题并同步 */

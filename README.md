@@ -50,6 +50,7 @@
 - 未登录访问时自动弹出登录框。
 - 支持“以游客身份浏览”。
 - 支持登录、注册、注册成功后自动登录。
+- 注册时必须填写邀请码；`server.js` 将其与 `REGISTRATION_INVITE_CODE` 精确比对，不匹配时返回“请联系管理员获取邀请码”。部署前需将该常量设置为非空邀请码，否则服务端会拒绝注册。
 - 注册请求发送到 `REGISTER_API`。
 - 登录请求发送到 OpenList 同源接口：`/api/auth/login`。
 - 登录成功后将 token 写入 `localStorage` 的 `token` 键，然后刷新页面。
@@ -78,4 +79,4 @@
 当前：
 
 ```js
-var REGISTER_API = "http://10.88.202.78:3235/api/register";
+var REGISTER_API = "http://10.88.206.67:3235/api/register";

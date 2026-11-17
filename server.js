@@ -8,6 +8,7 @@ const PORT = 3235;
 const OPENLIST_BASE_URL = "http://localhost:5244"; // OpenList 地址
 const ADMIN_USERNAME = "admin";                     // 管理员账号
 const ADMIN_PASSWORD = "";       // 管理员密码
+const REGISTRATION_INVITE_CODE = ""; // 设置邀请码后才允许注册
 // ==========================================
 
 // 通用 HTTP 请求封装
@@ -106,6 +107,20 @@ const server = http.createServer(async (req, res) => {
 
         const username = (body.username || "").trim();
         const password = body.password || "";
+        const inviteCode =
+            typeof body.inviteCode === "string" ? body.inviteCode : "";
+
+        if (!REGISTRATION_INVITE_CODE) {
+            res.writeHead(500);
+            res.end(JSON.stringify({ message: "服务端未配置邀请码，请联系管理员" }));
+            return;
+        }
+
+        if (inviteCode !== REGISTRATION_INVITE_CODE) {
+            res.writeHead(403);
+            res.end(JSON.stringify({ message: "请联系管理员获取邀请码" }));
+            return;
+        }
 
         if (!username || !password) {
             res.writeHead(400);
