@@ -8,7 +8,7 @@
 
 
 /* =========================================================
-   主题变量
+   Theme Variables
    ========================================================= */
 
 :root {
@@ -50,7 +50,7 @@
 
 
 /* =========================================================
-   全局
+   Global
    ========================================================= */
 
 html {
@@ -112,7 +112,7 @@ body {
 
 
 /* =========================================================
-   OpenList 容器透明
+   OpenList Container Transparent
    ========================================================= */
 
 #root,
@@ -126,10 +126,10 @@ body {
 
 
 /* =========================================================
-   视频背景
+   Video Background
    ========================================================= */
 
-#openlist-video-bg {
+.openlist-video-bg {
 
     position:
         fixed;
@@ -161,6 +161,9 @@ body {
     transform:
         scale(1.02);
 
+    opacity:
+        0;
+
     background:
 
         linear-gradient(
@@ -174,8 +177,15 @@ body {
 }
 
 
+.openlist-video-bg.active {
+
+    opacity:
+        1;
+}
+
+
 /* =========================================================
-   视频遮罩
+   Video Overlay
    ========================================================= */
 
 #openlist-video-overlay {
@@ -217,7 +227,7 @@ body {
 
 
 /* =========================================================
-   视频模糊层
+   Video Blur Layer
    ========================================================= */
 
 #openlist-video-blur {
@@ -245,7 +255,7 @@ body {
 
 
 /* =========================================================
-   深色模式视频遮罩
+   Dark Mode Video Overlay
    ========================================================= */
 
 .hope-ui-dark #openlist-video-overlay {
@@ -271,7 +281,7 @@ body {
 
 
 /* =========================================================
-   视频顶部 / 底部渐变
+   Video Top / Bottom Gradient
    ========================================================= */
 
 #openlist-video-overlay::after {
@@ -343,7 +353,7 @@ body {
 
 
 /* =========================================================
-   隐藏 OpenList 原生 Header
+   Hide OpenList Native Header
    ========================================================= */
 
 #root > .header {
@@ -382,7 +392,7 @@ body {
 
 
 /* =========================================================
-   页面主体
+   Page Body
    ========================================================= */
 
 .body {
@@ -406,7 +416,7 @@ body {
 
 
 /* =========================================================
-   面包屑 / Nav
+   Breadcrumb / Nav
    ========================================================= */
 
 .body > .nav {
@@ -451,13 +461,11 @@ body {
 
     transition:
         all .3s ease;
-
-    padding: inherit;
 }
 
 
 /* =========================================================
-   Nav 深色
+   Nav Dark
    ========================================================= */
 
 .hope-ui-dark .body > .nav {
@@ -493,7 +501,7 @@ body {
 
 
 /* =========================================================
-   文件列表
+   File List
    ========================================================= */
 
 .obj-box {
@@ -548,7 +556,7 @@ body {
 
 
 /* =========================================================
-   文件列表 - 深色
+   File List - Dark
    ========================================================= */
 
 .hope-ui-dark .obj-box {
@@ -582,7 +590,7 @@ body {
 
 
 /* =========================================================
-   文件项目
+   File Item
    ========================================================= */
 
 .obj-box > div > div {
@@ -599,7 +607,7 @@ body {
 
 
 /* =========================================================
-   文件 Hover
+   File Hover
    ========================================================= */
 
 .obj-box > div > div:hover {
@@ -626,7 +634,7 @@ body {
 
 
 /* =========================================================
-   文件 Hover - 深色
+   File Hover - Dark
    ========================================================= */
 
 .hope-ui-dark
@@ -651,7 +659,7 @@ body {
 
 
 /* =========================================================
-   文件名
+   File Name
    ========================================================= */
 
 .name-box .name {
@@ -673,7 +681,7 @@ body {
 
 
 /* =========================================================
-   缩略图
+   Thumbnail
    ========================================================= */
 
 .item-thumbnail {
@@ -694,7 +702,7 @@ body {
 
 
 /* =========================================================
-   输入框
+   Input
    ========================================================= */
 
 input,
@@ -731,7 +739,7 @@ textarea:focus,
 
 
 /* =========================================================
-   按钮
+   Button
    ========================================================= */
 
 button {
@@ -759,7 +767,7 @@ button:active {
 
 
 /* =========================================================
-   原生图标按钮
+   Native Icon Button
    ========================================================= */
 
 .hope-icon-button {
@@ -830,7 +838,7 @@ button:active {
 
 
 /* =========================================================
-   侧边栏 / Drawer
+   Sidebar / Drawer
    ========================================================= */
 
 [class*="sidebar"],
@@ -849,7 +857,7 @@ button:active {
 
 
 /* =========================================================
-   链接
+   Link
    ========================================================= */
 
 a {
@@ -868,7 +876,7 @@ a:hover {
 
 
 /* =========================================================
-   隐藏原生 Footer
+   Hide Native Footer
    ========================================================= */
 
 #root .footer {
@@ -879,7 +887,7 @@ a:hover {
 
 
 /* =========================================================
-   自定义底部导航
+   Custom Footer
    ========================================================= */
 
 #openlist-footer {
@@ -953,7 +961,7 @@ a:hover {
 
 
 /* =========================================================
-   Footer 深色
+   Footer Dark
    ========================================================= */
 
 .hope-ui-dark #openlist-footer {
@@ -995,7 +1003,7 @@ a:hover {
 
 
 /* =========================================================
-   Footer 内部
+   Footer Inner
    ========================================================= */
 
 .openlist-footer-inner {
@@ -1027,7 +1035,7 @@ a:hover {
 
 
 /* =========================================================
-   Footer 左侧 Online
+   Footer Left Online
    ========================================================= */
 
 .openlist-footer-status {
@@ -1118,14 +1126,8 @@ a:hover {
 
 
 /* =========================================================
-   Footer 中央
+   Footer Center
    ========================================================= */
-
-/*
-   使用 absolute + 50%，
-   确保无论左右按钮多少，
-   中间内容永远真正居中。
-*/
 
 .openlist-footer-center {
 
@@ -1185,7 +1187,7 @@ a:hover {
 
 
 /* =========================================================
-   Footer 分隔符
+   Footer Divider
    ========================================================= */
 
 .openlist-footer-divider {
@@ -1196,7 +1198,7 @@ a:hover {
 
 
 /* =========================================================
-   由 OpenList 驱动
+   Powered by OpenList
    ========================================================= */
 
 .openlist-footer-center a {
@@ -1227,7 +1229,7 @@ a:hover {
 
 
 /* =========================================================
-   Footer 右侧
+   Footer Right
    ========================================================= */
 
 .openlist-footer-actions {
@@ -1247,7 +1249,7 @@ a:hover {
 
 
 /* =========================================================
-   Footer 右侧按钮 / 管理
+   Footer Right Button / Manage
    ========================================================= */
 
 .openlist-footer-actions button,
@@ -1343,20 +1345,8 @@ a:hover {
 
 
 /* =========================================================
-   隐藏底栏「主题」「管理」
+   Hide Footer "Theme" "Manage"
    ========================================================= */
-
-/*
- * 底栏这两个按钮全局隐藏（不限手机端）：
- *
- * 主题 -> 顶栏右侧已有 ☼ 图标
- * 管理 -> 顶栏 ⋯ 更多菜单里已有「管理后台」
- *
- * 底栏只保留「返回顶部」。
- *
- * 用 !important 压过各断点里
- * 给 .openlist-footer-actions button / a 设的 display。
- */
 
 #openlist-footer-theme,
 .openlist-footer-actions a[href*="@manage"] {
@@ -1367,7 +1357,7 @@ a:hover {
 
 
 /* =========================================================
-   滚动条
+   Scrollbar
    ========================================================= */
 
 ::-webkit-scrollbar {
@@ -1413,7 +1403,7 @@ a:hover {
 
 
 /* =========================================================
-   选中文本
+   Selection
    ========================================================= */
 
 ::selection {
@@ -1427,7 +1417,7 @@ a:hover {
 
 
 /* =========================================================
-   深色模式文字变量
+   Dark Mode Text Variables
    ========================================================= */
 
 .hope-ui-dark {
@@ -1457,10 +1447,6 @@ a:hover {
 }
 
 
-/* =========================================================
-   深色模式容器透明
-   ========================================================= */
-
 .hope-ui-dark #root,
 .hope-ui-dark #root > div,
 .hope-ui-dark .body {
@@ -1471,10 +1457,10 @@ a:hover {
 
 
 /* =========================================================
-   视频无 src 时的背景
+   Video No Src Background
    ========================================================= */
 
-#openlist-video-bg:not([src]) {
+.openlist-video-bg:not([src]) {
 
     background:
 
@@ -1498,1271 +1484,448 @@ a:hover {
 
 
 /* =========================================================
-   手机端
-   ========================================================= */
-
-<style>
-
-/* =========================================================
-   OpenList Mobile Fix
-   手机版专用修正版
-   ========================================================= */
-
-/* =========================================================
-   平板 / 手机
+   Mobile
    ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* -----------------------------------------------------
-       页面整体
-       ----------------------------------------------------- */
-
     html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden !important;
-    }
-
+    body,
     #root {
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         overflow-x: hidden !important;
     }
 
     .body {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-
-        /*
-         * 给底部导航留出空间
-         * 手机 footer 只剩 Online 状态条
-         */
-        padding-bottom:
-            calc(
-                68px + env(safe-area-inset-bottom)
-            ) !important;
-
-        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 0 calc(76px + env(safe-area-inset-bottom)) 0 !important;
+        box-sizing: border-box !important;
+        display: block !important;
     }
 
-
-    /* =====================================================
-       顶部导航 / 面包屑
-       ===================================================== */
-
     .body > .nav {
-
-        /*
-         * 手机不要再使用桌面端 82px
-         */
-        margin-top:
-            68px !important;
-
-        margin-left:
-            8px !important;
-
-        margin-right:
-            8px !important;
-
-        width:
-            auto !important;
-
-        max-width:
-            calc(100% - 16px) !important;
-
-        box-sizing:
-            border-box !important;
-
-        min-height:
-            42px;
-
-        border-radius:
-            15px !important;
-
-        /*
-         * 面包屑允许横向滚动，不再强制单行挤压
-         */
-        overflow-x:
-            auto !important;
-
-        overflow-y:
-            hidden !important;
-
-        -webkit-overflow-scrolling:
-            touch;
-
-        scrollbar-width:
-            none;
+        margin: 66px 8px 10px 8px !important;
+        width: auto !important;
+        max-width: calc(100% - 16px) !important;
+        min-height: 40px !important;
+        height: 40px !important;
+        padding: 0 10px !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
 
     .body > .nav::-webkit-scrollbar {
-
-        display:
-            none;
+        display: none;
     }
 
-    .body > .nav .nav-link {
-
-        max-width:
-            120px;
-
-        overflow:
-            hidden;
-
-        text-overflow:
-            ellipsis;
-
-        white-space:
-            nowrap;
+    .body > .nav .hope-breadcrumb__list,
+    .body > .nav ol,
+    .body > .nav ul {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        gap: 2px !important;
+        list-style: none !important;
     }
 
-    .body > .nav .nav-item:last-child .nav-link {
-
-        max-width:
-            160px;
+    .body > .nav .nav-item,
+    .body > .nav .hope-breadcrumb__item,
+    .body > .nav li {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
     }
 
-
-    /* Nav 内部内容不要把页面撑宽 */
-
-    .body > .nav > * {
-        max-width:
-            100% !important;
-
-        box-sizing:
-            border-box !important;
+    .body > .nav .nav-link,
+    .body > .nav .hope-breadcrumb__link,
+    .body > .nav .hope-breadcrumb__link *,
+    .body > .nav span {
+        padding: 4px 8px !important;
+        margin: 0 !important;
+        height: auto !important;
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        border-radius: 7px !important;
+        white-space: nowrap !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 4px !important;
     }
 
+    .body > .nav .hope-breadcrumb__link[aria-current="page"],
+    .body > .nav .hope-c-kyJmIJ-bQjbGr-currentPage-true {
+        font-weight: 600 !important;
+    }
 
-    /* =====================================================
-       文件列表
-       ===================================================== */
+    #openlist-topbar {
+        position: fixed !important;
+        top: 8px !important;
+        left: 8px !important;
+        right: 8px !important;
+        width: auto !important;
+        max-width: none !important;
+        transform: none !important;
+        height: 54px !important;
+        padding: 0 8px !important;
+        border-radius: 15px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 6px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    #openlist-topbar .openlist-brand {
+        flex: 0 0 auto !important;
+        min-width: 0 !important;
+        gap: 0 !important;
+    }
+
+    #openlist-topbar .openlist-brand-text {
+        display: none !important;
+    }
+
+    #openlist-topbar .openlist-brand-icon {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 19px !important;
+        border-radius: 10px !important;
+    }
+
+    #openlist-topbar .openlist-search-center {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 4px !important;
+    }
+
+    #openlist-topbar .openlist-search-button {
+        width: 100% !important;
+        max-width: none !important;
+        height: 36px !important;
+        padding: 0 10px !important;
+        border-radius: 10px !important;
+        justify-content: center !important;
+    }
+
+    #openlist-topbar .openlist-search-text,
+    #openlist-topbar .openlist-search-shortcut {
+        display: none !important;
+    }
+
+    #openlist-topbar .openlist-search-icon {
+        font-size: 17px !important;
+    }
+
+    #openlist-topbar .openlist-actions {
+        flex: 0 0 auto !important;
+        gap: 1px !important;
+    }
+
+    #openlist-topbar .openlist-online {
+        display: none !important;
+    }
+
+    #openlist-topbar .openlist-action {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 15px !important;
+        border-radius: 9px !important;
+    }
+
+    .body > div,
+    .body > section,
+    .body > main,
+    .body > article {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        box-sizing: border-box !important;
+        display: block !important;
+    }
+
+    .obj-box,
+    .obj-box > div,
+    .list,
+    .list-box,
+    .list-wrapper,
+    [class*="list-box"],
+    [class*="file-list"],
+    [class*="file-box"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
 
     .obj-box {
-
-        width:
-            auto !important;
-
-        max-width:
-            calc(100% - 16px) !important;
-
-        margin-left:
-            8px !important;
-
-        margin-right:
-            8px !important;
-
-        box-sizing:
-            border-box !important;
-
-        border-radius:
-            16px !important;
-
-        overflow:
-            hidden !important;
+        border-radius: 14px !important;
     }
 
-
-    /* =====================================================
-       文件列表内部
-       ===================================================== */
-
-    .obj-box > div {
-        max-width:
-            100% !important;
-
-        box-sizing:
-            border-box !important;
-    }
-
-
-    .obj-box > div > div {
-
-        /*
-         * 手机取消 hover 上浮
-         * 手机没有真正的 hover
-         */
-        transform:
-            none !important;
-
-        box-sizing:
-            border-box !important;
-
-        max-width:
-            100% !important;
-
-        border-radius:
-            11px !important;
-    }
-
-
-    .obj-box > div > div:hover {
-
-        transform:
-            none !important;
-    }
-
-
-    /* =====================================================
-       列表项行内边距
-       ===================================================== */
-
+    .obj-box > div > div,
     .list-item {
-
-        padding:
-            6px 8px !important;
-
-        gap:
-            4px !important;
-
-        font-size:
-            13px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        border-radius: 10px !important;
+        transform: none !important;
     }
-
-
-    /* =====================================================
-       列表项图标 & checkbox 缩小
-       ===================================================== */
-
-    .list-item .icon {
-
-        width:
-            20px !important;
-
-        height:
-            20px !important;
-
-        flex-shrink:
-            0 !important;
-    }
-
-    .list-item .name-box {
-
-        gap:
-            3px !important;
-    }
-
-    .list-item .name-box > label {
-
-        transform:
-            scale(0.85);
-
-        margin:
-            0 -2px !important;
-    }
-
-    .list-item .name-box .icon {
-
-        margin-right:
-            0 !important;
-    }
-
-
-    /* =====================================================
-       表头缩小
-       ===================================================== */
 
     .list .title {
-
-        padding:
-            6px 8px !important;
-
-        font-size:
-            12px !important;
-
-        gap:
-            4px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 8px 10px !important;
+        font-size: 12px !important;
+        display: flex !important;
+        gap: 6px !important;
     }
 
-
-    /* =====================================================
-       文件名
-       ===================================================== */
-
-    .name-box {
-        min-width:
-            0 !important;
-
-        max-width:
-            100% !important;
+    .list .title > *:first-child,
+    .list-item .name-box {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
     }
 
-
-    .name-box .name {
-
-        /*
-         * 超长文件名省略
-         */
-        overflow:
-            hidden !important;
-
-        text-overflow:
-            ellipsis !important;
-
-        white-space:
-            nowrap !important;
-
-        min-width:
-            0 !important;
+    .list .title > *:not(:first-child),
+    .list-item .size,
+    .list-item .time,
+    .list-item [class*="size"],
+    .list-item [class*="time"] {
+        flex: 0 0 auto !important;
+        max-width: 80px !important;
+        font-size: 11px !important;
     }
 
-
-    /* =====================================================
-       缩略图
-       ===================================================== */
+    .name-box,
+    .name-box .name,
+    .list-item .name {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        max-width: 100% !important;
+        font-size: 13px !important;
+    }
 
     .item-thumbnail {
-
-        /*
-         * 手机不要放大缩略图
-         */
-        transform:
-            none !important;
-
-        max-width:
-            100%;
+        transform: none !important;
+        max-width: 100% !important;
     }
 
-
+    .obj-box > div > div:hover,
     .obj-box > div > div:hover .item-thumbnail {
-        transform:
-            none !important;
+        transform: none !important;
     }
-
-
-    /* =====================================================
-       输入框
-       ===================================================== */
-
-    input,
-    textarea,
-    [role="textbox"] {
-
-        max-width:
-            100% !important;
-
-        box-sizing:
-            border-box !important;
-    }
-
-
-    /* =====================================================
-       防止 OpenList 表格产生横向滚动
-       ===================================================== */
-
-    table {
-        max-width:
-            100% !important;
-    }
-
-    td,
-    th {
-        max-width:
-            100%;
-
-        overflow:
-            hidden;
-
-        text-overflow:
-            ellipsis;
-    }
-
-
-    /* =====================================================
-       Markdown
-       ===================================================== */
 
     [class*="markdown"],
     .markdown-body {
-
-        width:
-            auto !important;
-
-        max-width:
-            calc(100% - 16px) !important;
-
-        margin-left:
-            8px !important;
-
-        margin-right:
-            8px !important;
-
-        box-sizing:
-            border-box !important;
-
-        border-radius:
-            16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        box-sizing: border-box !important;
+        border-radius: 14px !important;
     }
-
-
-    /* =====================================================
-       自定义底部导航
-       ===================================================== */
 
     #openlist-footer {
-
-        /*
-         * 不再使用固定左右 18px
-         */
-        left:
-            8px !important;
-
-        right:
-            8px !important;
-
-        bottom:
-            calc(
-                8px + env(safe-area-inset-bottom)
-            ) !important;
-
-        width:
-            auto !important;
-
-        max-width:
-            none !important;
-
-        height:
-            auto !important;
-
-        min-height:
-            44px !important;
-
-        box-sizing:
-            border-box !important;
-
-        border-radius:
-            16px !important;
-
-        overflow:
-            visible !important;
+        left: 8px !important;
+        right: 8px !important;
+        bottom: calc(8px + env(safe-area-inset-bottom)) !important;
+        width: auto !important;
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        border-radius: 15px !important;
+        box-sizing: border-box !important;
     }
-
-
-    /* =====================================================
-       Footer 内部
-       ===================================================== */
 
     .openlist-footer-inner {
-
-        width:
-            100% !important;
-
-        height:
-            auto !important;
-
-        min-height:
-            44px !important;
-
-        min-width:
-            0 !important;
-
-        padding:
-            6px 10px !important;
-
-        box-sizing:
-            border-box !important;
-
-        display:
-            flex !important;
-
-        flex-direction:
-            row !important;
-
-        align-items:
-            center !important;
-
-        justify-content:
-            center !important;
-
-        gap:
-            0 !important;
-
-        overflow:
-            hidden !important;
+        padding: 0 12px !important;
+        height: 48px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
     }
-
-
-    /* =====================================================
-       Footer 左侧 Online
-       ===================================================== */
 
     .openlist-footer-status {
-
-        flex:
-            0 0 auto !important;
-
-        min-width:
-            0 !important;
-
-        height:
-            34px !important;
-
-        padding:
-            0 9px !important;
-
-        border-radius:
-            10px !important;
-
-        display:
-            inline-flex !important;
-
-        align-items:
-            center !important;
-
-        justify-content:
-            center !important;
-
-        gap:
-            5px !important;
-
-        font-size:
-            11px !important;
-
-        white-space:
-            nowrap !important;
+        flex: 0 0 auto !important;
+        min-width: 0 !important;
+        height: 32px !important;
+        padding: 0 10px !important;
+        gap: 5px !important;
+        font-size: 12px !important;
+        border-radius: 9px !important;
     }
-
 
     .openlist-footer-status-dot {
-
-        width:
-            6px !important;
-
-        height:
-            6px !important;
-
-        min-width:
-            6px !important;
-
-        border-radius:
-            50% !important;
+        width: 6px !important;
+        height: 6px !important;
+        min-width: 6px !important;
     }
-
-
-    /* =====================================================
-       Footer 中间内容
-       ===================================================== */
 
     .openlist-footer-center {
-
-        /*
-         * 手机隐藏中央 OpenList / 驱动文字
-         * 给两侧留空间
-         */
-        display:
-            none !important;
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        flex: 1 1 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 0 !important;
     }
 
+    .openlist-footer-center > .openlist-footer-brand,
+    .openlist-footer-center > .openlist-footer-divider,
+    .openlist-footer-center > span:not(.openlist-footer-login),
+    .openlist-footer-center > a:not(.openlist-footer-login) {
+        display: none !important;
+    }
 
-    /*
-     * 手机底栏：
-     *
-     * 主题 / 管理 已在上面全局隐藏（不限断点）
-     * 返回顶部   -> 保留，只显示 ↑ 图标（文字在下方隐藏）
-     *
-     * 右下角悬浮的 #openlist-top 在手机上已隐藏，
-     * 避免和底栏的 ↑ 重复（见 custom_content.html 的 768px 断点）。
-     */
+    .openlist-footer-center .openlist-footer-login {
+        height: 32px !important;
+        padding: 0 14px !important;
+        font-size: 12px !important;
+        border-radius: 9px !important;
+        flex: 0 0 auto !important;
+    }
 
-
-    /* =====================================================
-       Footer 右侧
-       ===================================================== */
-
-    /*
-     * 这里刻意不写 display，
-     * 避免覆盖「隐藏主题 / 管理」的规则。
-     * 这一组里只剩「返回顶部」一个按钮，
-     * 以下尺寸就是它的实际尺寸。
-     */
+    .openlist-footer-center .openlist-footer-login svg {
+        width: 12px !important;
+        height: 12px !important;
+    }
 
     .openlist-footer-actions {
-
-        flex:
-            0 0 auto !important;
-
-        min-width:
-            0 !important;
-
-        align-items:
-            center !important;
-
-        justify-content:
-            flex-end !important;
-
-        gap:
-            2px !important;
-
-        white-space:
-            nowrap !important;
+        display: none !important;
     }
-
-
-    .openlist-footer-actions button,
-    .openlist-footer-actions a {
-
-        width:
-            38px !important;
-
-        min-width:
-            38px !important;
-
-        max-width:
-            38px !important;
-
-        height:
-            36px !important;
-
-        padding:
-            0 !important;
-
-        margin:
-            0 !important;
-
-        border-radius:
-            10px !important;
-
-        display:
-            inline-flex !important;
-
-        align-items:
-            center !important;
-
-        justify-content:
-            center !important;
-
-        box-sizing:
-            border-box !important;
-
-        font-size:
-            12px !important;
-
-        flex-shrink:
-            0 !important;
-    }
-
-    
-
-    /*
-     * 手机隐藏按钮文字
-     */
-    .openlist-footer-actions button span,
-    .openlist-footer-actions a span {
-
-        display:
-            none !important;
-    }
-
-
-    /* =====================================================
-       手机 Footer Hover
-       ===================================================== */
-
-    .openlist-footer-actions button:hover,
-    .openlist-footer-actions a:hover {
-
-        transform:
-            none !important;
-    }
-
-
-    /* =====================================================
-       自定义顶部栏
-       ===================================================== */
-
-    /*
-     * 如果你的自定义内容使用这个 ID，
-     * 手机自动缩小顶部栏
-     */
-
-    #openlist-topbar {
-
-        left:
-            8px !important;
-
-        right:
-            8px !important;
-
-        width:
-            auto !important;
-
-        max-width:
-            none !important;
-
-        min-width:
-            0 !important;
-
-        height:
-            52px !important;
-
-        border-radius:
-            16px !important;
-
-        box-sizing:
-            border-box !important;
-
-        overflow:
-            hidden !important;
-    }
-
-
-    /* 顶栏内部 */
-
-    #openlist-topbar > * {
-        min-width:
-            0;
-    }
-
-
-    /* 顶栏 Logo */
-
-    #openlist-topbar .openlist-brand {
-        min-width:
-            0 !important;
-
-        flex-shrink:
-            1 !important;
-    }
-
-
-    /* 手机隐藏 Personal Cloud */
-
-    #openlist-topbar .openlist-subtitle {
-        display:
-            none !important;
-    }
-
-
-    /* 手机搜索框 */
-
-    #openlist-topbar .openlist-search {
-
-        flex:
-            1 1 auto !important;
-
-        min-width:
-            0 !important;
-
-        max-width:
-            none !important;
-
-        margin:
-            0 6px !important;
-    }
-
-
-    /* 搜索文字过长时 */
-
-    #openlist-topbar .openlist-search span {
-
-        overflow:
-            hidden;
-
-        text-overflow:
-            ellipsis;
-
-        white-space:
-            nowrap;
-    }
-
-
-    /* 顶栏右侧按钮 */
-
-    #openlist-topbar button {
-
-        flex-shrink:
-            0 !important;
-    }
-
-
-    /* =====================================================
-       手机隐藏不必要的顶栏文字
-       ===================================================== */
-
-    #openlist-topbar .openlist-online-text,
-    #openlist-topbar .openlist-action-text {
-
-        display:
-            none !important;
-    }
-
-
-    /* =====================================================
-       搜索弹窗
-       ===================================================== */
 
     #openlist-search-panel {
-
-        left:
-            8px !important;
-
-        right:
-            8px !important;
-
-        width:
-            auto !important;
-
-        max-width:
-            none !important;
-
-        box-sizing:
-            border-box !important;
-
-        border-radius:
-            16px !important;
+        left: 8px !important;
+        right: 8px !important;
+        width: auto !important;
+        max-width: none !important;
+        box-sizing: border-box !important;
+        border-radius: 16px !important;
     }
-
 
     #openlist-search-panel input {
-
-        width:
-            100% !important;
-
-        box-sizing:
-            border-box !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
-
-
-    /* =====================================================
-       顶部 / 返回顶部按钮
-       ===================================================== */
-
-    #openlist-top-button {
-
-        right:
-            12px !important;
-
-        bottom:
-            calc(
-                72px + env(safe-area-inset-bottom)
-            ) !important;
-
-        width:
-            40px !important;
-
-        height:
-            40px !important;
-    }
-
-
-    /* =====================================================
-       侧边工具栏
-       ===================================================== */
-
-    /*
-     * OpenList 自己右侧的工具栏在手机上容易
-     * 和 Footer / 屏幕边缘打架。
-     */
 
     .hope-icon-button {
-
-        border-radius:
-            10px !important;
+        border-radius: 10px !important;
     }
-
-
-    /* =====================================================
-       滚动条
-       ===================================================== */
 
     ::-webkit-scrollbar {
-
-        width:
-            4px;
-
-        height:
-            4px;
+        width: 4px;
+        height: 4px;
     }
-
-
-    /* =====================================================
-       防止任何元素撑出屏幕
-       ===================================================== */
 
     img,
     video,
     iframe {
-
-        max-width:
-            100%;
+        max-width: 100%;
     }
 
 }
 
 
 /* =========================================================
-   超小屏幕
-   ========================================================= */
-
-@media (max-width: 430px) {
-
-    /* -----------------------------------------------
-       Footer
-       ----------------------------------------------- */
-
-    #openlist-footer {
-
-        right:
-            6px !important;
-
-        bottom:
-            calc(
-                6px + env(safe-area-inset-bottom)
-            ) !important;
-
-        height:
-            auto !important;
-
-        min-height:
-            40px !important;
-
-        border-radius:
-            15px !important;
-    }
-
-
-    .openlist-footer-inner {
-
-        padding:
-            4px 8px !important;
-    }
-
-
-    .openlist-footer-status {
-
-        height:
-            30px !important;
-
-        padding:
-            0 7px !important;
-
-        font-size:
-            10px !important;
-    }
-
-
-    .openlist-footer-actions button,
-    .openlist-footer-actions a {
-
-        width:
-            36px !important;
-
-        min-width:
-            36px !important;
-
-        max-width:
-            36px !important;
-
-        height:
-            34px !important;
-    }
-
-
-    /* -----------------------------------------------
-       Nav
-       ----------------------------------------------- */
-
-    .body > .nav {
-
-        margin-top:
-            66px !important;
-
-        margin-left:
-            6px !important;
-
-        margin-right:
-            6px !important;
-
-        max-width:
-            calc(100% - 12px) !important;
-
-        border-radius:
-            14px !important;
-    }
-
-
-    /* -----------------------------------------------
-       文件列表
-       ----------------------------------------------- */
-
-    .obj-box {
-
-        margin-left:
-            6px !important;
-
-        margin-right:
-            6px !important;
-
-        max-width:
-            calc(100% - 12px) !important;
-
-        border-radius:
-            14px !important;
-    }
-
-
-    /* -----------------------------------------------
-       Markdown
-       ----------------------------------------------- */
-
-    [class*="markdown"],
-    .markdown-body {
-
-        margin-left:
-            6px !important;
-
-        margin-right:
-            6px !important;
-
-        max-width:
-            calc(100% - 12px) !important;
-
-        border-radius:
-            14px !important;
-    }
-
-
-    /* -----------------------------------------------
-       顶栏
-       ----------------------------------------------- */
-
-    #openlist-topbar {
-
-        right:
-            6px !important;
-
-        height:
-            50px !important;
-
-        border-radius:
-            15px !important;
-    }
-
-
-    /* 手机上 Logo 再缩小一点 */
-
-    #openlist-topbar .openlist-brand {
-
-        font-size:
-            13px !important;
-    }
-
-
-    /* 手机上搜索框不要太宽 */
-
-    #openlist-topbar .openlist-search {
-
-        margin:
-            0 4px !important;
-    }
-
-
-    /* 返回顶部 */
-
-    #openlist-top-button {
-
-        right:
-            10px !important;
-
-        bottom:
-            calc(
-                66px + env(safe-area-inset-bottom)
-            ) !important;
-
-        width:
-            38px !important;
-
-        height:
-            38px !important;
-    }
-
-}
-
-
-/* =========================================================
-   极窄屏幕 360px
+   Narrow Screen 360px
    ========================================================= */
 
 @media (max-width: 360px) {
 
     #openlist-footer {
-
-        left:
-            4px !important;
-
-        right:
-            4px !important;
+        left: 4px !important;
+        right: 4px !important;
     }
-
 
     .openlist-footer-inner {
-
-        padding:
-            5px 6px !important;
+        padding: 0 8px !important;
     }
-
-
-    .openlist-footer-status {
-
-        padding:
-            0 6px !important;
-    }
-
-
-    .openlist-footer-actions button,
-    .openlist-footer-actions a {
-
-        width:
-            34px !important;
-
-        min-width:
-            34px !important;
-
-        max-width:
-            34px !important;
-    }
-
 
     .body > .nav {
-
-        margin-left:
-            4px !important;
-
-        margin-right:
-            4px !important;
-
-        max-width:
-            calc(100% - 8px) !important;
+        margin-left: 4px !important;
+        margin-right: 4px !important;
+        max-width: calc(100% - 8px) !important;
     }
 
+    .body > div,
+    .body > section,
+    .body > main,
+    .body > article {
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }
 
     .obj-box {
-
-        margin-left:
-            4px !important;
-
-        margin-right:
-            4px !important;
-
-        max-width:
-            calc(100% - 8px) !important;
+        margin-left: 4px !important;
+        margin-right: 4px !important;
+        max-width: calc(100% - 8px) !important;
     }
 
 }
 
 
 /* =========================================================
-   减少动画
+   Reduced Motion
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
     html {
-
-        scroll-behavior:
-            auto;
+        scroll-behavior: auto;
     }
 
-
-    #openlist-video-bg {
-
-        display:
-            none;
+    .openlist-video-bg {
+        display: none;
     }
-
 
     .openlist-footer-status-dot {
-
-        animation:
-            none !important;
+        animation: none !important;
     }
-
 
     *,
     *::before,
     *::after {
-
-        transition-duration:
-            0.01ms !important;
-
-        animation-duration:
-            0.01ms !important;
-
-        animation-iteration-count:
-            1 !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 
 }
 
-
-/* =========================================================
-   视频没有 src 时的兜底
-   ========================================================= */
-
-#openlist-video-bg:not([src]) {
-
-    background:
-
-        radial-gradient(
-            circle at 30% 20%,
-            rgba(
-                255,
-                255,
-                255,
-                0.65
-            ),
-            transparent 45%
-        ),
-
-        linear-gradient(
-            135deg,
-            #dceff8,
-            #eef4f8
-        );
-}
-
-
-/* =========================================================
-   深色模式
-   ========================================================= */
-
-.hope-ui-dark {
-
-    --openlist-text:
-        rgba(
-            255,
-            255,
-            255,
-            0.90
-        );
-
-    --openlist-text-secondary:
-        rgba(
-            255,
-            255,
-            255,
-            0.62
-        );
-}
-
-
-.hope-ui-dark body {
-
-    background:
-        transparent !important;
-}
-
-
-.hope-ui-dark #root,
-.hope-ui-dark #root > div,
-.hope-ui-dark .body {
-
-    background:
-        transparent !important;
-}
 
 /* =========================================================
    More Menu
@@ -2780,9 +1943,6 @@ a:hover {
 
     border-radius: 18px;
 
-    /*
-     * Glass
-     */
     background:
         rgba(255, 255, 255, 0.72);
 
@@ -2824,8 +1984,6 @@ a:hover {
 }
 
 
-/* 打开 */
-
 #openlist-more-menu.open {
 
     opacity: 1;
@@ -2838,8 +1996,6 @@ a:hover {
 
 }
 
-
-/* 标题 */
 
 .openlist-more-title {
 
@@ -2860,8 +2016,6 @@ a:hover {
 
 }
 
-
-/* 菜单项目 */
 
 .openlist-more-item {
 
@@ -2894,8 +2048,6 @@ a:hover {
 }
 
 
-/* hover */
-
 .openlist-more-item:hover {
 
     background:
@@ -2907,8 +2059,6 @@ a:hover {
 }
 
 
-/* 点击 */
-
 .openlist-more-item:active {
 
     transform:
@@ -2916,8 +2066,6 @@ a:hover {
 
 }
 
-
-/* 图标 */
 
 .openlist-more-icon {
 
@@ -2953,8 +2101,6 @@ a:hover {
 }
 
 
-/* 文字区域 */
-
 .openlist-more-text {
 
     display: flex;
@@ -2970,8 +2116,6 @@ a:hover {
 }
 
 
-/* 主标题 */
-
 .openlist-more-text strong {
 
     font-size: 14px;
@@ -2986,8 +2130,6 @@ a:hover {
 }
 
 
-/* 描述 */
-
 .openlist-more-text small {
 
     margin-top: 1px;
@@ -3001,8 +2143,6 @@ a:hover {
 
 }
 
-
-/* 箭头 */
 
 .openlist-more-arrow {
 
@@ -3031,10 +2171,6 @@ a:hover {
 
 }
 
-
-/* =========================================================
-   Dark Mode
-   ========================================================= */
 
 .hope-ui-dark #openlist-more-menu,
 .dark #openlist-more-menu {
@@ -3124,17 +2260,10 @@ a:hover {
 }
 
 
-/* =========================================================
-   Mobile
-   ========================================================= */
-
 @media (max-width: 600px) {
 
     #openlist-more-menu {
 
-        /*
-         * 手机不要太宽
-         */
         width:
             min(
                 270px,
@@ -3145,9 +2274,6 @@ a:hover {
 
         border-radius: 17px;
 
-        /*
-         * 手机增强玻璃效果
-         */
         backdrop-filter:
             blur(28px)
             saturate(170%);
@@ -3158,7 +2284,6 @@ a:hover {
 
     }
 
-
     .openlist-more-item {
 
         min-height: 56px;
@@ -3166,7 +2291,6 @@ a:hover {
         border-radius: 12px;
 
     }
-
 
     .openlist-more-icon {
 
@@ -3178,13 +2302,11 @@ a:hover {
 
     }
 
-
     .openlist-more-text strong {
 
         font-size: 13px;
 
     }
-
 
     .openlist-more-text small {
 
@@ -3194,10 +2316,6 @@ a:hover {
 
 }
 
-
-/* =========================================================
-   Very Small Phone
-   ========================================================= */
 
 @media (max-width: 380px) {
 
@@ -3210,9 +2328,10 @@ a:hover {
 
 }
 
+
 /* =====================================================
-   主题切换转场特效
-   View Transitions 蓄力爆发
+   Theme Transition Effects
+   View Transitions
    ===================================================== */
 
 ::view-transition-old(root),
@@ -3231,8 +2350,8 @@ a:hover {
 
 
 /* =====================================================
-   主题切换转场特效
-   Fallback 时空扭曲 + 能量冲击波
+   Theme Transition Effects
+   Fallback Spacetime Warp + Energy Shockwave
    ===================================================== */
 
 #openlist-theme-fx {
@@ -3370,10 +2489,6 @@ a:hover {
 }
 
 
-/* =====================================================
-   主题切换转场 内容扭曲
-   ===================================================== */
-
 #root {
     transition:
         filter 0.45s cubic-bezier(0.7, 0, 0.3, 1),
@@ -3385,43 +2500,38 @@ html.openlist-theme-warp #root {
     transform: scale(0.945);
 }
 
-#openlist-video-bg {
+.openlist-video-bg {
     transition:
         opacity 0.45s ease,
         filter 0.5s cubic-bezier(0.7, 0, 0.3, 1),
         transform 0.5s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-html.openlist-theme-warp #openlist-video-bg {
+html.openlist-theme-warp .openlist-video-bg {
     filter: brightness(1.22) saturate(1.45) hue-rotate(28deg);
     transform: scale(1.06);
 }
 
 
 /* =========================================================
-   原生组件层级适配
-   通知 / 选中工具栏 / 右键菜单 避开自定义导航栏
+   Native Component Z-Index Adaptation
    ========================================================= */
 
-/* Hope UI 通知列表（欢迎语等提示）：置于顶栏之上并下移避开顶栏 */
 .hope-notification__list {
     z-index: 100000 !important;
     top: 84px !important;
 }
 
-/* 选中文件时底部弹出的操作菜单：上移避开底部导航 */
 .center-toolbar {
     z-index: 100000 !important;
     bottom: 92px !important;
 }
 
-/* 原生右下角悬浮工具条：上移避开底部导航 */
 .left-toolbar-box {
     z-index: 100000 !important;
     bottom: 92px !important;
 }
 
-/* 右键菜单：置于导航栏之上 */
 .solid-contextmenu {
     z-index: 100000 !important;
 }
@@ -3440,7 +2550,1621 @@ html.openlist-theme-warp #openlist-video-bg {
 
 
 /* =========================================================
+   Footer Login Button
+   ========================================================= */
+
+.openlist-footer-center .openlist-footer-login {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        4px;
+
+    height:
+        26px;
+
+    padding:
+        0 10px;
+
+    box-sizing:
+        border-box;
+
+    border-radius:
+        8px;
+
+    border:
+        1px solid
+        rgba(
+            var(--openlist-accent-rgb),
+            0.38
+        );
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.12
+        );
+
+    color:
+        var(--openlist-accent)
+        !important;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        .02em;
+
+    text-decoration:
+        none;
+
+    opacity:
+        1 !important;
+
+    cursor:
+        pointer;
+
+    transition:
+        all .2s ease;
+}
+
+
+.openlist-footer-center .openlist-footer-login svg {
+
+    width:
+        12px;
+
+    height:
+        12px;
+
+    flex-shrink:
+        0;
+}
+
+
+.openlist-footer-center .openlist-footer-login:hover {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.22
+        );
+
+    border-color:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.60
+        );
+
+    color:
+        var(--openlist-accent)
+        !important;
+
+    opacity:
+        1 !important;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+
+        0 6px 18px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.22
+        );
+}
+
+
+.openlist-footer-center .openlist-footer-login:active {
+
+    transform:
+        translateY(0);
+
+    box-shadow:
+        none;
+}
+
+
+.hope-ui-dark .openlist-footer-center .openlist-footer-login {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.18
+        );
+
+    border-color:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.45
+        );
+
+    color:
+        #7cc4ff
+        !important;
+}
+
+
+.hope-ui-dark .openlist-footer-center .openlist-footer-login:hover {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.30
+        );
+
+    border-color:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.65
+        );
+
+    color:
+        #9ed3ff
+        !important;
+}
+
+
+/* =========================================================
+   Login Modal
+   ========================================================= */
+
+#openlist-login-modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        2147483000;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        20px;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+
+    transition:
+        opacity .32s ease,
+        visibility .32s ease;
+}
+
+
+#openlist-login-modal.show {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    pointer-events:
+        auto;
+}
+
+
+/* ---------- Backdrop ---------- */
+
+#openlist-login-modal .olm-backdrop {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        rgba(
+            245,
+            248,
+            252,
+            0.28
+        );
+
+    backdrop-filter:
+        blur(12px)
+        saturate(140%);
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(140%);
+
+    animation:
+        olm-fade-in .4s ease;
+}
+
+
+.hope-ui-dark
+#openlist-login-modal
+.olm-backdrop {
+
+    background:
+        rgba(
+            8,
+            11,
+            16,
+            0.42
+        );
+
+    backdrop-filter:
+        blur(12px)
+        saturate(120%);
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(120%);
+}
+
+
+@keyframes olm-fade-in {
+
+    from { opacity: 0; }
+
+    to { opacity: 1; }
+}
+
+
+/* ---------- Card ---------- */
+
+#openlist-login-modal .olm-card {
+
+    position:
+        relative;
+
+    width:
+        min(
+            100%,
+            380px
+        );
+
+    padding:
+        30px 26px 22px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.85
+        );
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.88
+        );
+
+    box-shadow:
+        0 10px 40px
+        rgba(
+            30,
+            80,
+            130,
+            0.14
+        );
+
+    backdrop-filter:
+        blur(14px)
+        saturate(140%);
+
+    -webkit-backdrop-filter:
+        blur(14px)
+        saturate(140%);
+
+    transform:
+        translateY(14px)
+        scale(0.97);
+
+    opacity:
+        0;
+
+    transition:
+        transform .42s
+            cubic-bezier(0.2, 0.9, 0.3, 1.2),
+        opacity .3s ease;
+}
+
+
+#openlist-login-modal.show
+.olm-card {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    opacity:
+        1;
+}
+
+
+.hope-ui-dark
+#openlist-login-modal
+.olm-card {
+
+    background:
+        rgba(
+            22,
+            26,
+            34,
+            0.92
+        );
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+
+    box-shadow:
+        0 10px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.42
+        );
+
+    backdrop-filter:
+        blur(14px)
+        saturate(120%);
+
+    -webkit-backdrop-filter:
+        blur(14px)
+        saturate(120%);
+}
+
+
+/* ---------- Brand ---------- */
+
+#openlist-login-modal .olm-brand {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        22px;
+}
+
+
+#openlist-login-modal .olm-brand-icon {
+
+    width:
+        54px;
+
+    height:
+        54px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        10px;
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.14
+        );
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    font-size:
+        26px;
+
+    box-shadow:
+        inset
+        0 0
+        0 1px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.18
+        );
+
+    animation:
+        olm-icon-breathe
+        3.6s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes olm-icon-breathe {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-2px);
+    }
+}
+
+
+#openlist-login-modal .olm-brand-title {
+
+    font-size:
+        18px;
+
+    font-weight:
+        700;
+
+    color:
+        #2d3a48;
+
+    letter-spacing:
+        0.4px;
+}
+
+
+.hope-ui-dark
+#openlist-login-modal
+.olm-brand-title {
+
+    color:
+        #edf2f7;
+}
+
+
+#openlist-login-modal .olm-brand-subtitle {
+
+    margin-top:
+        2px;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        1.6px;
+
+    text-transform:
+        uppercase;
+
+    color:
+        #98a3b0;
+}
+
+
+.hope-ui-dark
+#openlist-login-modal
+.olm-brand-subtitle {
+
+    color:
+        #7f8a98;
+}
+
+
+/* ---------- View Switching (Login / Register) ---------- */
+
+#openlist-login-modal .olm-view {
+
+    display:
+        none;
+}
+
+
+#openlist-login-modal[data-view="login"] .olm-view-login,
+#openlist-login-modal[data-view="register"] .olm-view-register {
+
+    display:
+        block;
+
+    animation:
+        olm-view-fade .28s ease;
+}
+
+
+@keyframes olm-view-fade {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateX(6px);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* ---------- Fields ---------- */
+
+#openlist-login-modal .olm-field {
+
+    margin-bottom:
+        14px;
+}
+
+
+#openlist-login-modal .olm-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.6px;
+
+    color:
+        #7b8896;
+
+    text-transform:
+        uppercase;
+}
+
+
+.hope-ui-dark
+#openlist-login-modal
+.olm-label {
+
+    color:
+        #8b96a4;
+}
+
+
+#openlist-login-modal .olm-input {
+
+    width:
+        100%;
+
+    height:
+        44px;
+
+    padding:
+        0 14px;
+
+    box-sizing:
+        border-box;
+
+    border:
+        1px solid
+        rgba(
+            120,
+            150,
+            180,
+            0.22
+        );
+
+    border-radius:
+        11px;
+
+    outline:
+        none;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.96
+        );
+
+    color:
+        #2d3a48;
+
+    font-size:
+        14px;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.hope-ui-dark
+#openlist-login-modal
+.olm-input {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.09
+        );
+
+    color:
+        #edf2f7;
+}
+
+
+#openlist-login-modal .olm-input::placeholder {
+
+    color:
+        #a8b3c0;
+}
+
+
+#openlist-login-modal .olm-input:focus {
+
+    border-color:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.55
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            1
+        );
+
+    box-shadow:
+        0 0 0 4px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.12
+        );
+}
+
+
+.hope-ui-dark
+#openlist-login-modal
+.olm-input:focus {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.10
+        );
+}
+
+
+/* ---------- Submit ---------- */
+
+#openlist-login-modal .olm-submit {
+
+    width:
+        100%;
+
+    height:
+        46px;
+
+    margin-top:
+        8px;
+
+    border:
+        0;
+
+    border-radius:
+        11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(
+                var(--openlist-accent-rgb)
+            ),
+            rgba(
+                var(--openlist-accent-rgb),
+                0.82
+            )
+        );
+
+    color:
+        #fff;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        1px;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 6px 18px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.28
+        );
+
+    transition:
+        transform .2s ease,
+        box-shadow .25s ease,
+        filter .2s ease;
+}
+
+
+#openlist-login-modal .olm-submit:hover {
+
+    transform:
+        translateY(-1px);
+
+    filter:
+        brightness(1.06);
+}
+
+
+#openlist-login-modal .olm-submit:disabled {
+
+    opacity:
+        .65;
+
+    cursor:
+        not-allowed;
+
+    transform:
+        none;
+}
+
+
+/* ---------- Guest ---------- */
+
+#openlist-login-modal .olm-guest {
+
+    width:
+        100%;
+
+    height:
+        42px;
+
+    margin-top:
+        10px;
+
+    border:
+        1px solid
+        rgba(
+            120,
+            150,
+            180,
+            0.22
+        );
+
+    border-radius:
+        11px;
+
+    background:
+        transparent;
+
+    color:
+        #6a7786;
+
+    font-size:
+        13px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        0.4px;
+
+    cursor:
+        pointer;
+
+    transition:
+        all .2s ease;
+}
+
+
+.hope-ui-dark
+#openlist-login-modal
+.olm-guest {
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.10
+        );
+
+    color:
+        #9aa6b4;
+}
+
+
+#openlist-login-modal .olm-guest:hover {
+
+    border-color:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.45
+        );
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.07
+        );
+}
+
+
+/* ---------- Register / Login Switch ---------- */
+
+#openlist-login-modal .olm-register {
+
+    margin-top:
+        12px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        4px;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        0.2px;
+
+    color:
+        #7b8896;
+}
+
+
+.hope-ui-dark
+#openlist-login-modal
+.olm-register {
+
+    color:
+        #9aa6b4;
+}
+
+
+#openlist-login-modal .olm-register-link {
+
+    position:
+        relative;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        2px 0;
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    font-weight:
+        600;
+
+    text-decoration:
+        none;
+
+    cursor:
+        pointer;
+
+    transition:
+        color .2s ease,
+        opacity .2s ease;
+}
+
+
+#openlist-login-modal
+.olm-register-link::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        -1px;
+
+    height:
+        1px;
+
+    background:
+        currentColor;
+
+    opacity:
+        0;
+
+    transform:
+        scaleX(0.4);
+
+    transform-origin:
+        center;
+
+    transition:
+        opacity .2s ease,
+        transform .25s ease;
+}
+
+
+#openlist-login-modal
+.olm-register-link:hover {
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    opacity:
+        .85;
+}
+
+
+#openlist-login-modal
+.olm-register-link:hover::after {
+
+    opacity:
+        .8;
+
+    transform:
+        scaleX(1);
+}
+
+
+/* ---------- Error ---------- */
+
+#openlist-login-modal .olm-error {
+
+    margin-top:
+        10px;
+
+    padding:
+        9px 12px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(
+            235,
+            87,
+            87,
+            0.10
+        );
+
+    border:
+        1px solid
+        rgba(
+            235,
+            87,
+            87,
+            0.25
+        );
+
+    color:
+        #d94545;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.5;
+
+    display:
+        none;
+}
+
+
+#openlist-login-modal .olm-error.show {
+
+    display:
+        block;
+}
+
+
+/* ---------- Footer ---------- */
+
+#openlist-login-modal .olm-foot {
+
+    margin-top:
+        18px;
+
+    text-align:
+        center;
+
+    font-size:
+        11px;
+
+    color:
+        #a3aebc;
+
+    letter-spacing:
+        0.3px;
+}
+
+
+#openlist-login-modal .olm-foot a {
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+}
+
+
+#openlist-login-modal .olm-foot a:hover {
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+}
+
+
+@media (max-width: 430px) {
+
+    #openlist-login-modal
+    .olm-card {
+
+        padding:
+            26px 22px 20px;
+
+        border-radius:
+            16px;
+    }
+
+}
+
+
+/* =========================================================
    END
    ========================================================= */
 
 </style>
+
+
+<!-- =========================================================
+     Login / Register Modal
+     ========================================================= -->
+
+<div id="openlist-login-modal" data-view="login">
+
+    <div class="olm-backdrop"></div>
+
+    <div class="olm-card">
+
+        <div class="olm-brand">
+
+            <div class="olm-brand-icon">
+                &#x25C8;
+            </div>
+
+            <div class="olm-brand-title">
+                &#x5B66;&#x751F;&#x76EE;&#x5F55;
+            </div>
+
+        </div>
+
+
+        <!-- =============================================
+             View: Login
+             ============================================= -->
+        <div class="olm-view olm-view-login">
+
+            <form id="olm-form" autocomplete="on">
+
+                <div class="olm-field">
+
+                    <label
+                        class="olm-label"
+                        for="olm-username"
+                    >
+                        &#x7528;&#x6237;&#x540D;
+                    </label>
+
+                    <input
+                        id="olm-username"
+                        class="olm-input"
+                        type="text"
+                        autocomplete="username"
+                        placeholder="&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="olm-field">
+
+                    <label
+                        class="olm-label"
+                        for="olm-password"
+                    >
+                        &#x5BC6;&#x7801;
+                    </label>
+
+                    <input
+                        id="olm-password"
+                        class="olm-input"
+                        type="password"
+                        autocomplete="current-password"
+                        placeholder="&#x8BF7;&#x8F93;&#x5165;&#x5BC6;&#x7801;"
+                        required
+                    >
+
+                </div>
+
+
+                <div
+                    id="olm-error"
+                    class="olm-error"
+                ></div>
+
+
+                <button
+                    id="olm-submit"
+                    class="olm-submit"
+                    type="submit"
+                >
+                    &#x767B; &#x5F55;
+                </button>
+
+            </form>
+
+
+            <button
+                id="olm-guest"
+                class="olm-guest"
+                type="button"
+            >
+                &#x4EE5;&#x6E38;&#x5BA2;&#x8EAB;&#x4EFD;&#x6D4F;&#x89C8;
+            </button>
+
+
+            <div class="olm-register">
+
+                <span>&#x672A;&#x6CE8;&#x518C;&#xFF1F;</span>
+
+                <a
+                    id="olm-switch-register"
+                    class="olm-register-link"
+                    href="javascript:void(0)"
+                    role="button"
+                >
+                    &#x70B9;&#x51FB;&#x6CE8;&#x518C;
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =============================================
+             View: Register
+             ============================================= -->
+        <div class="olm-view olm-view-register">
+
+            <form id="olm-register-form" autocomplete="on">
+
+                <div class="olm-field">
+
+                    <label
+                        class="olm-label"
+                        for="olm-register-username"
+                    >
+                        &#x7528;&#x6237;&#x540D;
+                    </label>
+
+                    <input
+                        id="olm-register-username"
+                        class="olm-input"
+                        type="text"
+                        autocomplete="username"
+                        placeholder="&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="olm-field">
+
+                    <label
+                        class="olm-label"
+                        for="olm-register-invite-code"
+                    >
+                        &#x9080;&#x8BF7;&#x7801;
+                    </label>
+
+                    <input
+                        id="olm-register-invite-code"
+                        class="olm-input"
+                        type="text"
+                        autocomplete="off"
+                        spellcheck="false"
+                        placeholder="&#x8BF7;&#x8F93;&#x5165;&#x9080;&#x8BF7;&#x7801;"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="olm-field">
+
+                    <label
+                        class="olm-label"
+                        for="olm-register-password"
+                    >
+                        &#x5BC6;&#x7801;
+                    </label>
+
+                    <input
+                        id="olm-register-password"
+                        class="olm-input"
+                        type="password"
+                        autocomplete="new-password"
+                        placeholder="&#x8BF7;&#x8F93;&#x5165;&#x5BC6;&#x7801;"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="olm-field">
+
+                    <label
+                        class="olm-label"
+                        for="olm-register-confirm"
+                    >
+                        &#x786E;&#x8BA4;&#x5BC6;&#x7801;
+                    </label>
+
+                    <input
+                        id="olm-register-confirm"
+                        class="olm-input"
+                        type="password"
+                        autocomplete="new-password"
+                        placeholder="&#x8BF7;&#x518D;&#x6B21;&#x8F93;&#x5165;&#x5BC6;&#x7801;"
+                        required
+                    >
+
+                </div>
+
+
+                <div
+                    id="olm-register-error"
+                    class="olm-error"
+                ></div>
+
+
+                <button
+                    id="olm-register-submit"
+                    class="olm-submit"
+                    type="submit"
+                >
+                    &#x6CE8; &#x518C;
+                </button>
+
+            </form>
+
+
+            <div class="olm-register">
+
+                <span>&#x5DF2;&#x6709;&#x8D26;&#x6237;&#xFF1F;</span>
+
+                <a
+                    id="olm-switch-login"
+                    class="olm-register-link"
+                    href="javascript:void(0)"
+                    role="button"
+                >
+                    &#x8FD4;&#x56DE;&#x767B;&#x5F55;
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="olm-foot">
+
+            &#x7531;
+
+            <a
+                href="https://github.com/OpenListTeam/OpenList"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                OpenList
+            </a>
+
+            &#x9A71;&#x52A8;
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     Register View Logic
+     ========================================================= -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+    // Config: Register API endpoint
+    // Same-origin (Nginx reverse proxy): '/register-api/api/register'
+    // Separate host: 'http://SERVER_IP:3235/api/register'
+    var REGISTER_API = "http://10.88.206.67:3235/api/register";
+
+    function init() {
+
+        var modal = document.getElementById("openlist-login-modal");
+
+        if (!modal) {
+            setTimeout(init, 400);
+            return;
+        }
+
+        if (modal.dataset.regBound === "1") {
+            return;
+        }
+
+        modal.dataset.regBound = "1";
+
+        var switchRegister = document.getElementById("olm-switch-register");
+        var switchLogin = document.getElementById("olm-switch-login");
+        var registerForm = document.getElementById("olm-register-form");
+        var registerError = document.getElementById("olm-register-error");
+        var registerSubmit = document.getElementById("olm-register-submit");
+
+        function showError(msg) {
+            if (!registerError) return;
+            registerError.textContent = msg;
+            registerError.classList.add("show");
+        }
+
+        function hideError() {
+            if (!registerError) return;
+            registerError.classList.remove("show");
+            registerError.textContent = "";
+        }
+
+        function setView(view) {
+            modal.setAttribute("data-view", view);
+            hideError();
+            if (view === "register") {
+                setTimeout(function () {
+                    var u = document.getElementById("olm-register-username");
+                    if (u) u.focus();
+                }, 80);
+            } else {
+                setTimeout(function () {
+                    var u = document.getElementById("olm-username");
+                    if (u) u.focus();
+                }, 80);
+            }
+        }
+
+        if (switchRegister) {
+            switchRegister.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (registerForm) registerForm.reset();
+                setView("register");
+            });
+        }
+
+        if (switchLogin) {
+            switchLogin.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                setView("login");
+            });
+        }
+
+        var backdrop = modal.querySelector(".olm-backdrop");
+        if (backdrop) {
+            backdrop.addEventListener("click", function () {
+                if (modal.getAttribute("data-view") === "register") {
+                    setView("login");
+                }
+            });
+        }
+
+        if (registerForm) {
+            registerForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                hideError();
+
+                var username = document.getElementById("olm-register-username").value.trim();
+                var password = document.getElementById("olm-register-password").value;
+                var confirm = document.getElementById("olm-register-confirm").value;
+                var inviteCode = document.getElementById("olm-register-invite-code").value;
+
+                if (!username || !password) {
+                    showError("\u8BF7\u8F93\u5165\u7528\u6237\u540D\u548C\u5BC6\u7801");
+                    return;
+                }
+                if (!inviteCode) {
+                    showError("\u8BF7\u8F93\u5165\u9080\u8BF7\u7801");
+                    return;
+                }
+                if (password !== confirm) {
+                    showError("\u4E24\u6B21\u8F93\u5165\u7684\u5BC6\u7801\u4E0D\u4E00\u81F4");
+                    return;
+                }
+                if (password.length < 4) {
+                    showError("\u5BC6\u7801\u957F\u5EA6\u81F3\u5C11 4 \u4F4D");
+                    return;
+                }
+
+                registerSubmit.disabled = true;
+                registerSubmit.textContent = "\u6CE8\u518C\u4E2D...";
+
+                fetch(REGISTER_API, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        username: username,
+                        password: password,
+                        inviteCode: inviteCode
+                    })
+                })
+                .then(function (res) {
+                    return res.json().then(function (data) {
+                        return { ok: res.ok, data: data };
+                    });
+                })
+                .then(function (r) {
+                    if (!r.ok) {
+                        showError(r.data.message || "\u6CE8\u518C\u5931\u8D25");
+                        registerSubmit.disabled = false;
+                        registerSubmit.textContent = "\u6CE8 \u518C";
+                        return;
+                    }
+
+                    // Registered -> auto login
+                    registerSubmit.textContent = "\u767B\u5F55\u4E2D...";
+
+                    return fetch("/api/auth/login", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ username: username, password: password })
+                    })
+                    .then(function (res) { return res.json(); })
+                    .then(function (data) {
+                        if (data && data.code === 200 && data.data && data.data.token) {
+                            try {
+                                localStorage.setItem("token", data.data.token);
+                                sessionStorage.removeItem("openlist-guest-mode");
+                            } catch (err) {}
+                            location.reload();
+                        } else {
+                            showError("\u6CE8\u518C\u6210\u529F\uFF0C\u4F46\u81EA\u52A8\u767B\u5F55\u5931\u8D25\uFF0C\u8BF7\u624B\u52A8\u767B\u5F55");
+                            registerSubmit.disabled = false;
+                            registerSubmit.textContent = "\u6CE8 \u518C";
+                            setView("login");
+                        }
+                    });
+                })
+                .catch(function () {
+                    showError("\u7F51\u7EDC\u9519\u8BEF\uFF0C\u8BF7\u68C0\u67E5\u8FDE\u63A5");
+                    registerSubmit.disabled = false;
+                    registerSubmit.textContent = "\u6CE8 \u518C";
+                });
+            });
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+    } else {
+        init();
+    }
+
+})();
+
+</script>

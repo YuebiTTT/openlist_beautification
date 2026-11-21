@@ -1,212 +1,82 @@
-# OpenList 玻璃拟态主题 · 视频背景版
+# OpenList Premium Glass 视频背景主题
 
-给 [OpenList](https://github.com/OpenListTeam/OpenList) 前端套的一套玻璃拟态皮肤：明暗双视频背景、自定义顶栏 / 底栏、搜索面板、快捷入口菜单，以及点击主题按钮时从鼠标位置扩散的转场特效。
+## 1. 项目简介
 
-纯 CSS + 原生 JS，不改任何页面模板，后台粘贴两段代码即可生效。
+本套文件用于给 OpenList 添加：
 
----
+- 视频背景（亮色 / 暗色两套视频）
+- 玻璃拟态 UI
+- 自定义顶部栏、搜索面板、返回顶部、底部状态栏
+- 登录 / 注册弹窗
+- 注册 API 服务
+- 亮暗主题切换与切换动画
+- 移动端适配
 
-## 文件说明
+包含三个文件：
 
-| 文件 | 内容 | 粘贴位置 |
-| --- | --- | --- |
-| `custom_head.css` | 全部样式（**文件内含 `<style>` 标签**） | 管理后台 → 设置 → 全局 → **自定义头部** |
-| `custom_content.html` | DOM 结构 + 内联 `<style>` + 全部交互脚本 | 管理后台 → 设置 → 全局 → **自定义内容** |
+| 文件 | 作用 |
+|---|---|
+| `custom_head.css` | 实际是“头部注入内容”，包含 CSS、登录/注册弹窗 HTML、注册逻辑 JS。注意：它**不是纯 CSS 文件**。 |
+| `custom_content.html` | 页面内容注入，包含视频背景、自定义 UI、样式、主题/搜索/登录弹窗/页脚逻辑。 |
+| `server.js` | 零依赖 Node.js 注册 API 服务，通过 OpenList 管理员账号创建普通用户。 |
 
-> `custom_head.css` 后缀是 `.css`，但内容是带 `<style>` 包裹的 HTML 片段，因为它要原样粘进「自定义头部」文本框，别当成纯 CSS 文件用。
-
----
-
-## 食用方法
-
-1. 登录 OpenList 管理后台，进入 **设置 → 全局**。
-2. 把 `custom_head.css` 的**全部内容**（含首尾 `<style>`）粘进 **自定义头部**。
-3. 把 `custom_content.html` 的**全部内容**粘进 **自定义内容**。
-4. 保存，然后刷新前台页面。
-
-注意两点：
-
-- **先备份**你原来填的自定义头部 / 自定义内容，这两块是覆盖式保存。
-- 自定义头部**不作用于管理页面**，`/@manage` 后台界面不会有任何变化，这是 OpenList 的设计，不是没生效。
+> `custom_content.html` 依赖 `custom_head.css` 中的 `#openlist-login-modal` 登录/注册弹窗。  
+> 请确保 `custom_head.css` 的内容已经注入，否则登录弹窗脚本会等待超时。
 
 ---
 
-## 功能一览
+## 2. 功能说明
 
-**视频背景**
+### 2.1 视频背景
 
-- 浅色 / 深色主题各挂一个视频，`<video>` 全屏铺底，`object-fit: cover`。
-- 切换主题时旧视频淡出 → 换源 → 新视频淡入，并记住播放进度，来回切不会每次从头开始。
-- 上面盖了遮罩 + 模糊层，深色模式另有单独一层压暗，保证文字可读。
-- 页面从后台切回来会自动尝试恢复播放；浏览器拦截自动播放时静默跳过（视频是 `muted` 的，通常能自动播）。
+- 亮色主题视频：
+  `/d/学生目录/alist默认背景/lemon.mp4`
+- 暗色主题视频：
+  `/d/学生目录/alist默认背景/wallpaper1.mp4`
+- 通过 `fetch` 拉取为 Blob 后播放，减少视频地址直接暴露。
+- 视频文件需要当前用户可访问；如果目录需要登录，未登录/游客可能加载失败。
 
-**顶栏**
+### 2.2 自定义 UI
 
-品牌区（图标 + 标题 + 副标题）、居中搜索按钮、右侧 Online 状态 / 主题 ☼ / 刷新 ↻ / 更多 ⋯。滚动超过 35px 时顶栏进入 `scrolled` 状态（加深背景）。
+- 顶部栏：品牌、搜索按钮、主题切换、刷新、更多菜单。
+- 搜索面板：按 `/` 或点击搜索按钮打开，`Esc` 关闭。
+- 底部状态栏：Online 状态、登录/登出按钮。
+- 更多菜单：管理后台入口。
+- 返回顶部按钮。
+- 移动端底部栏、顶部栏、面包屑、文件列表适配。
 
-**底栏**
+### 2.3 登录 / 注册
 
-左侧 Online 状态，右侧返回顶部 ↑。原来的「主题」「管理」两个按钮**已全局隐藏**（所有屏幕尺寸都隐藏），因为顶栏 ☼ 和 ⋯ 菜单里的「管理后台」已经覆盖了这两个功能。
+- 未登录访问时自动弹出登录框。
+- 支持“以游客身份浏览”。
+- 支持登录、注册、注册成功后自动登录。
+- 注册时必须填写邀请码；`server.js` 将其与 `REGISTRATION_INVITE_CODE` 精确比对，不匹配时返回“请联系管理员获取邀请码”。部署前需将该常量设置为非空邀请码，否则服务端会拒绝注册。
+- 注册请求发送到 `REGISTER_API`。
+- 登录请求发送到 OpenList 同源接口：`/api/auth/login`。
+- 登录成功后将 token 写入 `localStorage` 的 `token` 键，然后刷新页面。
+- 底部登录按钮会根据 `localStorage/sessionStorage` 中的 `token` 切换“登录/登出”。
 
-**搜索面板**
+### 2.4 注册 API
 
-复用 OpenList 原生搜索框，不另起一套。`/` 打开（输入框聚焦时不会误触发），ESC 或点击面板外关闭。
+`server.js` 提供：
 
-**更多菜单**
+- `GET /api/register`：健康检查。
+- `POST /api/register`：注册接口。
 
-四项快捷入口，域名自动跟随当前访问的站点（可自定义）：
+注册流程：
 
-| 入口 | 地址 |
-| --- | --- |
-| 管理后台 | `当前域名:5244/@manage` |
-| OpenWrt | `当前域名/` |
-| qBittorrent | `当前域名:8081` |
-| Clash | `当前域名:9090` |
-
-**主题切换转场**
-
-优先用 View Transitions API，新主题画面从点击位置圆形扩散开，叠加一层内容扭曲效果；浏览器不支持时自动降级成直接切换，不会报错。
-
-**响应式**
-
-三档断点：`768px`（手机）、`430px`（小屏）、`360px`（极窄）。手机上顶栏只留图标、隐藏品牌文字，文件列表行距和图标都会缩小。
-
-**其他**
-
-隐藏了 OpenList 原生 Header 和 Footer，整套界面由自定义顶栏 / 底栏接管。
+1. 使用管理员账号登录 OpenList：`/api/auth/login`
+2. 获取管理员 token
+3. 调用 OpenList 管理接口创建普通用户：`/api/admin/user/create`
+4. 返回注册结果
 
 ---
 
-## 首次使用要改的地方
+## 3. 部署前必须修改的配置
 
-### 1. 视频地址
+### 3.1 `custom_head.css` 中的注册 API 地址
 
-`custom_content.html`，搜索 `DARK_VIDEO`：
+当前：
 
 ```js
-const LIGHT_VIDEO = "/d/background/lemon.mp4?sign=...";
-const DARK_VIDEO  = "/d/background/wallpaper1.mp4?sign=...";
-```
-
-换成你自己的两个视频（浅色一个、深色一个）。建议视频放在 OpenList 自己的存储里用 `/d/` 直链，跨域和防盗链问题最少。
-
-### 2. 品牌名
-
-| 位置 | 内容 |
-| --- | --- |
-| `custom_content.html` 搜索 `openlist-brand-title` | 顶栏主标题（现为「铜催化剂」） |
-| 搜索 `openlist-brand-subtitle` | 顶栏副标题（现为 `Personal Cloud`） |
-| 搜索 `openlist-footer-brand` | 底栏品牌名 |
-
-顶栏图标 `openlist-brand-icon` 是个字符 `◈`，想换就替换成别的字符或图片。
-
-### 3. 快捷菜单的端口
-
-`custom_content.html` 搜索 `管理后台` 或 `qBittorrent`，四个 `<a>` 的 `href` 改成你自己的地址和端口。不需要的直接删掉整段 `<a ...>...</a>`。
-
-### 4. 主题色
-
-`custom_head.css` 开头：
-
-```css
---openlist-accent:     #20a4ff;
---openlist-accent-rgb: 32, 164, 255;
-```
-
-两个都要改，`:root` 里那个 rgb 版本是给 `rgba()` 用的。
-
----
-
-## 配置速查
-
-改样式时按这些关键字搜，比记行号可靠。
-
-| 想改什么 | 文件 | 搜索关键字 |
-| --- | --- | --- |
-| 主题色 / 玻璃透明度 / 圆角 / 阴影 | `custom_head.css` | `:root` |
-| 视频模糊程度 | `custom_head.css` | `视频模糊层` |
-| 视频明暗、遮罩强度 | `custom_head.css` | `视频遮罩`、`深色模式视频遮罩` |
-| 顶栏本体尺寸 | `custom_head.css` | `自定义顶部栏` |
-| 顶栏滚动后的加深效果 | `custom_content.html` | `openlist-topbar.scrolled` |
-| 底栏样式 | `custom_head.css` | `自定义底部导航`、`Footer 内部` |
-| 底栏隐藏了哪些按钮 | `custom_head.css` | `隐藏底栏` |
-| 更多菜单样式 | `custom_head.css` | `More Menu` |
-| 主题转场特效 | `custom_head.css` | `主题切换转场` |
-| 手机端适配 | `custom_head.css` | `手机端`、`超小屏幕` |
-| 视频地址 | `custom_content.html` | `DARK_VIDEO` |
-| 快捷入口 | `custom_content.html` | `快捷菜单` |
-| 搜索快捷键 | `custom_content.html` | `快捷键` |
-| 手机隐藏悬浮按钮 | `custom_content.html` | `手机上隐藏右下角悬浮的返回顶部` |
-
----
-
-## 快捷键
-
-| 键 | 作用 |
-| --- | --- |
-| `/` | 打开搜索面板（在输入框里输入时不触发） |
-| `ESC` | 关闭搜索面板 / 关闭更多菜单 |
-
----
-
-## 浏览器兼容
-
-- **View Transitions API**（主题转场）：Chrome / Edge 111+、Safari 18+。Firefox 及旧版浏览器会自动降级为直接切换，功能不受影响。
-- **`backdrop-filter`**（毛玻璃）：现代浏览器基本都支持，极少数环境不支持时会退化成半透明纯色，可读性没问题。
-- 视频自动播放依赖 `muted` 属性，iOS Safari 需要 `playsinline`（已加）。
-
----
-
-## 排错
-
-**改完没生效**
-
-先 Ctrl + F5。如果前面挂了 CDN 或反向代理，清一下那层的缓存。
-
-**视频不播放**
-
-- 打开浏览器控制台看视频请求是不是 404 / 403。
-- 直链末尾的 `sign=xxx:0` 是用**管理员 Token** 签出来的。重置过密码、换过 Token 或重装过 OpenList 之后，旧的 sign 会失效，去 OpenList 里重新复制一次直链替换掉。
-- `sign` 里冒号后面的数字是过期时间戳，`0` 表示不过期；如果那是个具体时间戳，过期后同样要重新生成。
-
-**顶栏 / 底栏一直不出现**
-
-脚本初始化故意延迟了 1 秒，等 OpenList 的 React 页面挂载完成（见 `custom_content.html` 末尾的 `setTimeout(init, 1000)`）。网络慢的话再等一两秒。
-
-**底栏想恢复「主题」「管理」按钮**
-
-删掉 `custom_head.css` 里 `隐藏底栏` 那一段规则即可，HTML 元素一直都在，只是被隐藏了。
-
-**手机上想恢复右下角悬浮的返回顶部**
-
-删掉 `custom_content.html` 里「手机上隐藏右下角悬浮的返回顶部」那段，并把 `#openlist-top` 的 `bottom` 值加回来（原来抬到 `62px` 是为了避让底栏）。
-
----
-
-## 维护约定
-
-这套代码的格式是**逐行竖排**的 —— 每个 CSS 属性和值各占一行，JS 里每个参数、每个条件也单独成行，缩进层级拉得很开：
-
-```css
-.openlist-footer-actions {
-
-    display:
-        flex;
-
-    gap:
-        4px;
-}
-```
-
-这么写是为了让每一条声明都能被 diff 和 git blame 精确定位到，改的时候请保持这个风格，不要压成一行。
-
-另外：
-
-- 大量规则带 `!important`，因为要覆盖 Hope UI 运行时生成的内联样式和动态 class，去掉会导致样式失效。
-- 样式优先级靠选择器权重压过各断点里的 `!important`，改底栏按钮的显示 / 隐藏时注意别顺手把 `!important` 删了。
-- 两个文件互相引用 ID（比如 CSS 管 `#openlist-topbar` 的尺寸，HTML 管它内部元素），大改之前两边都搜一下。
-
-
----
-
-Design by Yuebi
+var REGISTER_API = "http://10.88.206.67:3235/api/register";

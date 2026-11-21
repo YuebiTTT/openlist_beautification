@@ -1,1619 +1,2857 @@
-    <!-- =========================================================
-        OpenList Video Background
-        ========================================================= -->
+<!-- =========================================================
+     OpenList Video Background
+     ========================================================= -->
 
 
-    <!-- =========================================================
-        视频背景
-        ========================================================= -->
+<!-- =========================================================
+     Video Background
+     ========================================================= -->
 
-    <video
-        id="openlist-video-bg"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        disablepictureinpicture
-    ></video>
+<video
+    id="openlist-video-bg-light"
+    class="openlist-video-bg"
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    disablepictureinpicture
+></video>
+
+<video
+    id="openlist-video-bg-dark"
+    class="openlist-video-bg"
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    disablepictureinpicture
+></video>
 
 
-    <!-- =========================================================
-        视频遮罩
-        ========================================================= -->
+<!-- =========================================================
+     Video Overlay
+     ========================================================= -->
 
-    <div
-        id="openlist-video-overlay"
-    ></div>
-
-
+<div
+    id="openlist-video-overlay"
+></div>
 
 
-    <!-- =========================================================
-        自定义 UI
-        ========================================================= -->
 
-    <div
-        id="openlist-custom-ui"
+
+<!-- =========================================================
+     Custom UI
+     ========================================================= -->
+
+<div
+    id="openlist-custom-ui"
+>
+
+
+    <!-- =====================================================
+         Top Bar
+         ===================================================== -->
+
+    <header
+        id="openlist-topbar"
     >
 
 
-        <!-- =====================================================
-            顶部导航
-            ===================================================== -->
-
-        <header
-            id="openlist-topbar"
-        >
-
-
-            <!-- =================================================
-                品牌
-                ================================================= -->
-
-            <div
-                class="openlist-brand"
-            >
-
-                <div
-                    class="openlist-brand-icon"
-                >
-                    ◈
-                </div>
-
-
-                <div
-                    class="openlist-brand-text"
-                >
-
-                    <div
-                        class="openlist-brand-title"
-                    >
-                        铜催化剂
-                    </div>
-
-
-                    <div
-                        class="openlist-brand-subtitle"
-                    >
-                        Personal Cloud
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- =================================================
-                搜索
-                ================================================= -->
-
-            <div
-                class="openlist-search-center"
-            >
-
-                <button
-                    id="openlist-search-button"
-                    class="openlist-search-button"
-                    type="button"
-                >
-
-                    <span
-                        class="openlist-search-icon"
-                    >
-                        ⌕
-                    </span>
-
-
-                    <span
-                        class="openlist-search-text"
-                    >
-                        Search files
-                    </span>
-
-
-                    <span
-                        class="openlist-search-shortcut"
-                    >
-                        /
-                    </span>
-
-                </button>
-
-            </div>
-
-
-            <!-- =================================================
-                右侧工具
-                ================================================= -->
-
-            <div
-                class="openlist-actions"
-            >
-
-
-                <!-- Online -->
-
-                <div
-                    class="openlist-online"
-                    title="OpenList Online"
-                >
-
-                    <span
-                        class="openlist-online-dot"
-                    ></span>
-
-
-                    <span
-                        class="openlist-online-text"
-                    >
-                        Online
-                    </span>
-
-                </div>
-
-
-                <!-- Theme -->
-
-                <button
-                    id="openlist-theme-button"
-                    class="openlist-action"
-                    type="button"
-                    title="切换主题"
-                >
-                    ☼
-                </button>
-
-
-                <!-- Refresh -->
-
-                <button
-                    id="openlist-refresh-button"
-                    class="openlist-action"
-                    type="button"
-                    title="刷新"
-                >
-                    ↻
-                </button>
-
-
-                <!-- More -->
-
-                <button
-                    id="openlist-more-button"
-                    class="openlist-action"
-                    type="button"
-                    title="更多"
-                >
-                    ⋯
-                </button>
-
-            </div>
-
-        </header>
-
-
-        <!-- =====================================================
-            搜索面板
-            ===================================================== -->
+        <!-- =================================================
+             Brand
+             ================================================= -->
 
         <div
-            id="openlist-search-panel"
+            class="openlist-brand"
         >
 
             <div
-                class="openlist-search-box"
+                class="openlist-brand-icon"
+            >
+                &#x25C8;
+            </div>
+
+
+            <div
+                class="openlist-brand-text"
             >
 
-                <span
-                    class="openlist-search-panel-icon"
+                <div
+                    class="openlist-brand-title"
                 >
-                    ⌕
-                </span>
-
-
-                <input
-                    id="openlist-search-input"
-                    type="text"
-                    placeholder="搜索文件..."
-                    autocomplete="off"
-                >
-
-
-                <span
-                    class="openlist-search-esc"
-                >
-                    ESC
-                </span>
+                    &#x5B66;&#x751F;&#x76EE;&#x5F55;
+                </div>
 
             </div>
 
         </div>
 
-        <!-- =====================================================
-            返回顶部
-            ===================================================== -->
 
-        <button
-            id="openlist-top"
-            type="button"
-            title="返回顶部"
+        <!-- =================================================
+             Search
+             ================================================= -->
+
+        <div
+            class="openlist-search-center"
         >
-            ↑
-        </button>
+
+            <button
+                id="openlist-search-button"
+                class="openlist-search-button"
+                type="button"
+            >
+
+                <span
+                    class="openlist-search-icon"
+                >
+                    &#x2315;
+                </span>
 
 
-        <!-- =====================================================
-            Footer
-            ===================================================== -->
-
-        <footer id="openlist-footer">
-
-            <div class="openlist-footer-inner">
-
-                <!-- 左侧：在线状态 -->
-                <div class="openlist-footer-status">
-
-                    <span class="openlist-footer-status-dot"></span>
-
-                    <span>Online</span>
-
-                </div>
+                <span
+                    class="openlist-search-text"
+                >
+                    Search files
+                </span>
 
 
-                <!-- 中间：OpenList 信息 -->
-                <div class="openlist-footer-center">
+                <span
+                    class="openlist-search-shortcut"
+                >
+                    /
+                </span>
 
-                    <span class="openlist-footer-brand">
-                        铜催化剂
-                    </span>
+            </button>
 
-                    <span class="openlist-footer-divider">
-                        ·
-                    </span>
-
-                    <a
-                        href="https://github.com/OpenListTeam/OpenList"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        由 OpenList 驱动
-                    </a>
-
-                </div>
+        </div>
 
 
-                <!-- 右侧 -->
-                <div class="openlist-footer-actions">
+        <!-- =================================================
+             Right Tools
+             ================================================= -->
 
-                    <!-- 主题 -->
-                    <button
-                        id="openlist-footer-theme"
-                        type="button"
-                        title="切换主题"
-                    >
-                        ☼
-                        <span>主题</span>
-                    </button>
+        <div
+            class="openlist-actions"
+        >
 
 
-                    <!-- 管理 -->
-                    <a
-                        href="/@manage"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="管理"
-                    >
-                        ⚙
-                        <span>管理</span>
-                    </a>
+            <!-- Online -->
+
+            <div
+                class="openlist-online"
+                title="OpenList Online"
+            >
+
+                <span
+                    class="openlist-online-dot"
+                ></span>
 
 
-                    <!-- 返回顶部 -->
-                    <button
-                        id="openlist-footer-top"
-                        type="button"
-                        title="返回顶部"
-                    >
-                        ↑
-                        <span>顶部</span>
-                    </button>
-
-                </div>
+                <span
+                    class="openlist-online-text"
+                >
+                    Online
+                </span>
 
             </div>
 
-        </footer>
-        
+
+            <!-- Theme -->
+
+            <button
+                id="openlist-theme-button"
+                class="openlist-action"
+                type="button"
+                title="&#x5207;&#x6362;&#x4E3B;&#x9898;"
+            >
+                &#x263C;
+            </button>
+
+
+            <!-- Refresh -->
+
+            <button
+                id="openlist-refresh-button"
+                class="openlist-action"
+                type="button"
+                title="&#x5237;&#x65B0;"
+            >
+                &#x21BB;
+            </button>
+
+
+            <!-- More -->
+
+            <button
+                id="openlist-more-button"
+                class="openlist-action"
+                type="button"
+                title="&#x66F4;&#x591A;"
+            >
+                &#x22EF;
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         Search Panel
+         ===================================================== -->
+
+    <div
+        id="openlist-search-panel"
+    >
+
+        <div
+            class="openlist-search-box"
+        >
+
+            <span
+                class="openlist-search-panel-icon"
+            >
+                &#x2315;
+            </span>
+
+
+            <input
+                id="openlist-search-input"
+                type="text"
+                placeholder="&#x641C;&#x7D22;&#x6587;&#x4EF6;..."
+                autocomplete="off"
+            >
+
+
+            <span
+                class="openlist-search-esc"
+            >
+                ESC
+            </span>
+
+        </div>
+
     </div>
 
+    <!-- =====================================================
+         Back to Top
+         ===================================================== -->
 
-    <style>
+    <button
+        id="openlist-top"
+        type="button"
+        title="&#x8FD4;&#x56DE;&#x9876;&#x90E8;"
+    >
+        &#x2191;
+    </button>
 
-    /* =========================================================
-    Custom UI
-    ========================================================= */
 
-    #openlist-custom-ui {
+    <!-- =====================================================
+         Footer
+         ===================================================== -->
 
-        position:
-            relative;
+    <footer id="openlist-footer">
 
-        z-index:
-            9999;
+        <div class="openlist-footer-inner">
 
-        pointer-events:
-            none;
+            <!-- Left: Online Status -->
+            <div class="openlist-footer-status">
+
+                <span class="openlist-footer-status-dot"></span>
+
+                <span>Online</span>
+
+            </div>
+
+
+            <!-- Center: Brand / Login / Copyright -->
+            <div class="openlist-footer-center">
+
+                <span class="openlist-footer-brand">
+                    &#x5B66;&#x751F;&#x76EE;&#x5F55;
+                </span>
+
+                <span class="openlist-footer-divider">
+                    &#xB7;
+                </span>
+
+                <!-- Login / Logout: handled by JS -->
+                <a
+                    class="openlist-footer-login"
+                    id="openlist-footer-login-btn"
+                    href="javascript:void(0)"
+                    role="button"
+                    data-action="login"
+                    title="&#x767B;&#x5F55;"
+                >
+
+                    <svg
+                        class="openlist-footer-login-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                        <line x1="3" y1="12" x2="15" y2="12"/>
+                        <polyline points="11 8 15 12 11 16"/>
+                    </svg>
+
+                    <span>&#x767B;&#x5F55;</span>
+
+                </a>
+
+                <span class="openlist-footer-divider">
+                    &#xB7;
+                </span>
+
+                <a
+                    href="https://github.com/OpenListTeam/OpenList"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    &#x7531; OpenList &#x9A71;&#x52A8;
+                </a>
+
+            </div>
+
+
+            <!-- Right -->
+            <div class="openlist-footer-actions">
+
+                <!-- Theme -->
+                <button
+                    id="openlist-footer-theme"
+                    type="button"
+                    title="&#x5207;&#x6362;&#x4E3B;&#x9898;"
+                >
+                    &#x263C;
+                    <span>&#x4E3B;&#x9898;</span>
+                </button>
+
+
+                <!-- Manage -->
+                <a
+                    href="/@manage"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="&#x7BA1;&#x7406;"
+                >
+                    &#x2699;
+                    <span>&#x7BA1;&#x7406;</span>
+                </a>
+
+
+                <!-- Back to Top -->
+                <button
+                    id="openlist-footer-top"
+                    type="button"
+                    title="&#x8FD4;&#x56DE;&#x9876;&#x90E8;"
+                >
+                    &#x2191;
+                    <span>&#x9876;&#x90E8;</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </footer>
+    
+</div>
+
+
+<style>
+
+/* =========================================================
+   Custom UI
+   ========================================================= */
+
+#openlist-custom-ui {
+
+    position:
+        relative;
+
+    z-index:
+        9999;
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   Top Bar
+   ========================================================= */
+
+#openlist-topbar {
+
+    position:
+        fixed;
+
+    top:
+        10px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        min(
+            calc(100vw - 40px),
+            1200px
+        );
+
+    height:
+        58px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        0 10px 0 16px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.50
+        );
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.48
+        );
+
+    box-shadow:
+        0 12px 40px
+        rgba(
+            30,
+            80,
+            130,
+            0.10
+        );
+
+    backdrop-filter:
+        blur(22px)
+        saturate(150%);
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(150%);
+
+    pointer-events:
+        auto;
+
+    transition:
+        all .3s ease;
+}
+
+
+#openlist-topbar.scrolled {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.64
+        );
+
+    box-shadow:
+        0 15px 45px
+        rgba(
+            30,
+            80,
+            130,
+            0.14
+        );
+}
+
+
+.hope-ui-dark
+#openlist-topbar {
+
+    background:
+        rgba(
+            15,
+            19,
+            27,
+            0.60
+        );
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.09
+        );
+
+    box-shadow:
+        0 12px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.30
+        );
+}
+
+
+.hope-ui-dark
+#openlist-topbar.scrolled {
+
+    background:
+        rgba(
+            13,
+            17,
+            24,
+            0.76
+        );
+}
+
+
+/* =========================================================
+   Brand
+   ========================================================= */
+
+.openlist-brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    min-width:
+        180px;
+}
+
+
+.openlist-brand-icon {
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.10
+        );
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    font-size:
+        21px;
+
+    box-shadow:
+        inset
+        0 0
+        0 1px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.08
+        );
+}
+
+
+.openlist-brand-title {
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    line-height:
+        17px;
+
+    color:
+        #43515f;
+}
+
+
+.openlist-brand-subtitle {
+
+    font-size:
+        10px;
+
+    line-height:
+        12px;
+
+    color:
+        #8c98a5;
+}
+
+
+.hope-ui-dark
+.openlist-brand-title {
+
+    color:
+        #edf2f7;
+}
+
+
+.hope-ui-dark
+.openlist-brand-subtitle {
+
+    color:
+        #8994a2;
+}
+
+
+/* =========================================================
+   Search
+   ========================================================= */
+
+.openlist-search-center {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+}
+
+
+.openlist-search-button {
+
+    width:
+        230px;
+
+    height:
+        38px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        0 10px;
+
+    border:
+        1px solid
+        rgba(
+            120,
+            150,
+            180,
+            0.11
+        );
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.30
+        );
+
+    color:
+        #8995a3;
+
+    cursor:
+        pointer;
+
+    transition:
+        all .2s ease;
+}
+
+
+.openlist-search-button:hover {
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.08
+        );
+
+    border-color:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.17
+        );
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+}
+
+
+.openlist-search-icon {
+
+    font-size:
+        20px;
+}
+
+
+.openlist-search-text {
+
+    flex:
+        1;
+
+    text-align:
+        left;
+
+    font-size:
+        12px;
+}
+
+
+.openlist-search-shortcut {
+
+    width:
+        20px;
+
+    height:
+        20px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        6px;
+
+    background:
+        rgba(
+            100,
+            120,
+            140,
+            0.08
+        );
+
+    font-size:
+        11px;
+}
+
+
+/* =========================================================
+   Actions
+   ========================================================= */
+
+.openlist-actions {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        4px;
+}
+
+
+.openlist-online {
+
+    height:
+        34px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        0 10px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.25
+        );
+
+    color:
+        #778391;
+
+    font-size:
+        11px;
+}
+
+
+.openlist-online-dot,
+.openlist-status-dot {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #4fd18a;
+
+    box-shadow:
+        0 0 10px
+        rgba(
+            79,
+            209,
+            138,
+            0.75
+        );
+
+    animation:
+        openlist-online-pulse
+        2s infinite;
+}
+
+
+@keyframes openlist-online-pulse {
+
+    0% {
+        opacity: 1;
+        transform: scale(1);
     }
 
-
-    /* =========================================================
-    顶部栏
-    ========================================================= */
-
-    #openlist-topbar {
-
-        position:
-            fixed;
-
-        top:
-            10px;
-
-        left:
-            50%;
-
-        transform:
-            translateX(-50%);
-
-        width:
-            min(
-                calc(100vw - 40px),
-                1200px
-            );
-
-        height:
-            58px;
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            space-between;
-
-        padding:
-            0 10px 0 16px;
-
-        border:
-            1px solid
-            rgba(
-                255,
-                255,
-                255,
-                0.50
-            );
-
-        border-radius:
-            18px;
-
-        background:
-            rgba(
-                255,
-                255,
-                255,
-                0.48
-            );
-
-        box-shadow:
-            0 12px 40px
-            rgba(
-                30,
-                80,
-                130,
-                0.10
-            );
-
-        backdrop-filter:
-            blur(22px)
-            saturate(150%);
-
-        -webkit-backdrop-filter:
-            blur(22px)
-            saturate(150%);
-
-        pointer-events:
-            auto;
-
-        transition:
-            all .3s ease;
+    50% {
+        opacity: .45;
+        transform: scale(.82);
     }
 
-
-    #openlist-topbar.scrolled {
-
-        background:
-            rgba(
-                255,
-                255,
-                255,
-                0.64
-            );
-
-        box-shadow:
-            0 15px 45px
-            rgba(
-                30,
-                80,
-                130,
-                0.14
-            );
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
+}
 
 
-    .hope-ui-dark
-    #openlist-topbar {
+.openlist-action {
 
-        background:
+    width:
+        36px;
+
+    height:
+        36px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        0;
+
+    border-radius:
+        11px;
+
+    background:
+        transparent;
+
+    color:
+        #687583;
+
+    font-size:
+        17px;
+
+    cursor:
+        pointer;
+
+    transition:
+        all .2s ease;
+}
+
+
+.openlist-action:hover {
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.09
+        );
+
+    transform:
+        translateY(-2px);
+}
+
+
+.hope-ui-dark
+.openlist-online {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.05
+        );
+
+    color:
+        #a4afbc;
+}
+
+
+.hope-ui-dark
+.openlist-action {
+
+    color:
+        #aeb8c4;
+}
+
+
+/* =========================================================
+   Search Panel
+   ========================================================= */
+
+#openlist-search-panel {
+
+    position:
+        fixed;
+
+    top:
+        78px;
+
+    left:
+        50%;
+
+    width:
+        min(
+            calc(100vw - 30px),
+            600px
+        );
+
+    transform:
+        translate(
+            -50%,
+            -10px
+        );
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+
+    z-index:
+        10001;
+
+    transition:
+        all .22s ease;
+}
+
+
+#openlist-search-panel.open {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    pointer-events:
+        auto;
+
+    transform:
+        translate(
+            -50%,
+            0
+        );
+}
+
+
+.openlist-search-box {
+
+    height:
+        58px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        0 13px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.50
+        );
+
+    border-radius:
+        17px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.74
+        );
+
+    box-shadow:
+        0 15px 50px
+        rgba(
+            30,
+            80,
+            130,
+            0.16
+        );
+
+    backdrop-filter:
+        blur(25px);
+
+    -webkit-backdrop-filter:
+        blur(25px);
+}
+
+
+.hope-ui-dark
+.openlist-search-box {
+
+    background:
+        rgba(
+            15,
+            19,
+            27,
+            0.80
+        );
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.09
+        );
+
+    box-shadow:
+        0 15px 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.32
+        );
+}
+
+
+.openlist-search-panel-icon {
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    font-size:
+        21px;
+}
+
+
+#openlist-search-input {
+
+    flex:
+        1;
+
+    height:
+        100%;
+
+    padding:
+        0;
+
+    border:
+        0 !important;
+
+    outline:
+        0 !important;
+
+    box-shadow:
+        none !important;
+
+    background:
+        transparent !important;
+
+    color:
+        #43515e;
+
+    font-size:
+        14px;
+}
+
+
+.hope-ui-dark
+#openlist-search-input {
+
+    color:
+        #edf2f7;
+}
+
+
+#openlist-search-input::placeholder {
+
+    color:
+        #9ba6b2;
+}
+
+
+.openlist-search-esc {
+
+    padding:
+        4px 7px;
+
+    border-radius:
+        6px;
+
+    background:
+        rgba(
+            100,
+            120,
+            140,
+            0.08
+        );
+
+    color:
+        #8d98a5;
+
+    font-size:
+        10px;
+}
+
+
+/* =========================================================
+   Back to Top
+   ========================================================= */
+
+#openlist-top {
+
+    position:
+        fixed;
+
+    right:
+        20px;
+
+    bottom:
+        20px;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.46
+        );
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.54
+        );
+
+    box-shadow:
+        0 10px 32px
+        rgba(
+            30,
+            80,
+            130,
+            0.10
+        );
+
+    color:
+        #687685;
+
+    font-size:
+        18px;
+
+    cursor:
+        pointer;
+
+    pointer-events:
+        auto;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        all .25s ease;
+}
+
+
+#openlist-top.show {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+}
+
+
+#openlist-top:hover {
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    background:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.12
+        );
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+#openlist-footer {
+
+    width:
+        min(
+            calc(100% - 44px),
+            1200px
+        );
+
+    margin:
+        35px auto 18px;
+
+    pointer-events:
+        auto;
+}
+
+
+.openlist-footer-inner {
+
+    min-height:
+        46px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        );
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.46
+        );
+
+    box-shadow:
+        0 10px 32px
+        rgba(
+            30,
+            80,
+            130,
+            0.08
+        );
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    color:
+        #84909d;
+
+    font-size:
+        12px;
+}
+
+
+.hope-ui-dark
+.openlist-footer-inner {
+
+    background:
+        rgba(
+            17,
+            21,
+            28,
+            0.56
+        );
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    color:
+        #9ca7b4;
+}
+
+
+.openlist-footer-left {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+}
+
+
+.openlist-footer-title {
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    font-weight:
+        600;
+}
+
+
+.openlist-footer-separator {
+
+    opacity:
+        .5;
+}
+
+
+.openlist-footer-right {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+}
+
+
+.openlist-footer-right button {
+
+    padding:
+        0;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        inherit;
+
+    font-size:
+        12px;
+
+    cursor:
+        pointer;
+
+    transition:
+        color .2s ease;
+}
+
+
+.openlist-footer-right button:hover {
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+}
+
+
+/* =========================================================
+   Footer Center: Brand / Login / Copyright
+   ========================================================= */
+
+.openlist-footer-center {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+}
+
+
+.openlist-footer-brand {
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+
+    font-weight:
+        600;
+}
+
+
+.openlist-footer-center a {
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+
+    transition:
+        color .2s ease;
+}
+
+
+.openlist-footer-center a:hover {
+
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        );
+}
+
+
+.openlist-footer-divider {
+
+    opacity:
+        .5;
+}
+
+
+/* =========================================================
+   Footer Login Button
+   ========================================================= */
+
+.openlist-footer-login {
+
+    position:
+        relative;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+
+    padding:
+        5px 13px 5px 11px;
+
+    border:
+        1px solid
+        rgba(
+            var(--openlist-accent-rgb),
+            0.22
+        );
+
+    border-radius:
+        999px;
+
+    background:
+        linear-gradient(
+            135deg,
             rgba(
-                15,
-                19,
-                27,
-                0.60
-            );
-
-        border-color:
+                var(--openlist-accent-rgb),
+                0.18
+            ) 0%,
             rgba(
-                255,
-                255,
-                255,
-                0.09
-            );
+                var(--openlist-accent-rgb),
+                0.06
+            ) 100%
+        );
 
-        box-shadow:
-            0 12px 45px
+    color:
+        rgb(
+            var(--openlist-accent-rgb)
+        ) !important;
+
+    text-decoration:
+        none;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.3px;
+
+    overflow:
+        hidden;
+
+    isolation:
+        isolate;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 1px 3px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.08
+        ),
+        inset
+        0 1px 0
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        );
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        transform .25s ease,
+        box-shadow .3s ease;
+}
+
+
+/* Hover Glow */
+.openlist-footer-login::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    border-radius:
+        inherit;
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
             rgba(
-                0,
-                0,
-                0,
-                0.30
-            );
-    }
+                var(--openlist-accent-rgb),
+                0.42
+            ),
+            transparent 65%
+        );
+
+    opacity:
+        0;
+
+    transition:
+        opacity .35s ease;
+
+    pointer-events:
+        none;
+
+    z-index:
+        -1;
+}
 
 
-    .hope-ui-dark
-    #openlist-topbar.scrolled {
+.openlist-footer-login:hover::after {
 
-        background:
-            rgba(
-                13,
-                17,
-                24,
-                0.76
-            );
-    }
+    opacity:
+        1;
+}
 
 
-    /* =========================================================
-    品牌
-    ========================================================= */
+.openlist-footer-login:hover {
+
+    border-color:
+        rgba(
+            var(--openlist-accent-rgb),
+            0.42
+        );
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 6px 16px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.24
+        ),
+        inset
+        0 1px 0
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        );
+}
+
+
+.openlist-footer-login:active {
+
+    transform:
+        translateY(0);
+
+    box-shadow:
+        0 2px 6px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.18
+        ),
+        inset
+        0 1px 0
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        );
+}
+
+
+.openlist-footer-login-icon {
+
+    width:
+        13px;
+
+    height:
+        13px;
+
+    flex:
+        0 0 auto;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.openlist-footer-login:hover
+.openlist-footer-login-icon {
+
+    transform:
+        translateX(2px);
+}
+
+
+/* Dark Mode Adjustments */
+.hope-ui-dark
+.openlist-footer-login {
+
+    box-shadow:
+        0 1px 3px
+        rgba(
+            0,
+            0,
+            0,
+            0.28
+        ),
+        inset
+        0 1px 0
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+}
+
+
+.hope-ui-dark
+.openlist-footer-login:hover {
+
+    box-shadow:
+        0 6px 18px
+        rgba(
+            var(--openlist-accent-rgb),
+            0.30
+        ),
+        inset
+        0 1px 0
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+}
+
+
+/* =========================================================
+   Footer Login Button - Logout State
+   ========================================================= */
+
+.openlist-footer-center
+.openlist-footer-login[data-action="logout"] {
+
+    border-color:
+        rgba(
+            235,
+            87,
+            87,
+            0.42
+        );
+
+    background:
+        rgba(
+            235,
+            87,
+            87,
+            0.12
+        );
+
+    color:
+        #d94545
+        !important;
+}
+
+
+.openlist-footer-center
+.openlist-footer-login[data-action="logout"]:hover {
+
+    background:
+        rgba(
+            235,
+            87,
+            87,
+            0.22
+        );
+
+    border-color:
+        rgba(
+            235,
+            87,
+            87,
+            0.65
+        );
+
+    color:
+        #c73030
+        !important;
+
+    box-shadow:
+        0 6px 18px
+        rgba(
+            235,
+            87,
+            87,
+            0.22
+        );
+}
+
+
+.hope-ui-dark
+.openlist-footer-center
+.openlist-footer-login[data-action="logout"] {
+
+    background:
+        rgba(
+            235,
+            87,
+            87,
+            0.18
+        );
+
+    border-color:
+        rgba(
+            235,
+            87,
+            87,
+            0.45
+        );
+
+    color:
+        #ff8e8e
+        !important;
+}
+
+
+.hope-ui-dark
+.openlist-footer-center
+.openlist-footer-login[data-action="logout"]:hover {
+
+    background:
+        rgba(
+            235,
+            87,
+            87,
+            0.30
+        );
+
+    border-color:
+        rgba(
+            235,
+            87,
+            87,
+            0.65
+        );
+
+    color:
+        #ffb0b0
+        !important;
+
+    box-shadow:
+        0 6px 18px
+        rgba(
+            235,
+            87,
+            87,
+            0.24
+        );
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 768px) {
 
     .openlist-brand {
 
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        gap:
-            10px;
-
         min-width:
-            180px;
+            auto;
+    }
+
+
+    .openlist-brand-text {
+
+        display:
+            none;
     }
 
 
     .openlist-brand-icon {
 
         width:
-            36px;
+            34px;
 
         height:
-            36px;
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            center;
-
-        border-radius:
-            11px;
-
-        background:
-            rgba(
-                var(--openlist-accent-rgb),
-                0.10
-            );
-
-        color:
-            rgb(
-                var(--openlist-accent-rgb)
-            );
-
-        font-size:
-            21px;
-
-        box-shadow:
-            inset
-            0 0
-            0 1px
-            rgba(
-                var(--openlist-accent-rgb),
-                0.08
-            );
-    }
-
-
-    .openlist-brand-title {
-
-        font-size:
-            14px;
-
-        font-weight:
-            700;
-
-        line-height:
-            17px;
-
-        color:
-            #43515f;
-    }
-
-
-    .openlist-brand-subtitle {
-
-        font-size:
-            10px;
-
-        line-height:
-            12px;
-
-        color:
-            #8c98a5;
-    }
-
-
-    .hope-ui-dark
-    .openlist-brand-title {
-
-        color:
-            #edf2f7;
-    }
-
-
-    .hope-ui-dark
-    .openlist-brand-subtitle {
-
-        color:
-            #8994a2;
-    }
-
-
-    /* =========================================================
-    搜索
-    ========================================================= */
-
-    .openlist-search-center {
-
-        position:
-            absolute;
-
-        left:
-            50%;
-
-        top:
-            50%;
-
-        transform:
-            translate(
-                -50%,
-                -50%
-            );
+            34px;
     }
 
 
     .openlist-search-button {
 
         width:
-            230px;
-
-        height:
-            38px;
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        gap:
-            9px;
+            42px;
 
         padding:
-            0 10px;
+            0;
 
-        border:
-            1px solid
-            rgba(
-                120,
-                150,
-                180,
-                0.11
-            );
-
-        border-radius:
-            12px;
-
-        background:
-            rgba(
-                255,
-                255,
-                255,
-                0.30
-            );
-
-        color:
-            #8995a3;
-
-        cursor:
-            pointer;
-
-        transition:
-            all .2s ease;
+        justify-content:
+            center;
     }
 
 
-    .openlist-search-button:hover {
-
-        background:
-            rgba(
-                var(--openlist-accent-rgb),
-                0.08
-            );
-
-        border-color:
-            rgba(
-                var(--openlist-accent-rgb),
-                0.17
-            );
-
-        color:
-            rgb(
-                var(--openlist-accent-rgb)
-            );
-    }
-
-
-    .openlist-search-icon {
-
-        font-size:
-            20px;
-    }
-
-
-    .openlist-search-text {
-
-        flex:
-            1;
-
-        text-align:
-            left;
-
-        font-size:
-            12px;
-    }
-
-
+    .openlist-search-text,
     .openlist-search-shortcut {
 
-        width:
-            20px;
-
-        height:
-            20px;
-
         display:
-            flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            center;
-
-        border-radius:
-            6px;
-
-        background:
-            rgba(
-                100,
-                120,
-                140,
-                0.08
-            );
-
-        font-size:
-            11px;
-    }
-
-
-    /* =========================================================
-    Actions
-    ========================================================= */
-
-    .openlist-actions {
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        gap:
-            4px;
+            none;
     }
 
 
     .openlist-online {
-
-        height:
-            34px;
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        gap:
-            7px;
 
         padding:
-            0 10px;
-
-        border-radius:
-            10px;
-
-        background:
-            rgba(
-                255,
-                255,
-                255,
-                0.25
-            );
-
-        color:
-            #778391;
-
-        font-size:
-            11px;
+            0 7px;
     }
 
 
-    .openlist-online-dot,
-    .openlist-status-dot {
-
-        width:
-            7px;
-
-        height:
-            7px;
-
-        border-radius:
-            50%;
-
-        background:
-            #4fd18a;
-
-        box-shadow:
-            0 0 10px
-            rgba(
-                79,
-                209,
-                138,
-                0.75
-            );
-
-        animation:
-            openlist-online-pulse
-            2s infinite;
-    }
-
-
-    @keyframes openlist-online-pulse {
-
-        0% {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        50% {
-            opacity: .45;
-            transform: scale(.82);
-        }
-
-        100% {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-
-    .openlist-action {
-
-        width:
-            36px;
-
-        height:
-            36px;
+    .openlist-online-text {
 
         display:
-            flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            center;
-
-        border:
-            0;
-
-        border-radius:
-            11px;
-
-        background:
-            transparent;
-
-        color:
-            #687583;
-
-        font-size:
-            17px;
-
-        cursor:
-            pointer;
-
-        transition:
-            all .2s ease;
+            none;
     }
 
 
-    .openlist-action:hover {
-
-        color:
-            rgb(
-                var(--openlist-accent-rgb)
-            );
-
-        background:
-            rgba(
-                var(--openlist-accent-rgb),
-                0.09
-            );
-
-        transform:
-            translateY(-2px);
-    }
-
-
-    .hope-ui-dark
-    .openlist-online {
-
-        background:
-            rgba(
-                255,
-                255,
-                255,
-                0.05
-            );
-
-        color:
-            #a4afbc;
-    }
-
-
-    .hope-ui-dark
     .openlist-action {
 
-        color:
-            #aeb8c4;
+        width:
+            33px;
+
+        height:
+            33px;
     }
 
 
-    /* =========================================================
-    搜索弹窗
-    ========================================================= */
-
-    #openlist-search-panel {
-
-        position:
-            fixed;
-
-        top:
-            78px;
+    #openlist-status {
 
         left:
-            50%;
-
-        width:
-            min(
-                calc(100vw - 30px),
-                600px
-            );
-
-        transform:
-            translate(
-                -50%,
-                -10px
-            );
-
-        opacity:
-            0;
-
-        visibility:
-            hidden;
-
-        pointer-events:
-            none;
-
-        z-index:
-            10001;
-
-        transition:
-            all .22s ease;
-    }
-
-
-    #openlist-search-panel.open {
-
-        opacity:
-            1;
-
-        visibility:
-            visible;
-
-        pointer-events:
-            auto;
-
-        transform:
-            translate(
-                -50%,
-                0
-            );
-    }
-
-
-    .openlist-search-box {
-
-        height:
-            58px;
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        gap:
             12px;
 
-        padding:
-            0 13px;
-
-        border:
-            1px solid
-            rgba(
-                255,
-                255,
-                255,
-                0.50
-            );
-
-        border-radius:
-            17px;
-
-        background:
-            rgba(
-                255,
-                255,
-                255,
-                0.74
-            );
-
-        box-shadow:
-            0 15px 50px
-            rgba(
-                30,
-                80,
-                130,
-                0.16
-            );
-
-        backdrop-filter:
-            blur(25px);
-
-        -webkit-backdrop-filter:
-            blur(25px);
+        bottom:
+            12px;
     }
 
-
-    .hope-ui-dark
-    .openlist-search-box {
-
-        background:
-            rgba(
-                15,
-                19,
-                27,
-                0.80
-            );
-
-        border-color:
-            rgba(
-                255,
-                255,
-                255,
-                0.09
-            );
-
-        box-shadow:
-            0 15px 50px
-            rgba(
-                0,
-                0,
-                0,
-                0.32
-            );
-    }
-
-
-    .openlist-search-panel-icon {
-
-        color:
-            rgb(
-                var(--openlist-accent-rgb)
-            );
-
-        font-size:
-            21px;
-    }
-
-
-    #openlist-search-input {
-
-        flex:
-            1;
-
-        height:
-            100%;
-
-        padding:
-            0;
-
-        border:
-            0 !important;
-
-        outline:
-            0 !important;
-
-        box-shadow:
-            none !important;
-
-        background:
-            transparent !important;
-
-        color:
-            #43515e;
-
-        font-size:
-            14px;
-    }
-
-
-    .hope-ui-dark
-    #openlist-search-input {
-
-        color:
-            #edf2f7;
-    }
-
-
-    #openlist-search-input::placeholder {
-
-        color:
-            #9ba6b2;
-    }
-
-
-    .openlist-search-esc {
-
-        padding:
-            4px 7px;
-
-        border-radius:
-            6px;
-
-        background:
-            rgba(
-                100,
-                120,
-                140,
-                0.08
-            );
-
-        color:
-            #8d98a5;
-
-        font-size:
-            10px;
-    }
-
-
-    /* =========================================================
-    返回顶部
-    ========================================================= */
 
     #openlist-top {
 
-        position:
-            fixed;
+        display:
+            none !important;
+    }
 
-        right:
-            20px;
+}
 
-        bottom:
-            20px;
 
-        width:
-            42px;
+/* =========================================================
+   Ultra Small Screen
+   ========================================================= */
 
-        height:
-            42px;
+@media (max-width: 430px) {
+
+    .openlist-online {
 
         display:
-            flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            center;
-
-        border:
-            1px solid
-            rgba(
-                255,
-                255,
-                255,
-                0.46
-            );
-
-        border-radius:
-            14px;
-
-        background:
-            rgba(
-                255,
-                255,
-                255,
-                0.54
-            );
-
-        box-shadow:
-            0 10px 32px
-            rgba(
-                30,
-                80,
-                130,
-                0.10
-            );
-
-        color:
-            #687685;
-
-        font-size:
-            18px;
-
-        cursor:
-            pointer;
-
-        pointer-events:
-            auto;
-
-        opacity:
-            0;
-
-        visibility:
-            hidden;
-
-        transform:
-            translateY(10px);
-
-        transition:
-            all .25s ease;
+            none;
     }
 
+}
 
-    #openlist-top.show {
 
-        opacity:
-            1;
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
 
-        visibility:
-            visible;
+@media (prefers-reduced-motion: reduce) {
 
-        transform:
-            translateY(0);
+    .openlist-video-bg {
+
+        display:
+            none;
     }
 
+}
 
-    #openlist-top:hover {
 
-        color:
-            rgb(
-                var(--openlist-accent-rgb)
-            );
 
-        background:
-            rgba(
-                var(--openlist-accent-rgb),
-                0.12
-            );
 
-        transform:
-            translateY(-3px);
+/* =========================================================
+   =========================================================
+   MOBILE FINAL OVERRIDE
+   终极移动端覆盖：必须放在最末尾，会覆盖头部.txt 的旧规则
+   =========================================================
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- 全局不溢出 ---------- */
+
+    html,
+    body,
+    #root {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
     }
 
+    /* ---------- Body 布局 ---------- */
 
-    /* =========================================================
-    Footer
-    ========================================================= */
+    .body {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0 0 calc(84px + env(safe-area-inset-bottom)) 0 !important;
+    }
+
+    /* ---------- 顶栏：图标 + Search files ---------- */
+
+    #openlist-topbar {
+        position: fixed !important;
+        top: 8px !important;
+        left: 8px !important;
+        right: 8px !important;
+        width: auto !important;
+        max-width: none !important;
+        transform: none !important;
+        height: 58px !important;
+        min-height: 58px !important;
+        padding: 0 8px 0 12px !important;
+        border-radius: 15px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 6px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    #openlist-topbar .openlist-brand {
+        flex: 0 0 auto !important;
+        min-width: 0 !important;
+        gap: 0 !important;
+    }
+
+    #openlist-topbar .openlist-brand-text {
+        display: none !important;
+    }
+
+    #openlist-topbar .openlist-brand-icon {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 18px !important;
+        border-radius: 10px !important;
+    }
+
+    #openlist-topbar .openlist-search-center {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        display: flex !important;
+        justify-content: stretch !important;
+        align-items: center !important;
+        margin: 0 2px !important;
+    }
+
+    #openlist-topbar .openlist-search-button {
+        width: 100% !important;
+        max-width: none !important;
+        height: 40px !important;
+        padding: 0 14px !important;
+        border-radius: 12px !important;
+        justify-content: flex-start !important;
+        gap: 8px !important;
+        overflow: hidden !important;
+    }
+
+    #openlist-topbar .openlist-search-text {
+        display: inline !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        text-align: left !important;
+        font-size: 13px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+
+    #openlist-topbar .openlist-search-shortcut {
+        display: none !important;
+    }
+
+    #openlist-topbar .openlist-search-icon {
+        font-size: 16px !important;
+        flex: 0 0 auto !important;
+    }
+
+    #openlist-topbar .openlist-actions {
+        flex: 0 0 auto !important;
+        gap: 1px !important;
+    }
+
+    #openlist-topbar .openlist-online {
+        display: none !important;
+    }
+
+    #openlist-topbar .openlist-action {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 14px !important;
+        border-radius: 8px !important;
+    }
+
+    /* ---------- 搜索面板 ---------- */
+
+    #openlist-search-panel {
+        position: fixed !important;
+        top: 72px !important;
+        left: 8px !important;
+        right: 8px !important;
+        width: auto !important;
+        max-width: none !important;
+        transform: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        box-sizing: border-box !important;
+        border-radius: 14px !important;
+    }
+
+    #openlist-search-panel.open {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: none !important;
+    }
+
+    #openlist-search-panel .openlist-search-box {
+        height: 52px !important;
+        padding: 0 14px !important;
+        gap: 10px !important;
+        border-radius: 14px !important;
+    }
+
+    #openlist-search-panel input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        font-size: 14px !important;
+    }
+
+    /* ---------- 面包屑 ---------- */
+
+    .body > .nav {
+        margin: 74px 8px 12px 8px !important;
+        width: auto !important;
+        max-width: calc(100% - 16px) !important;
+        min-height: 42px !important;
+        height: 42px !important;
+        padding: 0 12px !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .body > .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .body > .nav .hope-breadcrumb__list,
+    .body > .nav ol,
+    .body > .nav ul {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        gap: 2px !important;
+        list-style: none !important;
+    }
+
+    .body > .nav .nav-item,
+    .body > .nav li {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .body > .nav .nav-link,
+    .body > .nav .hope-breadcrumb__link,
+    .body > .nav span {
+        padding: 4px 8px !important;
+        margin: 0 !important;
+        height: auto !important;
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        border-radius: 7px !important;
+        white-space: nowrap !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+    }
+
+    /* ---------- 文件列表：撑满屏幕宽度 ---------- */
+
+    .obj-box {
+        width: auto !important;
+        max-width: none !important;
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+        box-sizing: border-box !important;
+        border-radius: 14px !important;
+        overflow: hidden !important;
+    }
+
+    .body > .obj-box {
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+        width: auto !important;
+        max-width: calc(100% - 16px) !important;
+    }
+
+    .body > div {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .obj-box > div,
+    .list,
+    .list-box,
+    .list-wrapper,
+    [class*="list-box"],
+    [class*="file-list"],
+    [class*="file-box"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .obj-box > div > div,
+    .list-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        border-radius: 10px !important;
+        transform: none !important;
+    }
+
+    .list-item {
+        padding: 10px 12px !important;
+        gap: 8px !important;
+        font-size: 13px !important;
+    }
+
+    .list-item .icon {
+        width: 22px !important;
+        height: 22px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .list .title {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 10px 12px !important;
+        font-size: 12px !important;
+        display: flex !important;
+        gap: 8px !important;
+    }
+
+    .list .title > *:first-child,
+    .list-item .name-box {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+    }
+
+    .list .title > *:not(:first-child),
+    .list-item .size,
+    .list-item .time,
+    .list-item [class*="size"],
+    .list-item [class*="time"] {
+        flex: 0 0 auto !important;
+        max-width: 80px !important;
+        font-size: 11px !important;
+    }
+
+    .name-box,
+    .name-box .name,
+    .list-item .name {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        max-width: 100% !important;
+        font-size: 13px !important;
+    }
+
+    .item-thumbnail {
+        transform: none !important;
+        max-width: 100% !important;
+    }
+
+    .obj-box > div > div:hover,
+    .obj-box > div > div:hover .item-thumbnail {
+        transform: none !important;
+    }
+
+    /* ---------- 底栏：只保留 Online + 登录/登出 ---------- */
 
     #openlist-footer {
-
-        width:
-            min(
-                calc(100% - 44px),
-                1200px
-            );
-
-        margin:
-            35px auto 18px;
-
-        pointer-events:
-            auto;
+        position: fixed !important;
+        left: 8px !important;
+        right: 8px !important;
+        top: auto !important;
+        bottom: calc(8px + env(safe-area-inset-bottom)) !important;
+        width: auto !important;
+        max-width: none !important;
+        height: 52px !important;
+        min-height: 52px !important;
+        max-height: 52px !important;
+        border-radius: 15px !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        overflow: visible !important;
     }
-
 
     .openlist-footer-inner {
+        padding: 0 12px !important;
+        height: 52px !important;
+        min-height: 52px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        box-sizing: border-box !important;
+    }
 
-        min-height:
-            46px;
+    .openlist-footer-status {
+        flex: 0 0 auto !important;
+        min-width: 0 !important;
+        height: 34px !important;
+        padding: 0 12px !important;
+        gap: 6px !important;
+        font-size: 12px !important;
+        border-radius: 10px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+    }
 
-        display:
-            flex;
+    .openlist-footer-status-dot {
+        width: 6px !important;
+        height: 6px !important;
+        min-width: 6px !important;
+        border-radius: 50% !important;
+    }
 
-        align-items:
-            center;
+    .openlist-footer-center {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        flex: 1 1 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 0 !important;
+    }
 
-        justify-content:
-            space-between;
+    .openlist-footer-center > .openlist-footer-brand,
+    .openlist-footer-center > .openlist-footer-divider,
+    .openlist-footer-center > span:not(.openlist-footer-login),
+    .openlist-footer-center > a:not(.openlist-footer-login) {
+        display: none !important;
+    }
 
-        padding:
-            0 18px;
+    .openlist-footer-center .openlist-footer-login {
+        height: 34px !important;
+        padding: 0 14px !important;
+        font-size: 12px !important;
+        border-radius: 10px !important;
+        flex: 0 0 auto !important;
+        gap: 5px !important;
+    }
 
-        border:
-            1px solid
-            rgba(
-                255,
-                255,
-                255,
-                0.45
-            );
+    .openlist-footer-center .openlist-footer-login svg {
+        width: 12px !important;
+        height: 12px !important;
+    }
 
-        border-radius:
-            15px;
+    .openlist-footer-actions {
+        display: none !important;
+    }
 
-        background:
-            rgba(
-                255,
-                255,
-                255,
-                0.46
-            );
+    /* ---------- 模态框 ---------- */
 
-        box-shadow:
-            0 10px 32px
-            rgba(
-                30,
-                80,
-                130,
-                0.08
-            );
+    #openlist-login-modal {
+        padding: 16px !important;
+    }
 
-        backdrop-filter:
-            blur(18px);
+    #openlist-login-modal .olm-card {
+        padding: 26px 22px 20px !important;
+        border-radius: 16px !important;
+        width: 100% !important;
+        max-width: 380px !important;
+    }
 
-        -webkit-backdrop-filter:
-            blur(18px);
+    #openlist-login-modal .olm-brand {
+        margin-bottom: 18px !important;
+    }
 
-        color:
-            #84909d;
+    #openlist-login-modal .olm-brand-icon {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 24px !important;
+        border-radius: 14px !important;
+    }
 
-        font-size:
-            12px;
+    #openlist-login-modal .olm-brand-title {
+        font-size: 17px !important;
+    }
+
+    #openlist-login-modal .olm-input {
+        height: 42px !important;
+        font-size: 14px !important;
+    }
+
+    #openlist-login-modal .olm-submit {
+        height: 44px !important;
+        font-size: 14px !important;
+    }
+
+    #openlist-login-modal .olm-guest {
+        height: 40px !important;
+        font-size: 13px !important;
+    }
+
+    /* ---------- 原生悬浮按钮组 ---------- */
+
+    .hope-icon-button {
+        width: 38px !important;
+        height: 38px !important;
+        border-radius: 10px !important;
+    }
+
+    /* ---------- 通知栏 / 工具栏位置 ---------- */
+
+    .hope-notification__list {
+        top: 70px !important;
+    }
+
+    .center-toolbar,
+    .left-toolbar-box {
+        bottom: calc(68px + env(safe-area-inset-bottom)) !important;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   =========================================================
+   WELCOME CARD & STACK SPACING FIX
+   欢迎卡片颜色透明 + 卡片间距修复
+   =========================================================
+   ========================================================= */
+
+/* ---------- 1. markdown 内部透明，只显示外层卡片 ---------- */
+
+[class*="markdown"],
+.markdown-body {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+.markdown,
+.markdown-body {
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+/* ---------- 2. body 垂直子元素间距 ---------- */
+
+.body > .nav + * {
+    margin-top: 12px !important;
+}
+
+.body > * + * {
+    margin-top: 12px !important;
+}
+
+.body > .nav {
+    margin-top: 74px !important;
+    margin-bottom: 0 !important;
+}
+
+/* ---------- 3. 欢迎卡片统一风格 ---------- */
+
+.body > div:not(.obj-box):not([class*="list"]):not([class*="toolbar"]) {
+    background: rgba(255, 255, 255, 0.45) !important;
+    border: 1px solid rgba(255, 255, 255, 0.52) !important;
+    border-radius: 14px !important;
+    backdrop-filter: blur(22px) saturate(145%) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(145%) !important;
+    box-shadow: 0 14px 45px rgba(30, 80, 130, 0.10) !important;
+    padding: 16px 20px !important;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+    max-width: calc(100% - 16px) !important;
+}
+
+.hope-ui-dark
+.body > div:not(.obj-box):not([class*="list"]):not([class*="toolbar"]) {
+    background: rgba(14, 18, 26, 0.54) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 14px 45px rgba(0, 0, 0, 0.30) !important;
+}
+
+.body > div:not(.obj-box):not([class*="list"]) h3 {
+    margin: 0 0 8px 0 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #2d3a48 !important;
+}
+
+.hope-ui-dark
+.body > div:not(.obj-box):not([class*="list"]) h3 {
+    color: #edf2f7 !important;
+}
+
+.body > div:not(.obj-box):not([class*="list"]) p {
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #54606d !important;
+}
+
+.hope-ui-dark
+.body > div:not(.obj-box):not([class*="list"]) p {
+    color: #a4afbc !important;
+}
+
+.body > div:not(.obj-box):not([class*="list"]) .hope-close-button {
+    opacity: 0.6 !important;
+    transition: opacity 0.2s ease !important;
+    color: #687583 !important;
+}
+
+.hope-ui-dark
+.body > div:not(.obj-box):not([class*="list"]) .hope-close-button {
+    color: #aeb8c4 !important;
+}
+
+.body > div:not(.obj-box):not([class*="list"]) .hope-close-button:hover {
+    opacity: 1 !important;
+}
+
+/* ---------- 4. 移动端 ---------- */
+
+@media (max-width: 768px) {
+
+    .body > .nav + * {
+        margin-top: 10px !important;
+    }
+
+    .body > * + * {
+        margin-top: 10px !important;
+    }
+
+    .body > .nav {
+        margin-top: 74px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .body > div:not(.obj-box):not([class*="list"]):not([class*="toolbar"]) {
+        padding: 14px 16px !important;
+        border-radius: 12px !important;
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+        max-width: calc(100% - 16px) !important;
+    }
+
+    .body > div:not(.obj-box):not([class*="list"]) h3 {
+        font-size: 15px !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+    .body > div:not(.obj-box):not([class*="list"]) p {
+        font-size: 13px !important;
+        line-height: 1.55 !important;
+    }
+
+    .body > div:not(.obj-box):not([class*="list"]) .hope-close-button {
+        width: 28px !important;
+        height: 28px !important;
+    }
+}
+
+
+
+
+/* =========================================================
+   =========================================================
+   MARKDOWN WELCOME CARD UNIFICATION v2
+   匹配所有含 markdown 的卡片容器
+   =========================================================
+   ========================================================= */
+
+/* ---------- 1. 内部所有层透明化 ---------- */
+
+#root .body > div:has(.markdown) > *,
+#root .body > div:has(.markdown) > * > *,
+#root .body > div:has(.markdown) .markdown,
+#root .body > div:has(.markdown) .markdown-body {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* ---------- 2. 外层统一玻璃卡片 ---------- */
+
+#root .body > div:has(.markdown) {
+    background: rgba(255, 255, 255, 0.45) !important;
+    border: 1px solid rgba(255, 255, 255, 0.52) !important;
+    border-radius: 14px !important;
+    backdrop-filter: blur(22px) saturate(145%) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(145%) !important;
+    box-shadow: 0 14px 45px rgba(30, 80, 130, 0.10) !important;
+    padding: 16px 20px !important;
+    margin: 12px 8px 0 8px !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+    max-width: calc(100% - 16px) !important;
+    overflow: hidden !important;
+    color: #54606d !important;
+}
+
+.hope-ui-dark #root .body > div:has(.markdown) {
+    background: rgba(14, 18, 26, 0.54) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 14px 45px rgba(0, 0, 0, 0.30) !important;
+    color: #a4afbc !important;
+}
+
+/* ---------- 3. 卡片内文字颜色统一 ---------- */
+
+#root .body > div:has(.markdown) h1,
+#root .body > div:has(.markdown) h2,
+#root .body > div:has(.markdown) h3,
+#root .body > div:has(.markdown) h4 {
+    color: #2d3a48 !important;
+    margin: 0 0 8px 0 !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+}
+
+.hope-ui-dark #root .body > div:has(.markdown) h1,
+.hope-ui-dark #root .body > div:has(.markdown) h2,
+.hope-ui-dark #root .body > div:has(.markdown) h3,
+.hope-ui-dark #root .body > div:has(.markdown) h4 {
+    color: #edf2f7 !important;
+}
+
+#root .body > div:has(.markdown) p {
+    color: inherit !important;
+    margin: 0 0 6px 0 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+#root .body > div:has(.markdown) p:last-child {
+    margin-bottom: 0 !important;
+}
+
+#root .body > div:has(.markdown) a {
+    color: var(--openlist-accent) !important;
+}
+
+/* ---------- 4. 移动端 ---------- */
+
+@media (max-width: 768px) {
+
+    #root .body > div:has(.markdown) {
+        padding: 14px 16px !important;
+        border-radius: 12px !important;
+    }
+
+    #root .body > div:has(.markdown) h1,
+    #root .body > div:has(.markdown) h2,
+    #root .body > div:has(.markdown) h3,
+    #root .body > div:has(.markdown) h4 {
+        font-size: 15px !important;
+        margin-bottom: 6px !important;
+    }
+
+    #root .body > div:has(.markdown) p {
+        font-size: 13px !important;
+        line-height: 1.55 !important;
+    }
+}
+
+</style>
+
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* =====================================================
+       Prevent Duplicate Execution
+       ===================================================== */
+
+    if (
+        window.__OpenListVideoTheme
+    ) {
+
+        return;
+
     }
 
 
-    .hope-ui-dark
-    .openlist-footer-inner {
+    window.__OpenListVideoTheme =
+        true;
 
-        background:
-            rgba(
-                17,
-                21,
-                28,
-                0.56
-            );
 
-        border-color:
-            rgba(
-                255,
-                255,
-                255,
-                0.08
-            );
+    /* =====================================================
+       DOM
+       ===================================================== */
 
-        color:
-            #9ca7b4;
-    }
+    function $(id) {
 
-
-    .openlist-footer-left {
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        gap:
-            7px;
-    }
-
-
-    .openlist-footer-title {
-
-        color:
-            rgb(
-                var(--openlist-accent-rgb)
-            );
-
-        font-weight:
-            600;
-    }
-
-
-    .openlist-footer-separator {
-
-        opacity:
-            .5;
-    }
-
-
-    .openlist-footer-right {
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        gap:
-            13px;
-    }
-
-
-    .openlist-footer-right button {
-
-        padding:
-            0;
-
-        border:
-            0;
-
-        background:
-            transparent;
-
-        color:
-            inherit;
-
-        font-size:
-            12px;
-
-        cursor:
-            pointer;
-
-        transition:
-            color .2s ease;
-    }
-
-
-    .openlist-footer-right button:hover {
-
-        color:
-            rgb(
-                var(--openlist-accent-rgb)
-            );
-    }
-
-
-    /* =========================================================
-    手机端
-    ========================================================= */
-
-    @media (max-width: 768px) {
-
-        /*
-         * topbar 内各元素微调
-         * topbar 本体由 custom_head.css 统一管理
-         */
-        .openlist-brand {
-
-            min-width:
-                auto;
-        }
-
-
-        .openlist-brand-text {
-
-            display:
-                none;
-        }
-
-
-        .openlist-brand-icon {
-
-            width:
-                34px;
-
-            height:
-                34px;
-        }
-
-
-        .openlist-search-button {
-
-            width:
-                42px;
-
-            padding:
-                0;
-
-            justify-content:
-                center;
-        }
-
-
-        .openlist-search-text,
-        .openlist-search-shortcut {
-
-            display:
-                none;
-        }
-
-
-        .openlist-online {
-
-            padding:
-                0 7px;
-        }
-
-
-        .openlist-online-text {
-
-            display:
-                none;
-        }
-
-
-        .openlist-action {
-
-            width:
-                33px;
-
-            height:
-                33px;
-        }
-
-
-        #openlist-status {
-
-            left:
-                12px;
-
-            bottom:
-                12px;
-        }
-
-
-        /*
-         * 手机上隐藏右下角悬浮的返回顶部
-         *
-         * 底栏里已经有「返回顶部」箭头，
-         * 这里再显示一个会变成两个箭头上下叠着。
-         */
-        #openlist-top {
-
-            display:
-                none !important;
-        }
+        return document.getElementById(
+            id
+        );
 
     }
 
 
-    /* =========================================================
-    超小屏
-    ========================================================= */
+    /* =====================================================
+       Video
+       ===================================================== */
 
-    @media (max-width: 430px) {
+    function initVideo() {
 
-        .openlist-online {
-
-            display:
-                none;
-        }
-
-    }
-
-
-    /* =========================================================
-    减少动画
-    ========================================================= */
-
-    @media (prefers-reduced-motion: reduce) {
-
-        #openlist-video-bg {
-
-            display:
-                none;
-        }
-
-    }
-
-    </style>
-
-
-    <script>
-
-    (function () {
-
-        "use strict";
-
-
-        /* =====================================================
-        防重复执行
-        ===================================================== */
+        /* ---- 第 1 步：旧浏览器 / fetch 缺失时直接跳过 ---- */
 
         if (
-            window.__OpenListVideoTheme
+            typeof window.fetch !==
+            "function"
         ) {
 
             return;
@@ -1621,521 +2859,57 @@
         }
 
 
-        window.__OpenListVideoTheme =
-            true;
+        const lightVideo =
+            $("openlist-video-bg-light");
+
+        const darkVideo =
+            $("openlist-video-bg-dark");
 
 
-        /* =====================================================
-        DOM
-        ===================================================== */
+        if (
+            !lightVideo ||
+            !darkVideo
+        ) {
 
-        function $(id) {
+            return;
 
-            return document.getElementById(
-                id
+        }
+
+
+        const LIGHT_VIDEO =
+            "/d/%E5%AD%A6%E7%94%9F%E7%9B%AE%E5%BD%95/alist%E9%BB%98%E8%AE%A4%E8%83%8C%E6%99%AF/lemon.mp4";
+
+
+        const DARK_VIDEO =
+            "/d/%E5%AD%A6%E7%94%9F%E7%9B%AE%E5%BD%95/alist%E9%BB%98%E8%AE%A4%E8%83%8C%E6%99%AF/wallpaper1.mp4";
+
+
+        const blobUrls = {
+            light: null,
+            dark: null
+        };
+
+
+        const blobLoading = {
+            light: false,
+            dark: false
+        };
+
+
+        function isDarkMode() {
+
+            return document.body.classList.contains(
+                "hope-ui-dark"
             );
 
         }
 
 
-        /* =====================================================
-        视频
-        ===================================================== */
-            
-            function initVideo() {
-
-                const video =
-                    $("openlist-video-bg");
-
-
-                if (!video) {
-
-                    return;
-
-                }
-
-
-                /*
-                * =====================================================
-                * OpenList 视频背景地址
-                * =====================================================
-                */
-
-                const LIGHT_VIDEO =
-                    "/d/background/lemon.mp4?sign=SJ1nRwApCN05KdeUQqVy_VFqHULBOYJm90SthNojtRI=:0";
-
-
-                const DARK_VIDEO =
-                    "/d/background/wallpaper1.mp4?sign=CZfmr-3uWMGclLAiCLyRHgzUw1jcuKmy9CeWYPTddqw=:0";
-
-
-                /*
-                * =====================================================
-                * 视频基础属性
-                * =====================================================
-                */
-
-                video.muted =
-                    true;
-
-                video.loop =
-                    true;
-
-                video.playsInline =
-                    true;
-
-
-                /*
-                * =====================================================
-                * 判断当前主题
-                * =====================================================
-                */
-
-                function isDarkMode() {
-
-                    return document.body.classList.contains(
-                        "hope-ui-dark"
-                    );
-
-                }
-
-
-                /*
-                * =====================================================
-                * 设置视频
-                * =====================================================
-                */
-
-                function setVideo(
-                    force
-                ) {
-
-                    const target =
-                        isDarkMode()
-                            ? DARK_VIDEO
-                            : LIGHT_VIDEO;
-
-
-                    /*
-                    * 如果已经是正确的视频，
-                    * 不重复加载。
-                    */
-
-                    if (
-                        !force &&
-                        video.dataset.currentVideo ===
-                            target
-                    ) {
-
-                        return;
-
-                    }
-
-
-                    video.dataset.currentVideo =
-                        target;
-
-
-                    /*
-                    * 保存当前播放位置。
-                    * 切换主题时尽量保持自然。
-                    */
-
-                    const oldTime =
-                        video.currentTime || 0;
-
-
-                    /*
-                    * 淡出旧视频
-                    */
-
-                    video.style.opacity =
-                        "0";
-
-
-                    /*
-                    * 停止当前视频
-                    */
-
-                    video.pause();
-
-
-                    /*
-                    * 更换 source
-                    */
-
-                    video.src =
-                        target;
-
-
-                    /*
-                    * 重新加载
-                    */
-
-                    video.load();
-
-
-                    /*
-                    * 新视频可播放后淡入
-                    */
-
-                    video.addEventListener(
-                        "canplay",
-                        function () {
-
-                            video.style.opacity =
-                                "";
-
-                        },
-                        {
-                            once: true
-                        }
-                    );
-
-
-                    video.addEventListener(
-                        "error",
-                        function () {
-
-                            video.style.opacity =
-                                "";
-
-                        },
-                        {
-                            once: true
-                        }
-                    );
-
-
-                    /*
-                    * 自动播放
-                    */
-
-                    const playPromise =
-                        video.play();
-
-
-                    if (
-                        playPromise &&
-                        typeof playPromise.catch ===
-                        "function"
-                    ) {
-
-                        playPromise.catch(
-                            function () {
-
-                                /*
-                                * 浏览器如果暂时阻止自动播放，
-                                * 不做任何处理。
-                                */
-
-                            }
-                        );
-
-                    }
-
-
-                    /*
-                    * 尝试恢复播放位置
-                    */
-
-                    video.addEventListener(
-                        "loadedmetadata",
-                        function restorePosition() {
-
-                            try {
-
-                                if (
-                                    oldTime > 0 &&
-                                    oldTime <
-                                    video.duration
-                                ) {
-
-                                    video.currentTime =
-                                        oldTime;
-
-                                }
-
-                            } catch (e) {}
-
-
-                            video.removeEventListener(
-                                "loadedmetadata",
-                                restorePosition
-                            );
-
-                        }
-                    );
-
-                }
-
-
-                /*
-                * =====================================================
-                * 第一次设置
-                * =====================================================
-                */
-
-                setVideo(
-                    true
-                );
-
-
-                /*
-                * =====================================================
-                * 监听 OpenList 主题变化
-                *
-                * OpenList / Hope UI 会修改 body class：
-                *
-                * hope-ui-light
-                * hope-ui-dark
-                *
-                * 所以 MutationObserver 可以实时检测。
-                * =====================================================
-                */
-
-                const observer =
-                    new MutationObserver(
-                        function () {
-
-                            setVideo(
-                                false
-                            );
-
-                        }
-                    );
-
-
-                observer.observe(
-                    document.body,
-                    {
-                        attributes:
-                            true,
-
-                        attributeFilter:
-                            [
-                                "class"
-                            ]
-                    }
-                );
-
-
-                /*
-                * =====================================================
-                * 某些情况下主题按钮可能修改 HTML / 根节点
-                * 再监听 html，增加兼容性。
-                * =====================================================
-                */
-
-                observer.observe(
-                    document.documentElement,
-                    {
-                        attributes:
-                            true,
-
-                        attributeFilter:
-                            [
-                                "class"
-                            ]
-                    }
-                );
-
-
-                /*
-                * =====================================================
-                * 浏览器从后台回来后重新尝试播放
-                * =====================================================
-                */
-
-                document.addEventListener(
-                    "visibilitychange",
-                    function () {
-
-                        if (
-                            document.visibilityState ===
-                            "visible"
-                        ) {
-
-                            const promise =
-                                video.play();
-
-
-                            if (
-                                promise &&
-                                typeof promise.catch ===
-                                "function"
-                            ) {
-
-                                promise.catch(
-                                    function () {}
-                                );
-
-                            }
-
-                        }
-
-                    }
-                );
-
-            }
-
-        /* =====================================================
-        滚动效果
-        ===================================================== */
-
-        function initScroll() {
-
-            const topbar =
-                $("openlist-topbar");
-
-
-            const topButton =
-                $("openlist-top");
-
-
-            if (!topbar) {
-
-                return;
-
-            }
-
-
-            function update() {
-
-                const scroll =
-                    window.scrollY;
-
-
-                if (
-                    scroll > 35
-                ) {
-
-                    topbar.classList.add(
-                        "scrolled"
-                    );
-
-                } else {
-
-                    topbar.classList.remove(
-                        "scrolled"
-                    );
-
-                }
-
-
-                if (
-                    topButton
-                ) {
-
-                    if (
-                        scroll > 300
-                    ) {
-
-                        topButton.classList.add(
-                            "show"
-                        );
-
-                    } else {
-
-                        topButton.classList.remove(
-                            "show"
-                        );
-
-                    }
-
-                }
-
-            }
-
-
-            window.addEventListener(
-                "scroll",
-                update,
-                {
-                    passive:
-                        true
-                }
-            );
-
-
-            update();
-
-        }
-
-
-        /* =====================================================
-        返回顶部
-        ===================================================== */
-
-        function initTop() {
-
-            const top =
-                $("openlist-top");
-
-
-            const footerTop =
-                $("openlist-footer-top");
-
-
-            function scrollTop() {
-
-                window.scrollTo({
-
-                    top:
-                        0,
-
-                    behavior:
-                        "smooth"
-
-                });
-
-            }
-
-
-            if (top) {
-
-                top.addEventListener(
-                    "click",
-                    scrollTop
-                );
-
-            }
-
-
-            if (footerTop) {
-
-                footerTop.addEventListener(
-                    "click",
-                    scrollTop
-                );
-
-            }
-
-        }
-
-
-        /* =====================================================
-        搜索
-        ===================================================== */
-
-        function initSearch() {
-
-            const button =
-                $("openlist-search-button");
-
-
-            const panel =
-                $("openlist-search-panel");
-
-
-            const input =
-                $("openlist-search-input");
-
+        function loadBlob(key, url) {
 
             if (
-                !button ||
-                !panel ||
-                !input
+                blobUrls[key] ||
+                blobLoading[key]
             ) {
 
                 return;
@@ -2143,274 +2917,631 @@
             }
 
 
-            function openSearch() {
+            blobLoading[key] =
+                true;
 
-                panel.classList.add(
-                    "open"
-                );
 
+            fetch(
+                url,
+                {
+                    credentials:
+                        "include"
+                }
+            )
+            .then(
+                function (res) {
+
+                    if (!res.ok) {
+
+                        throw new Error(
+                            "HTTP " + res.status
+                        );
+
+                    }
+
+                    return res.blob();
+
+                }
+            )
+            .then(
+                function (blob) {
+
+                    blobUrls[key] =
+                        URL.createObjectURL(
+                            blob
+                        );
+
+                    blobLoading[key] =
+                        false;
+
+                    console.log(
+                        "[Video] blob ready:",
+                        key,
+                        blob.size,
+                        "bytes"
+                    );
+
+
+                    const target =
+                        key === "dark"
+                            ? darkVideo
+                            : lightVideo;
+
+
+                    const isCurrent =
+                        key === "dark"
+                            ? isDarkMode()
+                            : !isDarkMode();
+
+
+                    if (
+                        isCurrent &&
+                        target.src !==
+                            blobUrls[key]
+                    ) {
+
+                        const time =
+                            target.currentTime || 0;
+
+                        target.src =
+                            blobUrls[key];
+
+
+                        target.addEventListener(
+                            "loadedmetadata",
+                            function () {
+
+                                try {
+
+                                    if (
+                                        time > 0 &&
+                                        time <
+                                        target.duration
+                                    ) {
+
+                                        target.currentTime =
+                                            time;
+
+                                    }
+
+                                } catch (e) {}
+
+
+                                target.play().catch(
+                                    function () {}
+                                );
+
+                            },
+                            {
+                                once: true
+                            }
+                        );
+
+                    }
+
+                }
+            )
+            .catch(
+                function (err) {
+
+                    blobLoading[key] =
+                        false;
+
+                    console.warn(
+                        "[Video] blob load failed:",
+                        err
+                    );
+
+                }
+            );
+
+        }
+
+
+        function applyTheme() {
+
+            const dark =
+                isDarkMode();
+
+
+            const current =
+                dark
+                    ? darkVideo
+                    : lightVideo;
+
+
+            const other =
+                dark
+                    ? lightVideo
+                    : darkVideo;
+
+
+            const currentKey =
+                dark
+                    ? "dark"
+                    : "light";
+
+
+            const otherKey =
+                dark
+                    ? "light"
+                    : "dark";
+
+
+            const currentUrl =
+                dark
+                    ? DARK_VIDEO
+                    : LIGHT_VIDEO;
+
+
+            const otherUrl =
+                dark
+                    ? LIGHT_VIDEO
+                    : DARK_VIDEO;
+
+
+            const targetSrc =
+                blobUrls[currentKey] ||
+                currentUrl;
+
+
+            if (
+                current.src !== targetSrc
+            ) {
+
+                current.preload =
+                    "metadata";
+
+                current.src =
+                    targetSrc;
+
+            }
+
+
+            current.classList.add(
+                "active"
+            );
+
+            other.classList.remove(
+                "active"
+            );
+
+
+            current.play().catch(
+                function () {}
+            );
+
+            other.pause();
+
+
+            loadBlob(
+                currentKey,
+                currentUrl
+            );
+
+
+            if (!blobUrls[otherKey]) {
 
                 setTimeout(
                     function () {
 
-                        input.focus();
+                        loadBlob(
+                            otherKey,
+                            otherUrl
+                        );
 
                     },
-                    80
+                    8000
                 );
 
             }
 
-
-            function closeSearch() {
-
-                panel.classList.remove(
-                    "open"
-                );
-
-            }
+        }
 
 
-            button.addEventListener(
-                "click",
+        applyTheme();
+
+
+        const observer =
+            new MutationObserver(
                 function () {
 
-                    if (
-                        panel.classList.contains(
-                            "open"
-                        )
-                    ) {
-
-                        closeSearch();
-
-                    } else {
-
-                        openSearch();
-
-                    }
+                    applyTheme();
 
                 }
             );
 
 
-            /*
-            * ESC
-            */
+        observer.observe(
+            document.body,
+            {
+                attributes:
+                    true,
 
-            input.addEventListener(
-                "keydown",
-                function (event) {
-
-                    if (
-                        event.key ===
-                        "Escape"
-                    ) {
-
-                        closeSearch();
-
-                        return;
-
-                    }
+                attributeFilter:
+                    [
+                        "class"
+                    ]
+            }
+        );
 
 
-                    if (
-                        event.key ===
-                        "Enter"
-                    ) {
+        observer.observe(
+            document.documentElement,
+            {
+                attributes:
+                    true,
 
-                        const keyword =
-                            input.value.trim();
-
-
-                        if (!keyword) {
-
-                            return;
-
-                        }
+                attributeFilter:
+                    [
+                        "class"
+                    ]
+            }
+        );
 
 
-                        /*
-                        * 找 OpenList 原生搜索框
-                        */
+        document.addEventListener(
+            "visibilitychange",
+            function () {
 
-                        const inputs =
-                            document.querySelectorAll(
-                                "input"
-                            );
+                if (
+                    document.visibilityState ===
+                    "visible"
+                ) {
 
-
-                        let target =
-                            null;
-
-
-                        for (
-                            let i = 0;
-                            i < inputs.length;
-                            i++
-                        ) {
-
-                            const candidate =
-                                inputs[i];
+                    const current =
+                        isDarkMode()
+                            ? darkVideo
+                            : lightVideo;
 
 
-                            if (
-                                candidate ===
-                                input
-                            ) {
-
-                                continue;
-
-                            }
-
-
-                            const placeholder =
-                                (
-                                    candidate
-                                        .placeholder ||
-                                    ""
-                                ).toLowerCase();
-
-
-                            if (
-
-                                placeholder.includes(
-                                    "search"
-                                ) ||
-
-                                placeholder.includes(
-                                    "搜索"
-                                )
-                            ) {
-
-                                target =
-                                    candidate;
-
-                                break;
-
-                            }
-
-                        }
-
-
-                        if (target) {
-
-                            target.focus();
-
-                            target.value =
-                                keyword;
-
-
-                            target.dispatchEvent(
-                                new Event(
-                                    "input",
-                                    {
-                                        bubbles:
-                                            true
-                                    }
-                                )
-                            );
-
-
-                            target.dispatchEvent(
-                                new KeyboardEvent(
-                                    "keydown",
-                                    {
-                                        key:
-                                            "Enter",
-
-                                        bubbles:
-                                            true
-                                    }
-                                )
-                            );
-
-                        }
-
-
-                        closeSearch();
-
-                    }
+                    current.play().catch(
+                        function () {}
+                    );
 
                 }
+
+            }
+        );
+
+    }
+
+    /* =====================================================
+       Scroll Effects
+       ===================================================== */
+
+    function initScroll() {
+
+        const topbar =
+            $("openlist-topbar");
+
+
+        const topButton =
+            $("openlist-top");
+
+
+        if (!topbar) {
+
+            return;
+
+        }
+
+
+        function update() {
+
+            const scroll =
+                window.scrollY;
+
+
+            if (
+                scroll > 35
+            ) {
+
+                topbar.classList.add(
+                    "scrolled"
+                );
+
+            } else {
+
+                topbar.classList.remove(
+                    "scrolled"
+                );
+
+            }
+
+
+            if (
+                topButton
+            ) {
+
+                if (
+                    scroll > 300
+                ) {
+
+                    topButton.classList.add(
+                        "show"
+                    );
+
+                } else {
+
+                    topButton.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            update,
+            {
+                passive:
+                    true
+            }
+        );
+
+
+        update();
+
+    }
+
+
+    /* =====================================================
+       Back to Top
+       ===================================================== */
+
+    function initTop() {
+
+        const top =
+            $("openlist-top");
+
+
+        const footerTop =
+            $("openlist-footer-top");
+
+
+        function scrollTop() {
+
+            window.scrollTo({
+
+                top:
+                    0,
+
+                behavior:
+                    "smooth"
+
+            });
+
+        }
+
+
+        if (top) {
+
+            top.addEventListener(
+                "click",
+                scrollTop
+            );
+
+        }
+
+
+        if (footerTop) {
+
+            footerTop.addEventListener(
+                "click",
+                scrollTop
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
+       Search
+       ===================================================== */
+
+    function initSearch() {
+
+        const button =
+            $("openlist-search-button");
+
+
+        const panel =
+            $("openlist-search-panel");
+
+
+        const input =
+            $("openlist-search-input");
+
+
+        if (
+            !button ||
+            !panel ||
+            !input
+        ) {
+
+            return;
+
+        }
+
+
+        function openSearch() {
+
+            panel.classList.add(
+                "open"
             );
 
 
-            /*
-            * /
-            * 快捷键
-            */
+            setTimeout(
+                function () {
 
-            document.addEventListener(
-                "keydown",
-                function (event) {
+                    input.focus();
 
-                    if (
-                        event.key !== "/"
-                    ) {
+                },
+                80
+            );
 
-                        return;
-
-                    }
+        }
 
 
-                    const element =
-                        document.activeElement;
+        function closeSearch() {
+
+            panel.classList.remove(
+                "open"
+            );
+
+        }
 
 
-                    if (
-                        element &&
-                        (
-                            element.tagName ===
-                            "INPUT" ||
+        button.addEventListener(
+            "click",
+            function () {
 
-                            element.tagName ===
-                            "TEXTAREA"
-                        )
-                    ) {
+                if (
+                    panel.classList.contains(
+                        "open"
+                    )
+                ) {
 
-                        return;
+                    closeSearch();
 
-                    }
-
-
-                    event.preventDefault();
+                } else {
 
                     openSearch();
 
                 }
-            );
+
+            }
+        );
 
 
-            /*
-            * 点击外面关闭
-            */
+        input.addEventListener(
+            "keydown",
+            function (event) {
 
-            document.addEventListener(
-                "click",
-                function (event) {
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
 
-                    if (
-                        !panel.classList.contains(
-                            "open"
-                        )
-                    ) {
+                    closeSearch();
+
+                    return;
+
+                }
+
+
+                if (
+                    event.key ===
+                    "Enter"
+                ) {
+
+                    const keyword =
+                        input.value.trim();
+
+
+                    if (!keyword) {
 
                         return;
 
                     }
 
 
-                    if (
-                        panel.contains(
-                            event.target
-                        ) ||
+                    const inputs =
+                        document.querySelectorAll(
+                            "input"
+                        );
 
-                        button.contains(
-                            event.target
-                        )
+
+                    let target =
+                        null;
+
+
+                    for (
+                        let i = 0;
+                        i < inputs.length;
+                        i++
                     ) {
 
-                        return;
+                        const candidate =
+                            inputs[i];
+
+
+                        if (
+                            candidate ===
+                            input
+                        ) {
+
+                            continue;
+
+                        }
+
+
+                        const placeholder =
+                            (
+                                candidate
+                                    .placeholder ||
+                                ""
+                            ).toLowerCase();
+
+
+                        if (
+
+                            placeholder.includes(
+                                "search"
+                            ) ||
+
+                            placeholder.includes(
+                                "\u641C\u7D22"
+                            )
+                        ) {
+
+                            target =
+                                candidate;
+
+                            break;
+
+                        }
+
+                    }
+
+
+                    if (target) {
+
+                        target.focus();
+
+                        target.value =
+                            keyword;
+
+
+                        target.dispatchEvent(
+                            new Event(
+                                "input",
+                                {
+                                    bubbles:
+                                        true
+                                }
+                            )
+                        );
+
+
+                        target.dispatchEvent(
+                            new KeyboardEvent(
+                                "keydown",
+                                {
+                                    key:
+                                        "Enter",
+
+                                    bubbles:
+                                        true
+                                }
+                            )
+                        );
 
                     }
 
@@ -2418,260 +3549,492 @@
                     closeSearch();
 
                 }
-            );
-
-        }
-
-
-        /* =====================================================
-        刷新
-        ===================================================== */
-
-        function initRefresh() {
-
-            const button =
-                $("openlist-refresh-button");
-
-
-            if (!button) {
-
-                return;
 
             }
+        );
 
 
-            button.addEventListener(
-                "click",
-                function () {
+        document.addEventListener(
+            "keydown",
+            function (event) {
 
-                    button.style.transform =
-                        "rotate(180deg)";
+                if (
+                    event.key !== "/"
+                ) {
 
-
-                    setTimeout(
-                        function () {
-
-                            location.reload();
-
-                        },
-                        180
-                    );
+                    return;
 
                 }
-            );
+
+
+                const element =
+                    document.activeElement;
+
+
+                if (
+                    element &&
+                    (
+                        element.tagName ===
+                        "INPUT" ||
+
+                        element.tagName ===
+                        "TEXTAREA"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                event.preventDefault();
+
+                openSearch();
+
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    !panel.classList.contains(
+                        "open"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                if (
+                    panel.contains(
+                        event.target
+                    ) ||
+
+                    button.contains(
+                        event.target
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                closeSearch();
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       Refresh
+       ===================================================== */
+
+    function initRefresh() {
+
+        const button =
+            $("openlist-refresh-button");
+
+
+        if (!button) {
+
+            return;
 
         }
 
 
-        /* =====================================================
-        主题切换转场
-        ===================================================== */
+        button.addEventListener(
+            "click",
+            function () {
 
-        function playThemeTransition(
-            x,
-            y,
-            apply
-        ) {
+                button.style.transform =
+                    "rotate(180deg)";
 
-            const reduced =
-                window.matchMedia(
-                    "(prefers-reduced-motion: reduce)"
-                ).matches;
 
-            if (reduced) {
+                setTimeout(
+                    function () {
 
-                apply();
+                        location.reload();
 
-                return;
+                    },
+                    180
+                );
 
             }
+        );
 
+    }
+
+
+    /* =====================================================
+       Theme Transition
+       ===================================================== */
+
+    function playThemeTransition(
+        x,
+        y,
+        apply
+    ) {
+
+        const reduced =
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+        if (reduced) {
+
+            apply();
+
+            return;
+
+        }
+
+
+        if (
+            document.startViewTransition
+        ) {
 
             /*
-            * 优先使用 View Transitions API
-            * 新主题画面从点击位置以圆形扩散开
-            */
+             * 关键改动：
+             * updateCallback 同步执行 apply()（直接切 class），
+             * 不返回 promise。这样快照会在 class 已经翻转后
+             * 立即拍摄，transition.ready 随即触发，
+             * 动画在点击的同一帧内开始，零延迟。
+             */
 
-            if (
-                document.startViewTransition
-            ) {
+            const transition =
+                document.startViewTransition(
+                    function () {
 
-                const beforeDark =
-                    document.body.classList.contains(
-                        "hope-ui-dark"
-                    );
+                        apply();
 
-                const transition =
-                    document.startViewTransition(
-                        function () {
+                    }
+                );
 
-                            apply();
+            transition.ready
+                .then(function () {
 
-                            /*
-                            * 等待主题 class 真正变化，
-                            * 确保新快照是切换后的画面
-                            */
+                    const r =
+                        Math.ceil(
+                            Math.hypot(
+                                Math.max(
+                                    x,
+                                    window.innerWidth - x
+                                ),
 
-                            return new Promise(
-                                function (resolve) {
+                                Math.max(
+                                    y,
+                                    window.innerHeight - y
+                                )
+                            ) * 1.05
+                        );
 
-                                    const obs =
-                                        new MutationObserver(
-                                            function () {
+                    document.documentElement.animate(
+                        [
+                            {
+                                clipPath:
+                                    "circle(0px at " + x + "px " + y + "px)",
 
-                                                if (
-                                                    document.body.classList.contains(
-                                                        "hope-ui-dark"
-                                                    ) !== beforeDark
-                                                ) {
+                                transform: "scale(1.16)",
 
-                                                    obs.disconnect();
+                                filter:
+                                    "brightness(1.7) saturate(1.6)",
 
-                                                    resolve();
+                                easing:
+                                    "cubic-bezier(0.6, 0, 0.9, 0.4)"
+                            },
 
-                                                }
+                            {
+                                clipPath:
+                                    "circle(" +
+                                    Math.round(r * 0.24) +
+                                    "px at " +
+                                    x +
+                                    "px " +
+                                    y +
+                                    "px)",
 
-                                            }
-                                        );
+                                transform: "scale(1.06)",
 
-                                    obs.observe(
-                                        document.body,
-                                        {
-                                            attributes: true,
+                                filter:
+                                    "brightness(1.3) saturate(1.25)",
 
-                                            attributeFilter:
-                                                [
-                                                    "class"
-                                                ]
-                                        }
-                                    );
+                                offset: 0.4,
 
-                                    setTimeout(
-                                        function () {
+                                easing:
+                                    "cubic-bezier(0.1, 0.7, 0.15, 1)"
+                            },
 
-                                            obs.disconnect();
+                            {
+                                clipPath:
+                                    "circle(" + r + "px at " + x + "px " + y + "px)",
 
-                                            resolve();
+                                transform: "scale(1)",
 
-                                        },
-                                        350
-                                    );
+                                filter:
+                                    "brightness(1) saturate(1)"
+                            }
+                        ],
+                        {
+                            duration: 1000,
 
-                                }
-                            );
-
+                            pseudoElement:
+                                "::view-transition-new(root)"
                         }
                     );
 
-                transition.ready
-                    .then(function () {
-
-                        const r =
-                            Math.ceil(
-                                Math.hypot(
-                                    Math.max(
-                                        x,
-                                        window.innerWidth - x
-                                    ),
-
-                                    Math.max(
-                                        y,
-                                        window.innerHeight - y
-                                    )
-                                ) * 1.05
-                            );
-
-                        document.documentElement.animate(
-                            [
-                                {
-                                    clipPath:
-                                        "circle(0px at " + x + "px " + y + "px)",
-
-                                    transform: "scale(1.16)",
-
-                                    filter:
-                                        "brightness(1.7) saturate(1.6)",
-
-                                    easing:
-                                        "cubic-bezier(0.6, 0, 0.9, 0.4)"
-                                },
-
-                                {
-                                    clipPath:
-                                        "circle(" +
-                                        Math.round(r * 0.24) +
-                                        "px at " +
-                                        x +
-                                        "px " +
-                                        y +
-                                        "px)",
-
-                                    transform: "scale(1.06)",
-
-                                    filter:
-                                        "brightness(1.3) saturate(1.25)",
-
-                                    offset: 0.4,
-
-                                    easing:
-                                        "cubic-bezier(0.1, 0.7, 0.15, 1)"
-                                },
-
-                                {
-                                    clipPath:
-                                        "circle(" + r + "px at " + x + "px " + y + "px)",
-
-                                    transform: "scale(1)",
-
-                                    filter:
-                                        "brightness(1) saturate(1)"
-                                }
-                            ],
+                    document.documentElement.animate(
+                        [
                             {
-                                duration: 1000,
+                                transform: "scale(1)",
 
-                                pseudoElement:
-                                    "::view-transition-new(root)"
-                            }
-                        );
+                                filter: "blur(0px)",
 
-                        document.documentElement.animate(
-                            [
-                                {
-                                    transform: "scale(1)",
+                                opacity: 1
+                            },
 
-                                    filter: "blur(0px)",
-
-                                    opacity: 1
-                                },
-
-                                {
-                                    transform: "scale(1.08)",
-
-                                    filter: "blur(10px)",
-
-                                    opacity: 0.35
-                                }
-                            ],
                             {
-                                duration: 1000,
+                                transform: "scale(1.08)",
 
-                                easing:
-                                    "cubic-bezier(0.5, 0, 0.2, 1)",
+                                filter: "blur(10px)",
 
-                                pseudoElement:
-                                    "::view-transition-old(root)"
+                                opacity: 0.35
                             }
-                        );
+                        ],
+                        {
+                            duration: 1000,
 
-                    })
-                    .catch(function () {});
+                            easing:
+                                "cubic-bezier(0.5, 0, 0.2, 1)",
 
-                return;
+                            pseudoElement:
+                                "::view-transition-old(root)"
+                        }
+                    );
+
+                })
+                .catch(function () {});
+
+            return;
+
+        }
+
+        fallbackThemeTransition(
+            x,
+            y,
+            apply
+        );
+
+    }
+
+
+    function buildThemeFx(x, y, toDark) {
+
+        const old =
+            document.getElementById(
+                "openlist-theme-fx"
+            );
+
+        if (old) {
+
+            old.remove();
+
+        }
+
+        const size =
+            Math.ceil(
+                Math.hypot(
+                    Math.max(
+                        x,
+                        window.innerWidth - x
+                    ),
+
+                    Math.max(
+                        y,
+                        window.innerHeight - y
+                    )
+                ) * 2.6
+            );
+
+        const geo =
+            "left:" + x + "px;" +
+            "top:" + y + "px;" +
+            "width:" + size + "px;" +
+            "height:" + size + "px;";
+
+        const fx =
+            document.createElement("div");
+
+        fx.id = "openlist-theme-fx";
+
+        fx.className = toDark
+            ? "to-dark"
+            : "to-light";
+
+        fx.style.setProperty(
+            "--fx-x",
+            x + "px"
+        );
+
+        fx.style.setProperty(
+            "--fx-y",
+            y + "px"
+        );
+
+        fx.innerHTML =
+            '<div class="fx-core" style="' + geo + '"></div>' +
+            '<div class="fx-ring fx-ring-1" style="' + geo + '"></div>' +
+            '<div class="fx-ring fx-ring-2" style="' + geo + '"></div>' +
+            '<div class="fx-ring fx-ring-3" style="' + geo + '"></div>' +
+            '<div class="fx-flash"></div>';
+
+        document.body.appendChild(fx);
+
+        return fx;
+
+    }
+
+
+    function fallbackThemeTransition(x, y, apply) {
+
+        const toDark =
+            !document.body.classList.contains(
+                "hope-ui-dark"
+            );
+
+        const fx =
+            buildThemeFx(x, y, toDark);
+
+        const root =
+            document.documentElement;
+
+        /*
+         * 同步 apply（立即切 class），
+         * fx 在下一帧启动，动画与主题切换同步发生。
+         */
+
+        apply();
+
+        root.classList.add(
+            "openlist-theme-warp"
+        );
+
+        requestAnimationFrame(function () {
+
+            fx.classList.add("run");
+
+        });
+
+        setTimeout(function () {
+
+            fx.classList.add("reveal");
+
+            root.classList.remove(
+                "openlist-theme-warp"
+            );
+
+        }, 530);
+
+        setTimeout(function () {
+
+            fx.remove();
+
+        }, 1500);
+
+    }
+
+
+    /* =====================================================
+       Theme
+       ===================================================== */
+
+    function initTheme() {
+
+        const button =
+            $("openlist-theme-button");
+
+
+        const footer =
+            $("openlist-footer-theme");
+
+
+        /*
+         * 关键改动：
+         * 不再遍历按钮点击原生主题按钮（React 异步更新会拖慢快照），
+         * 直接同步切换 body 的 class，写入 localStorage 做持久化。
+         */
+
+        function apply() {
+
+            const isDark =
+                document.body.classList.contains(
+                    "hope-ui-dark"
+                );
+
+
+            if (isDark) {
+
+                document.body.classList.remove(
+                    "hope-ui-dark"
+                );
+
+                document.body.classList.add(
+                    "hope-ui-light"
+                );
+
+                try {
+
+                    localStorage.setItem(
+                        "openlist-theme",
+                        "light"
+                    );
+
+                } catch (e) {}
+
+            } else {
+
+                document.body.classList.remove(
+                    "hope-ui-light"
+                );
+
+                document.body.classList.add(
+                    "hope-ui-dark"
+                );
+
+                try {
+
+                    localStorage.setItem(
+                        "openlist-theme",
+                        "dark"
+                    );
+
+                } catch (e) {}
 
             }
 
-            fallbackThemeTransition(
+        }
+
+
+        function toggle(event) {
+
+            const x =
+                event && event.clientX
+                    ? event.clientX
+                    : window.innerWidth / 2;
+
+            const y =
+                event && event.clientY
+                    ? event.clientY
+                    : window.innerHeight / 2;
+
+            playThemeTransition(
                 x,
                 y,
                 apply
@@ -2680,572 +4043,115 @@
         }
 
 
-        /* =====================================================
-        主题切换转场
-        Fallback 时空扭曲 + 冲击波
-        ===================================================== */
+        if (button) {
 
-        function buildThemeFx(x, y, toDark) {
-
-            const old =
-                document.getElementById(
-                    "openlist-theme-fx"
-                );
-
-            if (old) {
-
-                old.remove();
-
-            }
-
-            const size =
-                Math.ceil(
-                    Math.hypot(
-                        Math.max(
-                            x,
-                            window.innerWidth - x
-                        ),
-
-                        Math.max(
-                            y,
-                            window.innerHeight - y
-                        )
-                    ) * 2.6
-                );
-
-            const geo =
-                "left:" + x + "px;" +
-                "top:" + y + "px;" +
-                "width:" + size + "px;" +
-                "height:" + size + "px;";
-
-            const fx =
-                document.createElement("div");
-
-            fx.id = "openlist-theme-fx";
-
-            fx.className = toDark
-                ? "to-dark"
-                : "to-light";
-
-            fx.style.setProperty(
-                "--fx-x",
-                x + "px"
-            );
-
-            fx.style.setProperty(
-                "--fx-y",
-                y + "px"
-            );
-
-            fx.innerHTML =
-                '<div class="fx-core" style="' + geo + '"></div>' +
-                '<div class="fx-ring fx-ring-1" style="' + geo + '"></div>' +
-                '<div class="fx-ring fx-ring-2" style="' + geo + '"></div>' +
-                '<div class="fx-ring fx-ring-3" style="' + geo + '"></div>' +
-                '<div class="fx-flash"></div>';
-
-            document.body.appendChild(fx);
-
-            return fx;
-
-        }
-
-
-        function fallbackThemeTransition(x, y, apply) {
-
-            const toDark =
-                !document.body.classList.contains(
-                    "hope-ui-dark"
-                );
-
-            const fx =
-                buildThemeFx(x, y, toDark);
-
-            const root =
-                document.documentElement;
-
-            root.classList.add(
-                "openlist-theme-warp"
-            );
-
-            requestAnimationFrame(function () {
-
-                fx.classList.add("run");
-
-            });
-
-            /*
-            * 全屏被能量核心覆盖时切换主题
-            */
-
-            setTimeout(apply, 430);
-
-            /*
-            * 揭示新主题
-            */
-
-            setTimeout(function () {
-
-                fx.classList.add("reveal");
-
-                root.classList.remove(
-                    "openlist-theme-warp"
-                );
-
-            }, 530);
-
-            setTimeout(function () {
-
-                fx.remove();
-
-            }, 1500);
-
-        }
-
-
-        /* =====================================================
-        Theme
-        ===================================================== */
-
-        function initTheme() {
-
-            const button =
-                $("openlist-theme-button");
-
-
-            const footer =
-                $("openlist-footer-theme");
-
-
-            function apply() {
-
-                /*
-                * 寻找 OpenList 原生主题按钮
-                */
-
-                const buttons =
-                    document.querySelectorAll(
-                        "button"
-                    );
-
-
-                for (
-                    let i = 0;
-                    i < buttons.length;
-                    i++
-                ) {
-
-                    const candidate =
-                        buttons[i];
-
-
-                    if (
-                        candidate ===
-                        button ||
-
-                        candidate ===
-                        footer
-                    ) {
-
-                        continue;
-
-                    }
-
-
-                    const label =
-                        (
-                            candidate
-                                .getAttribute(
-                                    "aria-label"
-                                ) ||
-
-                            candidate
-                                .getAttribute(
-                                    "title"
-                                ) ||
-
-                            candidate
-                                .innerText ||
-
-                            ""
-                        ).toLowerCase();
-
-
-                    if (
-
-                        label.includes(
-                            "theme"
-                        ) ||
-
-                        label.includes(
-                            "dark"
-                        ) ||
-
-                        label.includes(
-                            "light"
-                        ) ||
-
-                        label.includes(
-                            "主题"
-                        )
-                    ) {
-
-                        candidate.click();
-
-                        return;
-
-                    }
-
-                }
-
-
-                /*
-                * Fallback
-                */
-
-                const dark =
-                    document.body.classList.contains(
-                        "hope-ui-dark"
-                    );
-
-
-                if (dark) {
-
-                    document.body.classList.remove(
-                        "hope-ui-dark"
-                    );
-
-                    document.body.classList.add(
-                        "hope-ui-light"
-                    );
-
-                } else {
-
-                    document.body.classList.remove(
-                        "hope-ui-light"
-                    );
-
-                    document.body.classList.add(
-                        "hope-ui-dark"
-                    );
-
-                }
-
-            }
-
-
-            /*
-            * 转场入口：
-            * 从点击位置开始播放主题切换转场
-            */
-
-            function toggle(event) {
-
-                const x =
-                    event && event.clientX
-                        ? event.clientX
-                        : window.innerWidth / 2;
-
-                const y =
-                    event && event.clientY
-                        ? event.clientY
-                        : window.innerHeight / 2;
-
-                playThemeTransition(
-                    x,
-                    y,
-                    apply
-                );
-
-            }
-
-
-            if (button) {
-
-                button.addEventListener(
-                    "click",
-                    toggle
-                );
-            }
-
-
-            if (footer) {
-
-                footer.addEventListener(
-                    "click",
-                    toggle
-                );
-            }
-
-        }
-
-
-        /* =====================================================
-        更多
-        ===================================================== */
-
-        function initMore() {
-
-            const button = $("openlist-more-button");
-
-            if (!button) {
-                return;
-            }
-
-            /*
-            * 防止重复创建
-            */
-            let menu = $("openlist-more-menu");
-
-            if (menu) {
-                return;
-            }
-
-            /*
-            * 当前 OpenList 域名
-            *
-            * 例如：
-            * https://example.com
-            *
-            * 自动变成：
-            * OpenWrt       -> http(s)://example.com/
-            * qBittorrent   -> http(s)://example.com:8081
-            * Clash         -> http(s)://example.com:9090
-            */
-            const protocol = window.location.protocol;
-            const hostname = window.location.hostname;
-
-            const baseUrl =
-                protocol + "//" + hostname;
-
-            /*
-            * 管理后台
-            */
-            const manageUrl =
-                baseUrl + ":5244/@manage";
-
-            /*
-            * 快捷菜单
-            */
-            menu = document.createElement("div");
-
-            menu.id = "openlist-more-menu";
-
-            menu.innerHTML = `
-
-                <div
-                    class="openlist-more-title"
-                >
-                    快捷入口
-                </div>
-
-                <a
-                    class="openlist-more-item"
-                    href="${manageUrl}"
-                >
-                    <span class="openlist-more-icon">
-                        ⚙
-                    </span>
-
-                    <span class="openlist-more-text">
-                        <strong>管理后台</strong>
-                        <small>OpenList 管理中心</small>
-                    </span>
-
-                    <span class="openlist-more-arrow">
-                        ›
-                    </span>
-                </a>
-
-                <a
-                    class="openlist-more-item"
-                    href="${baseUrl}/"
-                >
-                    <span class="openlist-more-icon">
-                        ◈
-                    </span>
-
-                    <span class="openlist-more-text">
-                        <strong>OpenWrt</strong>
-                        <small>路由器管理</small>
-                    </span>
-
-                    <span class="openlist-more-arrow">
-                        ›
-                    </span>
-                </a>
-
-                <a
-                    class="openlist-more-item"
-                    href="${baseUrl}:8081"
-                >
-                    <span class="openlist-more-icon">
-                        ⬇
-                    </span>
-
-                    <span class="openlist-more-text">
-                        <strong>qBittorrent</strong>
-                        <small>下载管理</small>
-                    </span>
-
-                    <span class="openlist-more-arrow">
-                        ›
-                    </span>
-                </a>
-
-                <a
-                    class="openlist-more-item"
-                    href="${baseUrl}:9090"
-                >
-                    <span class="openlist-more-icon">
-                        ◉
-                    </span>
-
-                    <span class="openlist-more-text">
-                        <strong>Clash</strong>
-                        <small>代理控制面板</small>
-                    </span>
-
-                    <span class="openlist-more-arrow">
-                        ›
-                    </span>
-                </a>
-
-            `;
-
-            document.body.appendChild(menu);
-
-
-            /*
-            * 打开 / 关闭菜单
-            */
             button.addEventListener(
                 "click",
-                function (event) {
-
-                    event.preventDefault();
-                    event.stopPropagation();
-
-                    const isOpen =
-                        menu.classList.contains(
-                            "open"
-                        );
-
-                    /*
-                    * 关闭其他状态
-                    */
-                    document
-                        .querySelectorAll(
-                            ".openlist-more-menu.open"
-                        )
-                        .forEach(
-                            function (item) {
-
-                                item.classList.remove(
-                                    "open"
-                                );
-
-                            }
-                        );
-
-                    if (!isOpen) {
-
-                        /*
-                        * 计算按钮位置
-                        */
-                        const rect =
-                            button.getBoundingClientRect();
-
-                        menu.style.top =
-                            (
-                                rect.bottom + 10
-                            ) + "px";
-
-                        /*
-                        * 桌面端右对齐
-                        */
-                        menu.style.right =
-                            (
-                                window.innerWidth -
-                                rect.right
-                            ) + "px";
-
-                        menu.classList.add(
-                            "open"
-                        );
-
-                    }
-
-                }
+                toggle
             );
+        }
 
 
-            /*
-            * 点击菜单内部
-            *
-            * 不让事件继续冒泡
-            */
-            menu.addEventListener(
+        if (footer) {
+
+            footer.addEventListener(
                 "click",
-                function (event) {
-
-                    event.stopPropagation();
-
-                }
+                toggle
             );
+        }
+
+    }
 
 
-            /*
-            * 点击页面其他地方关闭
-            */
-            document.addEventListener(
-                "click",
-                function () {
+    /* =====================================================
+       More
+       ===================================================== */
 
-                    menu.classList.remove(
+    function initMore() {
+
+        const button = $("openlist-more-button");
+
+        if (!button) {
+            return;
+        }
+
+        let menu = $("openlist-more-menu");
+
+        if (menu) {
+            return;
+        }
+
+        const protocol = window.location.protocol;
+        const hostname = window.location.hostname;
+
+        const baseUrl =
+            protocol + "//" + hostname;
+
+        const manageUrl =
+            baseUrl + ":5244/@manage";
+
+        menu = document.createElement("div");
+
+        menu.id = "openlist-more-menu";
+
+        menu.innerHTML = `
+
+            <div
+                class="openlist-more-title"
+            >
+                \u5FEB\u6377\u5165\u53E3
+            </div>
+
+            <a
+                class="openlist-more-item"
+                href="${manageUrl}"
+            >
+                <span class="openlist-more-icon">
+                    \u2699
+                </span>
+
+                <span class="openlist-more-text">
+                    <strong>\u7BA1\u7406\u540E\u53F0</strong>
+                    <small>OpenList \u7BA1\u7406\u4E2D\u5FC3</small>
+                </span>
+
+                <span class="openlist-more-arrow">
+                    \u203A
+                </span>
+            </a>
+
+        `;
+
+        document.body.appendChild(menu);
+
+
+        button.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                const isOpen =
+                    menu.classList.contains(
                         "open"
                     );
 
-                }
-            );
+                document
+                    .querySelectorAll(
+                        "#openlist-more-menu.open"
+                    )
+                    .forEach(
+                        function (item) {
 
+                            item.classList.remove(
+                                "open"
+                            );
 
-            /*
-            * ESC 关闭
-            */
-            document.addEventListener(
-                "keydown",
-                function (event) {
+                        }
+                    );
 
-                    if (
-                        event.key === "Escape"
-                    ) {
-
-                        menu.classList.remove(
-                            "open"
-                        );
-
-                    }
-
-                }
-            );
-
-
-            /*
-            * 窗口变化时重新定位
-            */
-            window.addEventListener(
-                "resize",
-                function () {
-
-                    if (
-                        !menu.classList.contains(
-                            "open"
-                        )
-                    ) {
-                        return;
-                    }
+                if (!isOpen) {
 
                     const rect =
                         button.getBoundingClientRect();
@@ -3261,64 +4167,908 @@
                             rect.right
                         ) + "px";
 
-                }
-            );
-
-        }
-            
-        /* =====================================================
-        初始化
-        ===================================================== */
-
-        function init() {
-
-            initVideo();
-
-            initScroll();
-
-            initTop();
-
-            initSearch();
-
-            initRefresh();
-
-            initTheme();
-
-            initMore();
-
-        }
-
-
-        /*
-        * 等 OpenList React 页面初始化
-        */
-
-        if (
-            document.readyState ===
-            "loading"
-        ) {
-
-            document.addEventListener(
-                "DOMContentLoaded",
-                function () {
-
-                    setTimeout(
-                        init,
-                        1000
+                    menu.classList.add(
+                        "open"
                     );
 
                 }
+
+            }
+        );
+
+
+        menu.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            function () {
+
+                menu.classList.remove(
+                    "open"
+                );
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    menu.classList.remove(
+                        "open"
+                    );
+
+                }
+
+            }
+        );
+
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (
+                    !menu.classList.contains(
+                        "open"
+                    )
+                ) {
+                    return;
+                }
+
+                const rect =
+                    button.getBoundingClientRect();
+
+                menu.style.top =
+                    (
+                        rect.bottom + 10
+                    ) + "px";
+
+                menu.style.right =
+                    (
+                        window.innerWidth -
+                        rect.right
+                    ) + "px";
+
+            }
+        );
+
+    }
+        
+
+    /* =====================================================
+       Markdown Welcome Card
+       —— 第 2/3 步再填实现，先占位
+       ===================================================== */
+
+    function patchHasMarkdown() {}
+
+    function watchBodyForMarkdown() {}
+
+
+    /* =====================================================
+       Initialize
+       ===================================================== */
+
+    function init() {
+
+        try { initVideo(); } catch (e) { console.warn("[OL] initVideo:", e); }
+
+        try { initScroll(); } catch (e) { console.warn("[OL] initScroll:", e); }
+
+        try { initTop(); } catch (e) { console.warn("[OL] initTop:", e); }
+
+        try { initSearch(); } catch (e) { console.warn("[OL] initSearch:", e); }
+
+        try { initRefresh(); } catch (e) { console.warn("[OL] initRefresh:", e); }
+
+        try { initTheme(); } catch (e) { console.warn("[OL] initTheme:", e); }
+
+        try { initMore(); } catch (e) { console.warn("[OL] initMore:", e); }
+
+        try { patchHasMarkdown(); } catch (e) {}
+
+        try { watchBodyForMarkdown(); } catch (e) {}
+
+
+        /* 读取上次保存的主题并同步 */
+        try {
+
+            const saved =
+                localStorage.getItem(
+                    "openlist-theme"
+                );
+
+            const isDark =
+                document.body.classList.contains(
+                    "hope-ui-dark"
+                );
+
+            if (
+                saved === "dark" &&
+                !isDark
+            ) {
+
+                document.body.classList.remove(
+                    "hope-ui-light"
+                );
+
+                document.body.classList.add(
+                    "hope-ui-dark"
+                );
+
+            } else if (
+                saved === "light" &&
+                isDark
+            ) {
+
+                document.body.classList.remove(
+                    "hope-ui-dark"
+                );
+
+                document.body.classList.add(
+                    "hope-ui-light"
+                );
+
+            }
+
+        } catch (e) {}
+
+    }
+
+
+    if (
+        document.readyState ===
+        "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                setTimeout(
+                    init,
+                    1000
+                );
+
+            }
+        );
+
+    } else {
+
+        setTimeout(
+            init,
+            1000
+        );
+
+    }
+
+})();
+
+</script>
+
+
+<!-- =========================================================
+     ▼▼▼ Login Modal JS ▼▼▼
+     ========================================================= -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* =====================================================
+       Skip Login Page
+       ===================================================== */
+
+    if (
+        location.pathname.indexOf(
+            "/@login"
+        ) === 0
+    ) {
+
+        return;
+
+    }
+
+
+    /* =====================================================
+       Login Status Check
+       ===================================================== */
+
+    function isLoggedIn() {
+
+        try {
+
+            if (
+                localStorage.getItem(
+                    "token"
+                )
+            ) {
+
+                return true;
+
+            }
+
+            if (
+                sessionStorage.getItem(
+                    "token"
+                )
+            ) {
+
+                return true;
+
+            }
+
+        } catch (e) {}
+
+        return false;
+
+    }
+
+
+    /* === 未登录就弹（不再判断游客模式） === */
+    if ( isLoggedIn() ) {
+
+        return;
+
+    }
+
+
+    /* =====================================================
+       Wait for OpenList Main App
+       ===================================================== */
+
+    let waited = 0;
+
+    const MAX_WAIT = 15000;
+
+    const CHECK_INTERVAL = 300;
+
+
+    function waitForApp() {
+
+        waited += CHECK_INTERVAL;
+
+        if (waited > MAX_WAIT) {
+
+            console.warn(
+                "[OpenList Login Modal] \u7B49\u5F85\u8D85\u65F6"
             );
 
-        } else {
+            return;
+
+        }
+
+
+        const modal =
+            document.getElementById(
+                "openlist-login-modal"
+            );
+
+
+        const appReady =
+
+            document.querySelector(
+                "#root .body"
+            ) ||
+
+            document.querySelector(
+                ".body > .nav"
+            ) ||
+
+            document.querySelector(
+                ".obj-box"
+            ) ||
+
+            document.querySelector(
+                ".hope-icon-button"
+            );
+
+
+        if (modal && appReady) {
+
+            initModal(modal);
+
+            return;
+
+        }
+
+
+        setTimeout(
+            waitForApp,
+            CHECK_INTERVAL
+        );
+
+    }
+
+
+    /* =====================================================
+       Initialize Modal
+       ===================================================== */
+
+    function initModal(modal) {
+
+        const form =
+            document.getElementById(
+                "olm-form"
+            );
+
+        const inputUser =
+            document.getElementById(
+                "olm-username"
+            );
+
+        const inputPass =
+            document.getElementById(
+                "olm-password"
+            );
+
+        const submitBtn =
+            document.getElementById(
+                "olm-submit"
+            );
+
+        const guestBtn =
+            document.getElementById(
+                "olm-guest"
+            );
+
+        const errorBox =
+            document.getElementById(
+                "olm-error"
+            );
+
+
+        if (
+            !form ||
+            !submitBtn ||
+            !guestBtn
+        ) {
+
+            return;
+
+        }
+
+
+        function openModal() {
+
+            modal.classList.add(
+                "show"
+            );
+
+            document.body.style.overflow =
+                "hidden";
 
             setTimeout(
-                init,
-                1000
+                function () {
+
+                    if (inputUser) {
+
+                        inputUser.focus();
+
+                    }
+
+                },
+                140
             );
 
         }
 
-    })();
 
-    </script>
+        function closeModal() {
+
+            modal.classList.remove(
+                "show"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        function showError(msg) {
+
+            errorBox.textContent =
+                msg || "\u767B\u5F55\u5931\u8D25";
+
+            errorBox.classList.add(
+                "show"
+            );
+
+        }
+
+
+        function hideError() {
+
+            errorBox.classList.remove(
+                "show"
+            );
+
+            errorBox.textContent =
+                "";
+
+        }
+
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                hideError();
+
+                const username =
+                    inputUser.value.trim();
+
+                const password =
+                    inputPass.value;
+
+
+                if (
+                    !username ||
+                    !password
+                ) {
+
+                    showError(
+                        "\u8BF7\u8F93\u5165\u7528\u6237\u540D\u548C\u5BC6\u7801"
+                    );
+
+                    return;
+
+                }
+
+
+                submitBtn.disabled =
+                    true;
+
+                submitBtn.textContent =
+                    "\u767B\u5F55\u4E2D...";
+
+
+                fetch(
+                    "/api/auth/login",
+                    {
+                        method:
+                            "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body:
+                            JSON.stringify({
+                                username:
+                                    username,
+
+                                password:
+                                    password
+                            })
+                    }
+                )
+                .then(
+                    function (res) {
+
+                        return res.json();
+
+                    }
+                )
+                .then(
+                    function (data) {
+
+                        if (
+                            data &&
+                            data.code === 200 &&
+                            data.data &&
+                            data.data.token
+                        ) {
+
+                            try {
+
+                                localStorage.setItem(
+                                    "token",
+                                    data.data.token
+                                );
+
+                                sessionStorage.removeItem(
+                                    "openlist-guest-mode"
+                                );
+
+                            } catch (e) {}
+
+
+                            location.reload();
+
+                            return;
+
+                        }
+
+
+                        submitBtn.disabled =
+                            false;
+
+                        submitBtn.textContent =
+                            "\u767B \u5F55";
+
+
+                        showError(
+                            (
+                                data &&
+                                data.message
+                            ) ||
+                            "\u7528\u6237\u540D\u6216\u5BC6\u7801\u9519\u8BEF"
+                        );
+
+                    }
+                )
+                .catch(
+                    function () {
+
+                        submitBtn.disabled =
+                            false;
+
+                        submitBtn.textContent =
+                            "\u767B \u5F55";
+
+
+                        showError(
+                            "\u7F51\u7EDC\u9519\u8BEF\uFF0C\u8BF7\u7A0D\u540E\u518D\u8BD5"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        function enterGuest() {
+
+            try {
+
+                sessionStorage.setItem(
+                    "openlist-guest-mode",
+                    "1"
+                );
+
+            } catch (e) {}
+
+
+            closeModal();
+
+        }
+
+
+        guestBtn.addEventListener(
+            "click",
+            enterGuest
+        );
+
+
+        const backdrop =
+            modal.querySelector(
+                ".olm-backdrop"
+            );
+
+
+        if (backdrop) {
+
+            backdrop.addEventListener(
+                "click",
+                enterGuest
+            );
+
+        }
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    modal.classList.contains(
+                        "show"
+                    )
+                ) {
+
+                    enterGuest();
+
+                }
+
+            }
+        );
+
+
+        window.openlistLogin =
+            openModal;
+
+
+        setTimeout(
+            openModal,
+            400
+        );
+
+    }
+
+
+    waitForApp();
+
+})();
+
+</script>
+
+
+<!-- =========================================================
+     ▼▼▼ Footer Login / Logout Toggle ▼▼▼
+     ========================================================= -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* =====================================================
+       Helpers
+       ===================================================== */
+
+    function getBtn() {
+
+        return document.getElementById(
+            "openlist-footer-login-btn"
+        );
+
+    }
+
+
+    function isLoggedIn() {
+
+        try {
+
+            return !!(
+
+                localStorage.getItem("token") ||
+                sessionStorage.getItem("token")
+            );
+
+        } catch (e) {
+
+            return false;
+
+        }
+
+    }
+
+
+    /* =====================================================
+       Update Button Appearance
+       ===================================================== */
+
+    function updateButton() {
+
+        const btn = getBtn();
+
+        if (!btn) {
+            return;
+        }
+
+
+        const span =
+            btn.querySelector("span");
+
+
+        if (isLoggedIn()) {
+
+            btn.setAttribute(
+                "data-action",
+                "logout"
+            );
+
+            btn.setAttribute(
+                "title",
+                "\u767B\u51FA"
+            );
+
+            if (span) {
+
+                span.innerHTML =
+                    "\u767B\u51FA";
+
+            }
+
+        } else {
+
+            btn.setAttribute(
+                "data-action",
+                "login"
+            );
+
+            btn.setAttribute(
+                "title",
+                "\u767B\u5F55"
+            );
+
+            if (span) {
+
+                span.innerHTML =
+                    "\u767B\u5F55";
+
+            }
+
+        }
+
+    }
+
+
+    /* =====================================================
+       Click Handler
+       ===================================================== */
+
+    function handleClick(event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+
+        const btn = getBtn();
+
+        if (!btn) {
+            return;
+        }
+
+
+        const action =
+            btn.getAttribute(
+                "data-action"
+            );
+
+
+        if (action === "logout") {
+
+            try {
+
+                localStorage.removeItem(
+                    "token"
+                );
+
+                sessionStorage.removeItem(
+                    "token"
+                );
+
+                sessionStorage.removeItem(
+                    "openlist-guest-mode"
+                );
+
+            } catch (e) {}
+
+
+            location.reload();
+
+            return;
+
+        }
+
+
+        if (
+            typeof window.openlistLogin ===
+            "function"
+        ) {
+
+            try {
+
+                sessionStorage.removeItem(
+                    "openlist-guest-mode"
+                );
+
+            } catch (e) {}
+
+
+            window.openlistLogin();
+
+            return;
+
+        }
+
+
+        location.href =
+            "/@login";
+
+    }
+
+
+    /* =====================================================
+       Bind Events
+       ===================================================== */
+
+    function bind() {
+
+        const btn = getBtn();
+
+        if (!btn) {
+            return;
+        }
+
+
+        if (
+            btn.dataset.bound ===
+            "1"
+        ) {
+
+            return;
+
+        }
+
+
+        btn.dataset.bound = "1";
+
+
+        btn.addEventListener(
+            "click",
+            handleClick
+        );
+
+    }
+
+
+    /* =====================================================
+       Init
+       ===================================================== */
+
+    function init() {
+
+        updateButton();
+
+        bind();
+
+    }
+
+
+    if (
+        document.readyState ===
+        "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                setTimeout(
+                    init,
+                    1200
+                );
+
+            }
+        );
+
+    } else {
+
+        setTimeout(
+            init,
+            1200
+        );
+
+    }
+
+})();
+
+</script>
